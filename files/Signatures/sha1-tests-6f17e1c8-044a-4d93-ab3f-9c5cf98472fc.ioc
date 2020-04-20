@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="6f17e1c8-044a-4d93-ab3f-9c5cf98472fc" last-modified="2016-09-02T17:35:54" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>SHA1 Tests</short_description>
+  <description>SHA1 Tests</description>
+  <authored_by>SHA</authored_by>
+  <authored_date>2016-09-02T17:24:35</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="8df36ff6-0d90-468a-b71c-878055ba8b01">
+      <IndicatorItem id="d7f71432-b43d-4db4-a355-878a71df5a5a" condition="is">
+        <Context document="DriverItem" search="DriverItem/Sha1sum" type="mir" />
+        <Content type="string">2f3e5606a5c8e4f509a821219069db4b058678fd</Content>
+      </IndicatorItem>
+      <IndicatorItem id="519a2837-df73-4691-b83a-d19e5766a96a" condition="is">
+        <Context document="FileItem" search="FileItem/Sha1sum" type="mir" />
+        <Content type="string">d387857914e73ef7393bf2172e372aab0c45e519</Content>
+      </IndicatorItem>
+      <IndicatorItem id="08e9a33a-616d-4f01-9539-cea8590aca9f" condition="is">
+        <Context document="ProcessItem" search="ProcessItem/SectionList/MemorySection/Sha1sum" type="mir" />
+        <Content type="string">c77f4448e7e3846f1084011081f66951661b53f7</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f8948ad2-fcf1-43f7-9d89-2929da8d02f6" condition="contains">
+        <Context document="ServiceItem" search="ServiceItem/pathsha1sum" type="mir" />
+        <Content type="string"> b3fcc10c8047b52c60c602394a6111a8ea48a585</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5ab13111-a237-4257-bbe7-316b4a6e65e0" condition="is">
+        <Context document="TaskItem" search="TaskItem/ActionList/Action/ExecProgramSha1sum" type="mir" />
+        <Content type="string">e461a9fbe9f3ef9f93601c595d91cfb907b77093</Content>
+      </IndicatorItem>
+      <IndicatorItem id="88c36e97-7108-4677-80c7-3096a04bcbe7" condition="contains">
+        <Context document="TaskItem" search="TaskItem/sha1sum" type="mir" />
+        <Content type="string">da5cc23887e1cdf5f1564a94fe5410f6735ce0e3</Content>
+      </IndicatorItem>
+      <IndicatorItem id="62b6cd8d-9b1c-4ec5-8b06-14b698304421" condition="is">
+        <Context document="FileItem" search="FileItem/StreamList/Stream/Sha1sum" type="mir" />
+        <Content type="string">bab6380dc01c1a5a2bc660a931994ba73798b564</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

@@ -1,0 +1,237 @@
+<stix:STIX_Package 
+	xmlns:certeu="http://cert.europa.eu/"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:HostnameObj="http://cybox.mitre.org/objects#HostnameObject-1"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd
+	http://cybox.mitre.org/objects#DomainNameObject-1 http://cybox.mitre.org/XMLSchema/objects/Domain_Name/1.0/Domain_Name_Object.xsd
+	http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd
+	http://cybox.mitre.org/objects#HostnameObject-1 http://cybox.mitre.org/XMLSchema/objects/Hostname/1.0/Hostname_Object.xsd
+	http://data-marking.mitre.org/Marking-1 http://stix.mitre.org/XMLSchema/data_marking/1.1.1/data_marking.xsd
+	http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 http://stix.mitre.org/XMLSchema/extensions/marking/simple/1.1.1/simple_marking.xsd
+	http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.1.1/tlp_marking.xsd
+	http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd" id="certeu:Package-5f000fe7-4a2f-4e20-aeba-9a38fcb17cbb" version="1.1.1" timestamp="2016-04-26T06:39:17.836199+00:00">
+    <stix:STIX_Header>
+        <stix:Title>Generic Export3</stix:Title>
+        <stix:Description>This list is composed from validated information from CERT-EU clients or partners. It is released to you as a contribution for cyber-threat intelligence and prevention in your organisation.</stix:Description>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>ancestor-or-self::stix:Indicator//node()</marking:Controlled_Structure>
+                <marking:Marking_Structure marking_model_name="CertEU-Sensitivity-MGMT" xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                    <simpleMarking:Statement>Public</simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="myorg:Indicator-d58ddbed-0b78-11e6-9839-000c297f3abb" timestamp="2016-04-26T06:39:17.836387+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Malspam Locky Test</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Description>Coming from analysis by CIRCL MISP</indicator:Description>
+            <indicator:Observable id="certeu:Observable-8749fec0-fc64-4ba5-b3cc-5b2d66b318cf">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="myorg:Observable-0b2542d3-0b79-11e6-9839-000c297f3abb">
+                        <cybox:Object id="certeu:Address-2d4262c2-c203-4b36-8f22-d1db53bd12f3">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>91.219.30.254</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="myorg:Observable-2830c697-0b79-11e6-9839-000c297f3abb">
+                        <cybox:Object id="certeu:File-394a485b-f29f-4d8c-a251-bf57d4c86cc7">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value>bee14206aa3e443af592a6946671d191f878f2cb7ca04013704b8fd4014a4c3a</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase ordinality="5" name="Installation" phase_id="stix:TTP-e1e4e3f7-be3b-4b39-b80a-a593cfd99a4f" kill_chain_name="LMCO Kill Chain" kill_chain_id="stix:TTP-af3e707f-2fb9-49e5-8c37-14026ca0a5ff"/>
+                <stixCommon:Kill_Chain_Phase ordinality="6" name="Command and Control" phase_id="stix:TTP-d6dc32b9-2538-4951-8733-3cb9ef1daae2" kill_chain_name="LMCO Kill Chain" kill_chain_id="stix:TTP-af3e707f-2fb9-49e5-8c37-14026ca0a5ff"/>
+            </indicator:Kill_Chain_Phases>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>ancestor-or-self::stix:Indicator//node()</marking:Controlled_Structure>
+                    <marking:Marking_Structure marking_model_ref="http://www.enisa.europa.eu/activities/cert/support/incident-management/browsable/incident-handling-process/information-disclosure" marking_model_name="TLP" xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+                    <marking:Marking_Structure marking_model_name="CertEU-Risk-MGMT" xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                        <simpleMarking:Statement>High</simpleMarking:Statement>
+                    </marking:Marking_Structure>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence>
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>CERT-EU</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2016-04-26T06:32:06</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="myorg:Indicator-ab9786ca-0b73-11e6-9839-000c297f3abb" timestamp="2016-04-26T06:39:17.838255+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Windows defender Platinium</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Observable id="certeu:Observable-efaea8cb-edd2-45d2-a1e2-3d4c38f11578">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="myorg:Observable-507b98af-0b74-11e6-9839-000c297f3abb">
+                        <cybox:Object id="certeu:File-c6355c16-34e9-4f89-a756-5b06bff34e44">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value>e9f900b5d01320ccd4990fd322a459d709d43e4b</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="myorg:Observable-6320fdb5-0b74-11e6-9839-000c297f3abb">
+                        <cybox:Object id="certeu:File-55f791eb-4bd0-49c0-a0cd-8460b0695cf3">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value>9a4e82ba371cd2fedea0b889c879daee7a01e1b1</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="myorg:Observable-1074f532-0b75-11e6-9839-000c297f3abb">
+                        <cybox:Object id="certeu:DomainName-82b7ba66-1e15-49bf-ac49-6a6ff50b3e92">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                <DomainNameObj:Value>box62.a-inet.net</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase ordinality="3" name="Delivery" phase_id="stix:TTP-79a0e041-9d5f-49bb-ada4-8322622b162d" kill_chain_name="LMCO Kill Chain" kill_chain_id="stix:TTP-af3e707f-2fb9-49e5-8c37-14026ca0a5ff"/>
+                <stixCommon:Kill_Chain_Phase ordinality="6" name="Command and Control" phase_id="stix:TTP-d6dc32b9-2538-4951-8733-3cb9ef1daae2" kill_chain_name="LMCO Kill Chain" kill_chain_id="stix:TTP-af3e707f-2fb9-49e5-8c37-14026ca0a5ff"/>
+            </indicator:Kill_Chain_Phases>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>ancestor-or-self::stix:Indicator//node()</marking:Controlled_Structure>
+                    <marking:Marking_Structure marking_model_ref="http://www.enisa.europa.eu/activities/cert/support/incident-management/browsable/incident-handling-process/information-disclosure" marking_model_name="TLP" xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                    <marking:Marking_Structure marking_model_name="CertEU-Risk-MGMT" xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                        <simpleMarking:Statement>High</simpleMarking:Statement>
+                    </marking:Marking_Structure>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence>
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Sightings sightings_count="1">
+                <indicator:Sighting>
+                    <indicator:Source>
+                        <stixCommon:Description>Constituency</stixCommon:Description>
+                    </indicator:Source>
+                </indicator:Sighting>
+            </indicator:Sightings>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>CERT-EU</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2016-04-26T05:55:35</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="myorg:Indicator-e9c36abf-ffe2-11e5-9dcc-000c297f3abb" timestamp="2016-04-26T06:39:17.839194+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>locky cert fr 7/4/16</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Description>part of a locky campaign targeting french entities</indicator:Description>
+            <indicator:Observable id="certeu:Observable-da0cf3fc-59e6-4d43-b833-15fab3fa6ca5">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="myorg:Observable-3f6f3105-ffe3-11e5-9dcc-000c297f3abb">
+                        <cybox:Object id="certeu:Hostname-51f920ae-484e-4ad5-b2c5-f54dc0030784">
+                            <cybox:Properties xsi:type="HostnameObj:HostnameObjectType">
+                                <HostnameObj:Hostname_Value>wblejsfob.pw</HostnameObj:Hostname_Value>
+                                <HostnameObj:Naming_System>DNS</HostnameObj:Naming_System>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="myorg:Observable-20781ec2-ffe8-11e5-9dcc-000c297f3abb">
+                        <cybox:Object id="certeu:Hostname-d846b522-35ba-41cc-b330-0f1562fbc600">
+                            <cybox:Properties xsi:type="HostnameObj:HostnameObjectType">
+                                <HostnameObj:Hostname_Value>pvwinlrmwvccuo.eu</HostnameObj:Hostname_Value>
+                                <HostnameObj:Naming_System>DNS</HostnameObj:Naming_System>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase ordinality="3" name="Delivery" phase_id="stix:TTP-79a0e041-9d5f-49bb-ada4-8322622b162d" kill_chain_name="LMCO Kill Chain" kill_chain_id="stix:TTP-af3e707f-2fb9-49e5-8c37-14026ca0a5ff"/>
+            </indicator:Kill_Chain_Phases>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>ancestor-or-self::stix:Indicator//node()</marking:Controlled_Structure>
+                    <marking:Marking_Structure marking_model_ref="http://www.enisa.europa.eu/activities/cert/support/incident-management/browsable/incident-handling-process/information-disclosure" marking_model_name="TLP" xsi:type='tlpMarking:TLPMarkingStructureType' color="WHITE"/>
+                    <marking:Marking_Structure marking_model_name="CertEU-Risk-MGMT" xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                        <simpleMarking:Statement>High</simpleMarking:Statement>
+                    </marking:Marking_Structure>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence>
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Sightings sightings_count="1">
+                <indicator:Sighting timestamp="2016-04-07T11:01:59">
+                    <indicator:Source>
+                        <stixCommon:Description>Constituency</stixCommon:Description>
+                    </indicator:Source>
+                </indicator:Sighting>
+            </indicator:Sightings>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>CERT-EU</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2016-04-11T12:41:56</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:Kill_Chains>
+            <stixCommon:Kill_Chain reference="http://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf" number_of_phases="7" id="stix:TTP-af3e707f-2fb9-49e5-8c37-14026ca0a5ff" definer="LMCO" name="LMCO Kill Chain">
+                <stixCommon:Kill_Chain_Phase ordinality="1" name="Reconnaissance" phase_id="stix:TTP-af1016d6-a744-4ed7-ac91-00fe2272185a"/>
+                <stixCommon:Kill_Chain_Phase ordinality="2" name="Weaponization" phase_id="stix:TTP-445b4827-3cca-42bd-8421-f2e947133c16"/>
+                <stixCommon:Kill_Chain_Phase ordinality="3" name="Delivery" phase_id="stix:TTP-79a0e041-9d5f-49bb-ada4-8322622b162d"/>
+                <stixCommon:Kill_Chain_Phase ordinality="4" name="Exploitation" phase_id="stix:TTP-f706e4e7-53d8-44ef-967f-81535c9db7d0"/>
+                <stixCommon:Kill_Chain_Phase ordinality="5" name="Installation" phase_id="stix:TTP-e1e4e3f7-be3b-4b39-b80a-a593cfd99a4f"/>
+                <stixCommon:Kill_Chain_Phase ordinality="6" name="Command and Control" phase_id="stix:TTP-d6dc32b9-2538-4951-8733-3cb9ef1daae2"/>
+                <stixCommon:Kill_Chain_Phase ordinality="7" name="Actions on Objectives" phase_id="stix:TTP-786ca8f9-2d9a-4213-b38e-399af4a2e5d6"/>
+            </stixCommon:Kill_Chain>
+        </stix:Kill_Chains>
+    </stix:TTPs>
+</stix:STIX_Package>

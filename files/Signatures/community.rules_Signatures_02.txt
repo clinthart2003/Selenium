@@ -1,0 +1,34 @@
+# Copyright 2001-2017 Sourcefire, Inc. All Rights Reserved.
+	
+# This file contains rules that were created by Sourcefire, Inc. and other third parties
+# (the "GPL Rules") that are distributed under the GNU General Public License (GPL),
+# v2. The GPL Rules created by Sourcefire are owned by Sourcefire, Inc., and the GPL
+# Rules not created by Sourcefire are owned by their respective owners. Please see
+# the AUTHORS file included in the community package for a list of third party owners and their
+# respective copyrights.
+
+# This file does not contain any Sourcefire VRT Certified Rules; the VRT Certified
+# Rules are distributed by Sourcefire separately under the VRT Certified Rules License
+# Agreement (v 2.0)
+
+#-----------------
+# COMMUNITY RULES
+#-----------------
+
+ alert tcp $HOME_NET 2589 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR - Dagger_1.4.0"; flow:to_client,established; content:"2|00 00 00 06 00 00 00|Drives|24 00|"; depth:16; metadata:ruleset community; classtype:misc-activity; sid:105; rev:14;)
+ alert tcp $EXTERNAL_NET any -> $HOME_NET 7597 (msg:"MALWARE-BACKDOOR QAZ Worm Client Login access"; flow:to_server,established; content:"qazwsx.hsq"; metadata:ruleset community; reference:mcafee,98775; classtype:misc-activity; sid:108; rev:11;)
+ alert tcp $EXTERNAL_NET any -> $HOME_NET 12345:12346 (msg:"MALWARE-BACKDOOR netbus getinfo"; flow:to_server,established; content:"GetInfo|0D|"; metadata:ruleset community; classtype:trojan-activity; sid:110; rev:10;)
+ alert tcp $HOME_NET 20034 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR NetBus Pro 2.0 connection established"; flow:to_client,established; flowbits:isset,backdoor.netbus_2.connect; content:"BN|10 00 02 00|"; depth:6; content:"|05 00|"; depth:2; offset:8; metadata:ruleset community; classtype:trojan-activity; sid:115; rev:15;)
+ alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR Infector.1.x"; flow:established,to_client; content:"WHATISIT"; depth:9; metadata:impact_flag red, ruleset community; reference:nessus,11157; classtype:misc-activity; sid:117; rev:17;)
+ alert tcp $HOME_NET 666 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR SatansBackdoor.2.0.Beta"; flow:to_client,established; content:"Remote|3A| "; depth:11; nocase; content:"You are connected to me.|0D 0A|Remote|3A| Ready for commands"; distance:0; nocase; metadata:ruleset community; reference:url,www.megasecurity.org/trojans/s/satanzbackdoor/SBD2.0b.html; reference:url,www3.ca.com/securityadvisor/pest/pest.aspx?id=5260; classtype:trojan-activity; sid:118; rev:12;)
+ alert tcp $HOME_NET 6789 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR Doly 2.0 access"; flow:established,to_client; content:"Wtzup Use"; depth:32; metadata:ruleset community; classtype:misc-activity; sid:119; rev:11;)
+ alert tcp $EXTERNAL_NET 1000:1300 -> $HOME_NET 146 (msg:"MALWARE-BACKDOOR Infector 1.6 Client to Server Connection Request"; flow:to_server,established; content:"FC "; metadata:ruleset community; reference:nessus,11157; classtype:misc-activity; sid:121; rev:14;)
+ alert tcp $HOME_NET 31785 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR HackAttack 1.20 Connect"; flow:established,to_client; content:"host"; metadata:ruleset community; classtype:misc-activity; sid:141; rev:10;)
+ alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"PROTOCOL-FTP ADMw0rm ftp login attempt"; flow:to_server,established; content:"USER"; nocase; content:"w0rm"; distance:1; nocase; pcre:"/^USER\s+w0rm/smi"; metadata:ruleset community, service ftp; classtype:suspicious-login; sid:144; rev:16;)
+ alert tcp $HOME_NET 30100:30102 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR NetSphere access"; flow:established,to_client; content:"NetSphere"; metadata:ruleset community; classtype:trojan-activity; sid:146; rev:13;)
+ alert tcp $HOME_NET 6969 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR GateCrasher"; flow:established,to_client; content:"GateCrasher"; depth:11; nocase; content:"Server"; distance:0; nocase; content:"On-Line..."; distance:0; nocase; pcre:"/^GateCrasher\s+v\d+\x2E\d+\x2C\s+Server\s+On-Line\x2E\x2E\x2E/smi"; metadata:ruleset community; reference:url,www.spywareguide.com/product_show.php?id=973; classtype:trojan-activity; sid:147; rev:11;)
+ alert tcp $HOME_NET 5401:5402 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR BackConstruction 2.1 Connection"; flow:established,to_client; content:"c|3A 5C|"; metadata:ruleset community; classtype:misc-activity; sid:152; rev:11;)
+ alert tcp $EXTERNAL_NET any -> $HOME_NET 666 (msg:"MALWARE-BACKDOOR BackConstruction 2.1 Client FTP Open Request"; flow:to_server,established; content:"FTPON"; metadata:ruleset community; classtype:misc-activity; sid:157; rev:9;)
+ alert tcp $HOME_NET 666 -> $EXTERNAL_NET any (msg:"MALWARE-BACKDOOR BackConstruction 2.1 Server FTP Open Reply"; flow:to_client,established; content:"FTP Port open"; metadata:ruleset community; classtype:misc-activity; sid:158; rev:10;)
+ alert udp $EXTERNAL_NET 3344 -> $HOME_NET 3345 (msg:"MALWARE-BACKDOOR Matrix 2.0 Client connect"; flow:to_server; content:"activate"; metadata:ruleset community; classtype:misc-activity; sid:161; rev:10;)
+ alert udp $EXTERNAL_NET 3345 -> $HOME_NET 3344 (msg:"MALWARE-BACKDOOR Matrix 2.0 Server access"; flow:to_server; content:"logged in"; metadata:ruleset community; classtype:misc-activity; sid:162; rev:10;
