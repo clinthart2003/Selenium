@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2020-02-29T13:40:26Z" cacheDuration="PT604800S" entityID="https://te-22499.threatq.com/api/saml/metadata">
+  <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURWekNDQWorZ0F3SUJBZ0lKQUxVUSt4cjduRWdLTUEwR0NTcUdTSWIzRFFFQkN3VUFNRUl4Q3pBSkJnTlYKQkFZVEFsaFlNUlV3RXdZRFZRUUhEQXhFWldaaGRXeDBJRU5wZEhreEhEQWFCZ05WQkFvTUUwUmxabUYxYkhRZwpRMjl0Y0dGdWVTQk1kR1F3SGhjTk1Ua3hNVEU1TVRrMU5EUXdXaGNOTWpFeE1URTRNVGsxTkRRd1dqQkNNUXN3CkNRWURWUVFHRXdKWVdERVZNQk1HQTFVRUJ3d01SR1ZtWVhWc2RDQkRhWFI1TVJ3d0dnWURWUVFLREJORVpXWmgKZFd4MElFTnZiWEJoYm5rZ1RIUmtNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQQp5N1ZUMFhVS3UzcDd6WFNHRnR2OGpkb3pUeEFwNVJSTkdKbkk2QS9Rdzl2YWRabzk2MkZhNW12WlJ6WUJ3WTljCllEdUNwU0RyV2M3U1hiSUtHbW0vN2FZTXFUWXpreHdEQUNZRmZMeGd3aTRmcjJMWDhMa29BemRYYWpCajlZT3UKeGNPVVN1TW1oUFBmY0p5MzYzZTczSDMva1hWUEZYT2ZHdGJIbEtRRFRFYlNOZUFidlRhRXJVYWNEcjVpWFlXTApBRnJaVEZYOG9Ldm5QeW4wcVgxUllSeWhYdkZuZnZNU2xkMDFlcFBDcWRQaHB1eGRPeEhaU3VkbS9QVlNYTDhMCnBubSsyZzdIS05ud2pLVi9RM1pZTXYzVTlKQ0NRZ0dlYldRbG4vOW01VVUyYS9iYTBYakRiSGErUzRTVXo2UjUKSmtwUUxUTmFQRS9kdHUvTWtHMlU3UUlEQVFBQm8xQXdUakFkQmdOVkhRNEVGZ1FVUk9OMjNoUm5CUHhvb1FLeQpUWkN6cTJkM0pOQXdId1lEVlIwakJCZ3dGb0FVUk9OMjNoUm5CUHhvb1FLeVRaQ3pxMmQzSk5Bd0RBWURWUjBUCkJBVXdBd0VCL3pBTkJna3Foa2lHOXcwQkFRc0ZBQU9DQVFFQVlFejVzZ0g4eUZ5VFJNeTdORVJJSkFwOEFXaWoKYVpJY0ZYOXptRmExU3lja0YrRHV3ZjQ1eUoyWitDNDlyU293LzJvekRHV3VETFpEM2NBZU82ZDFoSUlTM00zOQoxY0o1V0JUU2NGYndhWGFaUWIvUFQ0WHhyU0Q1eDBCZTVDeEFmWU5PL0ZFZkF6WTNSNWZnVkx2S1pPUkFqZU0vCkYvWnpWUmtGa0NZbExWS01qaS9qTXJ0aWVLdXBQRUlKODdrSzdoMWZic0Y0cXVac0N2dmtxeTIxalM1aGRycUIKSjVjdmZTZFl4K2xGaHpYdGk4OGpqYXpPMThJRkxBYUs2ODZZU29YSHV0Q0Y5UC85UUhweitySzY3MlZkQ1JKQwp6WTBGM2pKRVMvVjF1cHpuQkNRV1RmS1BOdWxuc1dOOUhBVWhhZDBGVW9GMnZjdlRjN1huSXFWbitBPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://te-22499.threatq.com/api/saml/sls"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://te-22499.threatq.com/api/saml/acs" index="1"/>
+    <md:AttributeConsumingService index="1">
+      <md:ServiceName xml:lang="en">threatq-sp</md:ServiceName>
+      <md:ServiceDescription xml:lang="en">ThreatQuotient Service Provider</md:ServiceDescription>
+      <md:RequestedAttribute Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" FriendlyName="Email" isRequired="false"/>
+      <md:RequestedAttribute Name="uid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" FriendlyName="Uid" isRequired="false"/>
+    </md:AttributeConsumingService>
+  </md:SPSSODescriptor>
+</md:EntityDescriptor>

