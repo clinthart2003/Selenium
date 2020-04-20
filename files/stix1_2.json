@@ -1,0 +1,21 @@
+[
+ {
+    "code": "victim",
+    "name": "Victim",
+    "name_plural": "Victims",
+    "description": "STIX: Victim",
+    "icon": "victim.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#566ddb",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+ }
+]

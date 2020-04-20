@@ -1,0 +1,125 @@
+Return-Path: <>
+Delivered-To: clinthart@comcast.net
+Received: from dovdir2-ch2g-05o.email.comcast.net ([96.114.154.145])
+	by dovback2-ch2g-06o.email.comcast.net with LMTP id oDaoF6sfG1rETQAA6rp7jQ
+	for <clinthart@comcast.net>; Sun, 26 Nov 2017 20:10:19 +0000
+Received: from dovpxy-asb-03o ([96.114.154.145])
+	by dovdir2-ch2g-05o.email.comcast.net with LMTP id uFpmE6sfG1r8JQAAoW9zcw
+	; Sun, 26 Nov 2017 20:10:19 +0000
+Received: from resimta-po-17v.sys.comcast.net ([96.114.154.145])
+	by dovpxy-asb-03o with LMTP id qGcoDqofG1oOKgAAG4fgWA
+	; Sun, 26 Nov 2017 20:10:19 +0000
+Received: from EUR01-HE1-obe.outbound.protection.outlook.com ([IPv6:2a01:111:f400:fe1e::31e])
+	by resimta-po-17v.sys.comcast.net with SMTP
+	id J3DjeMZKhYM2fJ3DteQGly; Sun, 26 Nov 2017 20:08:19 +0000
+X-CAA-SPAM: N00000
+X-Authority-Analysis: v=2.2 cv=Er+ilWUA c=1 sm=1 tr=0
+ a=osDrW2AON7y1HyiAeOL6jdcP5bE=:19 a=o1aIUnjXcTMA:10 a=8nJEP1OIZ-IA:10
+ a=O76VCmqbo-wA:10 a=ZZnuYtJkoWoA:10 a=sKNfEOBpAAAA:8 a=KcD9v2wbFEPwZKanGCYA:9
+ a=wPNLvfGTeEIA:10 a=fkqBw3BD5RLjSgApC7jY:22 a=r361-aEC5BurVNMJgNGc:22
+X-Xfinity-Message-Heuristics: IPv6:Y;TLS=1;SPF=1;DMARC=F
+X-Comcast-SMTP-Spoor: 
+ http://mail-he1eur01hn031e.outbound.protection.outlook.com
+Authentication-Results: resimta-po-17v.sys.comcast.net;
+	dkim=pass header.d=vxvxcvcxvffcloudnscx.onmicrosoft.com header.b=uioKCKFH
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=vxvxcvcxvffcloudnscx.onmicrosoft.com;
+ s=selector1-vxvxcvcxvffcloudnscx-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=4muwWhXKKI4sTHzxKQa5HShVos4AOajSZAutKBYxPhE=;
+ b=uioKCKFHUGNt4xJ4RUm1qi5ofBAf8tKtNwxHqnHUekv3B2u+SXwirNBTSQOQkaRW5HoqZSwDvux6sQyxQ6pcvVv4ffbJrorqkJWY/LBUOVnxjsrsvlW89lluNq768LCEgc8pv82wtfi2ev8GEkNv+f5RP8NbX2/TBMRJRt8mh9I=
+Authentication-Results: spf=none (sender IP is ) smtp.mailfrom=<>; 
+From: 'Amazon Notification' <jane.doe@walgreens.com>
+Reply-to: jane.doe@walgreens.com
+To: clinthart@comcast.net
+sender: Afbeeldinge37@gfjukuy.antisepticwipes.net
+Errors-to: Afbeeldinge37@gfjukuy.antisepticwipes.net
+Subject: Congratulations Amazon Customer-
+MIME-Version: 1.0
+Content-Type: text/html; charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Sun, 26 Nov 2017 20:08:09 +0000
+X-ClientProxiedBy: HE1PR0902CA0019.eurprd09.prod.outlook.com
+ (2603:10a6:3:e5::29) To AM5PR04MB3185.eurprd04.prod.outlook.com
+ (2603:10a6:206:c::30)
+Return-Path: <>
+Message-ID:
+	<AM5PR04MB3185A7AB6E7E6F23186D8C82B8240@AM5PR04MB3185.eurprd04.prod.outlook.com>
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: b3e68632-b64e-4304-cae1-08d535096a4d
+X-Microsoft-Antispam:
+	UriScan:;BCL:0;PCL:0;RULEID:(5600026)(4604075)(4534020)(4602075)(4603075)(4627115)(2017052603199);SRVR:AM5PR04MB3185;
+X-Microsoft-Exchange-Diagnostics:
+	1;AM5PR04MB3185;3:x4L9qC2wSyCJb4TO2CddlJojJ9KT0czRZWOihgklF8draR9gq9tqVHEaXg85YQC+3J7f8BElaQ9O3gHoD89tuf4u2G7XxsTm0voIpmxkO/KlHlKvdowMrChzi0IZ0wkf12KOr6AiXPPriGhBdF5/Hps4GaqIM8NwSpQE0m9WqVXDz8OPieczRBMO6EtpcJmcE2DmBX2q4JZeDq6c+gzJXN6Xa1kGduwWMUKZvyFHaqSTJCUtpsNYQAuTAjKz4XsR;25:8sTu3pSBfCusOk79jJNz023OgHlxEGAeVSgLbH0CkxYRnoC0xkj0+RhuRlk7sxXVpVhLyiRLv/LAItOheQ5QR9NRfHS8O1iDrxkCDR0Hqax34TTH55KXRHavhwphHRgD4LKoTnTQnRSOtID1ttOXNRmFuBVhlDBrHsZ2gHrKhGH9EiLaenxP7kMk59Oi/EpvmBGkIT3Af1MUk5Jmc0BB98hDpZY9qm5NvXlIbmdZUjE=;31:Jz4RD8TS+efHYupQqWBIrWuV5GawCqbT2H+b2mnnBPa5L0unusOa44haLYwLP34dRK+V5SA3PGOW+Rx+oWiv2tI8vHL+SyAajlI9cbP+K/PPG4WFTwgcyAaz0JuZbK70;20:2RkAmZXVe20kfpvwSKcO6KlGZuDbzceqV3D52H/ldFwtu07xPcbpC/p1Lyh/3PreR6RRHnhU1iTagOX4zQzdec5k5DaGJ0OlK6g76P0YmAwLPZKrcdWLL3kvxrBwJkKZyHVME/4UG7eJW1ZLk6jGiFClH72gZgmpJ627rBb2QNRwda0yRqJmAmEu60RGU/lIRzNy5/OhcuLJdTHMBhuJgsZYfpJ8YI5iZ/Ky+U3LJ7A1WQutih0oJdLERPGKa+Ce
+X-MS-TrafficTypeDiagnostic: AM5PR04MB3185:
+X-Microsoft-Antispam-PRVS:
+	<AM5PR04MB3185B505534C50790D749FFFB8240@AM5PR04MB3185.eurprd04.prod.outlook.com>
+X-Exchange-Antispam-Report-Test: UriScan:(69269065821643);
+X-Exchange-Antispam-Report-CFA-Test:
+	BCL:0;PCL:0;RULEID:(6040450)(2401047)(8121501046)(5005006)(10201501046)(3002001)(3231022)(93006095)(6041248)(201703131423075)(201703061421075)(20161123564025)(20161123560025)(20161123558100)(20161123562025)(20161123555025)(2016111802025)(6043046)(6072148)(201708071742011);SRVR:AM5PR04MB3185;BCL:0;PCL:0;RULEID:(100000803101)(100110400095);SRVR:AM5PR04MB3185;
+X-Microsoft-Exchange-Diagnostics:
+	1;AM5PR04MB3185;4:q0gzuIzy1nQ0dKl2rRps+74JqmqbSLw8t0sbknVdDpgFoq7WcGB8go9z+1QgU8BlhGSe6cF8pb9QJ2qRBF2JcA1I8ndbBRiV62+e+Zxx675zkh0gAtmiYgA/CQsTI5j3bRCMaqQTEyGF5J5aLWJuSWzm09DrIhBl643wgbAluZWEfJ50/FC+QeUuW6KpsG+35ktTCX6/VYF84PujvvbRgw==
+X-Forefront-PRVS: 0503FF9A3E
+X-Forefront-Antispam-Report:
+	SFV:NSPM;SFS:(10019020)(346002)(47630400002)(189002)(199003)(50986999)(54356999)(6916009)(8746002)(6306002)(97736004)(9686003)(53936002)(236005)(4500500003)(101416001)(74316002)(861006)(11286001)(23756003)(606006)(2361001)(305945005)(42882006)(2351001)(189998001)(2906002)(23846002)(42186006)(43066004)(50466002)(68736007)(81166006)(508600001)(81156014)(9036002)(105586002)(106356001)(3450700001)(3480700004)(555874004)(33656002)(78352004)(5880100001)(551214005)(7116003)(558084003)(8666007)(6392003)(733005)(588024002)(52396003)(69596002)(5660300001)(8676002)(7846003)(8936002)(61030200001)(105646017)(48373003)(3720700003)(550700007)(42262002)(14943795004);DIR:OUT;SFP:1501;SCL:1;SRVR:AM5PR04MB3185;H:plug.worldwideprecise.net;FPR:;SPF:None;PTR:InfoNoRecords;MX:0;A:0;LANG:en;
+Received-SPF: None (protection.outlook.com: plug.worldwideprecise.net does not
+ designate permitted sender hosts)
+X-Microsoft-Exchange-Diagnostics:
+	=?iso-8859-1?Q?1;AM5PR04MB3185;23:H33lO5+GlcX31X9mp0avIphJ86NvqdBP7aWPZV3?=
+ =?iso-8859-1?Q?1lqx1muz+rwh2Mj34cnXIAFlltnz9LIfhlt2IrwD/Co109fdUlqsJOCnxj?=
+ =?iso-8859-1?Q?Jl8rsqjUiaZKRPqLIybRfhXTLMDmQimJayGlR9YQC958w06oMk533FtCxj?=
+ =?iso-8859-1?Q?zMecom7D7mjJgwUUJ/E9bDOUEZUpSpo/E6eFvMt5jSrV3PygaTsH43ILGT?=
+ =?iso-8859-1?Q?QAVLcwd1TBGAqiwbHYRTpPS7tcxtOqbGz3F/N/vOrtt2bwuX1bBfuQrb4X?=
+ =?iso-8859-1?Q?582NfshYDIi7BoXyBBIp1FbuD9VyRE9+k3/erblU0pvw2sxO2fZAQRRb5Q?=
+ =?iso-8859-1?Q?ecxLFQODQzSHJ/JReitynXialsI+lCKxc1lYg+MHCqWYdIkVYhIZ0sBJjg?=
+ =?iso-8859-1?Q?qRxiiqFSGCXX5ATp1mSJyUb5ZbeECEFPQVhOrBxKZPyT8+b4Hqv7EiQZZo?=
+ =?iso-8859-1?Q?7FYR6gugt6spC9yayyOw1iBEqgtwfmyoUTYix82vbqivashoOsPxYshhOI?=
+ =?iso-8859-1?Q?o6vyceck+a/Ctz41eRBNrsct2NSqurs/dAqN5GEwBaMjbL9cJbE6S2OYo/?=
+ =?iso-8859-1?Q?pNFUKMLPOB6n5nh6TJ/BS6XjKbtfNH8f7z9iVvH4N25UAu2sgBDt+XZvDB?=
+ =?iso-8859-1?Q?IpVrXdu/dGJIPtfBEyyKod1oFCeTv+Vh4YU/wf+gdLOAxSxuzHacJp5L7s?=
+ =?iso-8859-1?Q?pE6LoK33hyr+pVLDCT53ihjQ35YVJfwTWinCgffPCktsfmRj9vxiVc66mh?=
+ =?iso-8859-1?Q?cenRAXwPE0ONdVmcUZQW7Fs6aWOEr5/WzXvP39m0zNlAiMotHNOCFWNqph?=
+ =?iso-8859-1?Q?vUClx4GbjX6feGJ+B3WxDbUEYF36fjUGWamQ2+1gI7TtPMWjPurLA3T3id?=
+ =?iso-8859-1?Q?OwkYIGasvorFOxPt42vasPYxOLhRzbX9+HmDSz6ZJ2WTQ/K5r67VZEgz7a?=
+ =?iso-8859-1?Q?L0EbMAu9gMJ/0kQzdU1wtde0BxvJpp6QdW4YTNv4Hv1mOfoGyQi6+xJEjL?=
+ =?iso-8859-1?Q?NVoYPJBIV6M5Ci/I7sKCeoCVK2Vg6t/DmOXzWm6zpuGeLwreOCwZ/oWYc6?=
+ =?iso-8859-1?Q?9ZAIuB1vVPJgFC0qabJYYIPvkD4sNI89pOXBN1cLXkE/wk4ZCHFVIoddNZ?=
+ =?iso-8859-1?Q?vYoxNEHav2vIJUtTN83HpqO8C/iUwPhkxVcnlKT1iHJB2N4T9g/2O4rYIJ?=
+ =?iso-8859-1?Q?pqSRI4qwM2v2fabLB0NHjY1AiYLLuSabLNWN3Y4cu1xQJcrvHh+n2W0EkQ?=
+ =?iso-8859-1?Q?E08uOhtnYrVbRmDBPu35msrEHpeHkwy7RAltBinKht/W2MS5EPUUsb273f?=
+ =?iso-8859-1?Q?dyMv4m9F/Q2IVPk64UIjetRyQtix0xqADUVVJ4MPuVmG3Kl7poCoier9s3?=
+ =?iso-8859-1?Q?zVjQQPADah0OMdRMtB5tnjQbplzLa/criCrtwC4oX83ijbX7CUalWWPaXO?=
+ =?iso-8859-1?Q?ImwWyraut2DVJbTh376G7wq/H+UVVD3lmkcPchDYRF8JsXLUT1gwiJ2Owa?=
+ =?iso-8859-1?Q?00K0Mu3+yWSuwZSMVaomVkpNDQqQJoUXl3mBGerDYXbF3vZvFg1hq19fB0?=
+ =?iso-8859-1?Q?s6C7A=3D=3D?=
+X-Microsoft-Exchange-Diagnostics:
+	1;AM5PR04MB3185;6:vlwUyfebzwXqOVvKo43AHKBqc6ZFYtiN+Xn/ulevOC0TMIvECMwZuYwVsXnN2uXDmo0hmap3NphPrn1E/as2kEsj8gEMw19SJm8D8yU+SvS/sT/h3n0GX/X5DdghJC8/g1DjrbtY2xAdtYzdU4lU5IPuIjOuK1yhAFVHx8tWzksjFKC73stse5p2JGP3c/sxhumxttQAl5LlTqD3gqgijQGtN7FO4s+j9q17sTbeQozeXMQuE07tDuPAhc93CM0O;5:ILNPGKlQV3BeBodt0JnBp0iy354E0dSy02dqaKlBx9D5wu+kiGyMQQO2v4Do8pWTViB8UG3uGwqFEHsmMYUEKivhSS76cstoNFsYTomVSZtfUkqnzVUapVBMRRXBSdU1qrrYVCHbffwF0tS3t8mod4PfZIhAULZuDLlJn5cFbuQ=;24:8N3d/ub2OkpDIK+2HKB/FFjmQwsdwzcEYtBIbmTc9MYgjeENaIUFz3hZbxUCSJVLpsKFUBzCcOcn05ZkRu85CUC/RUsXl8JiAK5fZgGcyz0=;7:j+iI2AH3rmdTBwnPvky8d5iB8nbaSwebySzggY2vdHGRHw2y7HerrgTK+4KZr0VGqJTNKLUCicaxgyJ9aNlNnKx4z1dsPlGziAWV2VJZVcpTh7ws4y9OfA0phaGhMPyw1VvyUFpLDepBzKLee6fey5FWWp2nF86lh2uXHNPBctr68H78cooMuTHEfZKl7yJSIL8yQeFk/g7GY753ThCX8Dj8MyKqKN8ysx4mES04iTxCrf7vvJGf8Ft62eKMSr2S
+SpamDiagnosticOutput: 1:99
+SpamDiagnosticMetadata: NSPM
+X-OriginatorOrg: gfjukuy.antisepticwipes.net
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Nov 2017 20:08:09.5379 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id:
+	b3e68632-b64e-4304-cae1-08d535096a4d
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: eaf45416-b003-456b-a12a-a36c77444121
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM5PR04MB3185
+X-CMAE-Envelope: MS4wfMtx7zHS6ATNkB3uu3qatv9wz8gEbFExAIfed5UtuhStwOfsVcxPbCLTQ6b2k4x8nFj2J9dQqqH8TcKfzcBx+tusCbMAk7tNvN40EjDa+cP8h+BaqhC9
+ EGVY2PBnep8qAx/DxxF6vNcId2TDmpiNm8Mm1Nz7J4Ww30ev70grbY/J
+
+<center>
+  <A href=3D"https://app.adjust.com/q96t2k?campaign=3Dcommunity%20website&a=
+dgroup=3Dmobile_loggedout&creative=3Dlandingpage&redirect=3DHttps%3A%2F%2F%=
+E2%93%96%E2%93%9E%E2%93%9E.%E2%93%96%E2%93%9B%2FMuWFtp#3yHv5v09utQP8zO7929k305hnCnN1c3p01CqIzCC4v0F37Jla55Y5yE4n98uIqFhu9tPuD97YV9bTJjYATrq4YWG8Ap6cQuSP9ml6i0S7Sm5D6RHe312qZ3sRc941IGhbP0oSCWjBr82G07KNnXY9n">Hello=
+:<Br><bR>
+<ImG sRc=3D"https://app.adjust.com/q96t2k?campaign=3Dcommunity%20website&ad=
+group=3Dmobile_loggedout&creative=3Dlandingpage&redirect=3DHttps%3A%2F%2F%E=
+2%93%96%E2%93%9E%E2%93%9E.%E2%93%96%E2%93%9B%2F5cgcvv#3yHv5v09utQP8zO7929k305hnCnN1c3p01CqIzCC4v0F37Jla55Y5yE4n98uIqFhu9tPuD97YV9bTJjYATrq4YWG8Ap6cQuSP9ml6i0S7Sm5D6RHe312qZ3sRc941IGhbP0oSCWjBr82G07KNnXY9n#[150_15=
+0_naA]"></a><br>
+<A href=3D"https://app.adjust.com/q96t2k?campaign=3Dcommunity%20website&adg=
+roup=3Dmobile_loggedout&creative=3Dlandingpage&redirect=3DHttps%3A%2F%2F%E2=
+%93%96%E2%93%9E%E2%93%9E.%E2%93%96%E2%93%9B%2FiRQNuw#3yHv5v09utQP8zO7929k305hnCnN1c3p01CqIzCC4v0F37Jla55Y5yE4n98uIqFhu9tPuD97YV9bTJjYATrq4YWG8Ap6cQuSP9ml6i0S7Sm5D6RHe312qZ3sRc941IGhbP0oSCWjBr82G07KNnXY9n#[150_150=
+_naA]"><bR>
+  <ImG sRc=3D"https://app.adjust.com/q96t2k?campaign=3Dcommunity%20website&=
+adgroup=3Dmobile_loggedout&creative=3Dlandingpage&redirect=3DHttps%3A%2F%2F=
+%E2%93%96%E2%93%9E%E2%93%9E.%E2%93%96%E2%93%9B%2Ftrgy8o#3yHv5v09utQP8zO7929k305hnCnN1c3p01CqIzCC4v0F37Jla55Y5yE4n98uIqFhu9tPuD97YV9bTJjYATrq4YWG8Ap6cQuSP9ml6i0S7Sm5D6RHe312qZ3sRc941IGhbP0oSCWjBr82G07KNnXY9n#[150_=
+150_naA]"></a><br>

@@ -1,0 +1,57 @@
+[
+ {
+    "code": "victim",
+    "name": "Victim",
+    "name_plural": "Victims",
+    "description": "STIX: Victim",
+    "icon": "/tmp/crown.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#566ddb",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "status_id",
+        "name": "Status"
+      },
+            {
+        "field": "status_id",
+        "name": "Priority"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+	},
+    {
+    "code": "hoosker_doo",
+    "name": "Hoosker Doo",
+    "name_plural": "Hoosker Doos",
+    "description": "Hoosker Doo",
+    "icon": "/tmp/hooskerdoo.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#db4e4e",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "status_id",
+        "name": "Status"
+      },
+            {
+        "field": "status_id",
+        "name": "Priority"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+  }
+]
+

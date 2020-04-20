@@ -1,0 +1,89 @@
+Delivered-To: lenn.kurtzman@threatq.com
+Received: by 10.80.161.165 with SMTP id 34csp500716edk;
+        Thu, 1 March 2018 13:00:43 -0800 (PST)
+X-Google-Smtp-Source: AH8x225vqd9m9z0mCj283Qic4hqYNmotO/RsRj8SvZG4U9tQOxhYDa24b8HtcoQGw5k83QLO5bUh
+X-Received: by 10.36.121.207 with SMTP id z198mr509177itc.58.1519139083525;
+        Thu, 1 March 2018 13:00:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1519139083; cv=none;
+        d=google.com; s=arc-20160816;
+        b=tKgKowXlV09hBjFZLI+g+Gbt/C8KtxvxFye1SIjwljmTXzdyLyVK4hIE/p2bRJIhfn
+         etRgOoHolCAUkuwJ75z2AyOpEpUr+sBkITUZx1Sas83j3dg/+BUqI5ktBavDr5eN08pd
+         l7TFLm38HX+aeTHYwl0Bw1Bs8VB5ybEXORoY88aAD9p0mDvo4UQ9/QhczEYCju/VkUzS
+         g2Icl2oefQ+BcTxlj+N941QtzG2q9WDSuvA8jpC+jIjtYrCvb7KTT6sApnJ4xHfKyeTV
+         KExvJeV4dDCv2sjwrRZpo2wzxqMtZg3Ux0NbtMqHWZh1e9Q9osfp44PjGdcLwrwohgFY
+         G4gg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature:arc-authentication-results;
+        bh=kDdbhoqyV0D+TUaAoIe81+s06uSU97wh1ddW3QhVKAk=;
+        b=eN8ijtu4agc/xqincvTCnviTWCjBO9Zm3/ED6UCANoD2vzBLft/NH2zc7M0903R9CU
+         ujaU8WIQRnmtCZiLwM0MNBx9FuIvjGfxPd9l7qSvrW+8W5VtPftHQj0ACyJSg/nYjn/b
+         srgLCnaMpkTAKTWQnNdSKTo2ws4XqHj0WmWH5hpB93WIgkOQk+QYWO7EHamOMRza7XMw
+         hD1NxnNjGO4TohuRUAy5uKUJ755OWr/WvQ55y4FUDPshyDUhNKGgaqNTNcJxAnkLBKms
+         rhGRBhVe00KOUJkfQR9fLczKWfk3XkPjRczUghNtZHcQuox3N+xImINzptrLS/lFTt1M
+         TFkQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@jinfonet.com header.s=s1 header.b=NOChA1C3;
+       spf=pass (google.com: domain of bounces+1740298-01a0-leon.ward=threatq.com@email.jinfonet.com designates 168.245.42.190 as permitted sender) smtp.mailfrom=bounces+1740298-01a0-leon.ward=threatq.com@email.jinfonet.com
+Return-Path: <bounces+1740298-01a0-leon.ward=threatq.com@email.jinfonet.com>
+Received: from o16824542x190.outbound-mail.sendgrid.net (o16824542x190.outbound-mail.sendgrid.net. [168.245.42.190])
+        by mx.google.com with ESMTPS id x7si1865203ioe.263.2018.03.01.13.00.00
+        for <lenn.kurtzman@threatq.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 1 Mar 2018 07:04:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+1740298-01a0-leon.ward=threatq.com@email.jinfonet.com designates 168.245.42.190 as permitted sender) client-ip=168.245.42.190;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jinfonet.com header.s=s1 header.b=NOChA1C3;
+       spf=pass (google.com: domain of bounces+1740298-01a0-leon.ward=threatq.com@email.jinfonet.com designates 168.245.42.190 as permitted sender) smtp.mailfrom=bounces+1740298-01a0-leon.ward=threatq.com@email.jinfonet.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=jinfonet.com; h=from:to:subject:mime-version:content-type:content-transfer-encoding; s=s1; bh=zDL2dP0QUPVPCa6WYF8rpCUd2KE=; b=NOChA1C3EYWHF05qzr7EkBS 5xjQlt3ooyA5C+c6uEuD29wopAZjZii88BLRSKOVXnwbHbow8WVvD/EE0zC/e3Yi yGS1uz3Kyz+Px7fbSKz8aUlKN7VmdbBorVdlSXlLQW/nf1vVpH7j1WWTU0igBANv wRE2U+8T0usC3f74Vx8s=
+Received: by filter0014p3mdw1.sendgrid.net with SMTP id filter0014p3mdw1-19301-5A8C38FC-66
+        2018-03-01 13:00:00.975847515 +0000 UTC
+Received: from jinfonet.com (ec2-34-192-159-190.compute-1.amazonaws.com [34.192.159.190]) by ismtpd0010p1iad1.sendgrid.net (SG) with ESMTP id d9zcTKWaQiabjQXzkBhang for <leon.ward@threatq.com>; Thu, 01 Mar 2018 13:00:00.994 -0800 (PST)
+Date: Thu, 1 March 2018 13:00:00 -0800 (PST)
+From: John Czupak <the_real_johnczupak@gmail.com>
+To: Lenn Kurtzman <lenn.kurtzman@threatq.com>
+Message-ID: <5a8c38fce135e_1c9e20e92f8_157_51@app2a-mail-grave-mimic-0167.mail>
+Subject: Urgent funds transfer!
+Mime-Version: 1.0
+Content-Type: multipart/mixed; boundary="--==_mimepart_5a8c38fce3503_1c9e20e92f826875e6"; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SG-EID: NCBn3g7ygtKwrcds+U+neJUIwXMOLZOGkbxxlG2UfDaOvIxXXf32azrZ/g/I1PfHiPDubrugeeSyyU uQWrP2aTdCi45Eo8TCl7pJgaBcLqM/CR0ww3MDZPUVtZLCbgZdRs0JL+n4Rdr66CSa4+R0KaoQhxCs TorBNN2jLs5X76xupzaE3r9q+aLUnAp0v3p+MpsGJFnn0tAgt5l2ubJvac8lkBGVSP+S5lS64FI4ua c=
+X-SG-ID: sdsWZQYYILTvt8K3KJ0fmTZWH1aR/bmO66r/zVDJHwnM4pNEjhwbJMFcs5aOxB3ey23S43ZoVpqhuK 5wtrsyKtz5oQ7gTpLDCDR4IPfFFp4dKOQjJvDWU7yndpdqpVuqxh3x66Zek14gsT8dUxMeehUw8PnL jYrTBYynh5p6ThhAATm+xMf08EdfsAFnIMJSFhPKd/gPZA6F69EsHr48aj3gkyMm7sPi6wnzjlqNuC mh2ocaMppLqIMk/WeNVTIZtH66UqF+gfzLEz3S6NzI6dhRPF0LSbAeSUEgmgBtHroba0GLf4qVdaAc w93X28NEwWxXj2/CPe/23iszyOnPfW2fNbezuA6Lj9F2CaiN7Omggo9bHdLe6IlU0FwnOOWe
+
+----==_mimepart_5a8c38fce3503_1c9e20e92f826875e6
+Content-Type: multipart/related; boundary="--==_mimepart_5a8c38fce34c1_1c9e20e92f82687472"; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+----==_mimepart_5a8c38fce34c1_1c9e20e92f82687472
+Content-Type: multipart/alternative; boundary="--==_mimepart_5a8c38fce33c5_1c9e20e92f82687317"; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+----==_mimepart_5a8c38fce33c5_1c9e20e92f82687317
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Lenn,
+
+We need to urgently send some money to this account to pay some bill. This is real, totally not phishy in any way. Trust me.
+
+Phone: +1 240-477-11111
+
+----==_mimepart_5a8c38fce33c5_1c9e20e92f82687317
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div><br></div></div><d=
+iv class=3D"outreach-signature outreach-unsubscribe" style=3D"font-size: 10=
+px; color: #999;">If you'd like me to stop sending you emails, please <a hr=
+ef=3D"https://jinfonet.oxfore.com/api/mailings/unsubscribe/PMRGSZBCHIYTINRQ=
+GE2DILBCN5ZGOIR2EI4GMMJZMMYGIMRNGA2GEYJNGEYWKNRNHE2DAYJNGAZGGOLBGY4DOYZTGNR=
+CELBCONUWOIR2EJ3GEZCMLJLU4VKJN5BHEMDEKFTWU53XIUYWCRLRMZ3UE4DVGR2VK6CKINUGS2=
+SUM5VE6WJ5EJ6Q=3D=3D=3D=3D">click here</a></div><img src=3D"https://sssss=
+t.ssssss.com/sss/mailings/opened/PMRGSZBCHIYTINRQGE2DILBCN5ZGOIR2EI4GMMJZMM=
+YGIMRNGA2GEYJNGEYWKNRNHE2DAYJNGAZGGOLBGY4DOYZTGNRCELBCONUWOIR2EJDE4UDRKZ4VU=
+ZTIJRHFKUSKFUWTARRSKVBGW2LFJ4ZW26DLIRJUS2DSMNKGUMZQMM2E2UJ5EJ6Q=3D=3D=3D=3D=
+.gif" alt=3D"" width=3D"1" height=3D"1">
+----==_mimepart_5a8c38fce33c5_1c9e20e92f82687317--
+----==_mimepart_5a8c38fce34c1_1c9e20e92f82687472--
+----==_mimepart_5a8c38fce3503_1c9e20e92f826875e6--
+

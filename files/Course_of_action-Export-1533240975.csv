@@ -1,0 +1,23 @@
+course_of_action_id,course_of_action_created_at,source_updated_at,source_source_id,source_type,type,source_creator_source_id,course_of_action_value,tags,source_created_at,course_of_action_updated_at,course_of_action_published_at,course_of_action_touched_at,id,source_id,source_reference_id,source_published_at,source_name,document_type
+22,2018-06-05T15:57:10Z,,,,parent,,Watering hole,,,2018-06-05T15:57:10Z,2018-06-05T15:57:10Z,2018-06-05T18:24:05.937Z,22,,,,,course_of_action
+21,2018-06-05T15:56:56Z,,,,parent,,.bash_profile and .bashrc,,,2018-06-05T15:56:56Z,2018-06-05T15:56:56Z,2018-06-05T15:56:56.538Z,21,,,,,course_of_action
+20,2018-06-05T15:56:42Z,,,,parent,,Accessibility Features,,,2018-06-05T15:56:42Z,2018-06-05T15:56:42Z,2018-06-05T15:56:42.760Z,20,,,,,course_of_action
+19,2018-06-05T15:56:29Z,,,,parent,,AppCert DLLs,,,2018-06-05T15:56:29Z,2018-06-05T15:56:29Z,2018-06-05T15:56:29.035Z,19,,,,,course_of_action
+18,2018-06-05T15:56:15Z,,,,parent,,AppInit DLLs,,,2018-06-05T15:56:15Z,2018-06-05T15:56:15Z,2018-06-05T15:56:15.874Z,18,,,,,course_of_action
+17,2018-06-05T15:56:02Z,,,,parent,,Create Account,,,2018-06-05T15:56:02Z,2018-06-05T15:56:02Z,2018-06-05T15:56:02.673Z,17,,,,,course_of_action
+16,2018-06-05T15:55:49Z,,,,parent,,Browser Extensions,,,2018-06-05T15:55:49Z,2018-06-05T15:55:49Z,2018-06-05T15:55:49.387Z,16,,,,,course_of_action
+15,2018-06-05T15:55:35Z,,,,parent,,DLL Search Order Hijacking,,,2018-06-05T15:55:35Z,2018-06-05T15:55:35Z,2018-06-05T15:55:35.916Z,15,,,,,course_of_action
+14,2018-06-05T15:55:21Z,,,,parent,,Multi-hop Proxy,,,2018-06-05T15:55:21Z,2018-06-05T15:55:21Z,2018-06-05T15:55:21.894Z,14,,,,,course_of_action
+13,2018-06-05T15:55:08Z,,,,parent,,Poison Ivy,,,2018-06-05T15:55:08Z,2018-06-05T15:55:08Z,2018-06-05T15:55:08.534Z,13,,,,,course_of_action
+12,2018-06-05T15:54:55Z,,,,parent,,Zeus,,,2018-06-05T15:54:55Z,2018-06-05T15:54:55Z,2018-06-05T15:54:55.324Z,12,,,,,course_of_action
+11,2018-06-05T15:54:42Z,,,,parent,,njRAT,,,2018-06-05T15:54:42Z,2018-06-05T15:54:42Z,2018-06-05T15:54:42.396Z,11,,,,,course_of_action
+10,2018-06-05T15:54:29Z,,,,parent,,Alureon,,,2018-06-05T15:54:29Z,2018-06-05T15:54:29Z,2018-06-05T15:54:29.529Z,10,,,,,course_of_action
+9,2018-06-05T15:54:16Z,,,,parent,,Andromeda,,,2018-06-05T15:54:16Z,2018-06-05T15:54:16Z,2018-06-05T15:54:16.463Z,9,,,,,course_of_action
+8,2018-06-05T15:54:03Z,,,,parent,,BEASTMODE,,,2018-06-05T15:54:03Z,2018-06-05T15:54:03Z,2018-06-05T15:54:03.341Z,8,,,,,course_of_action
+7,2018-06-05T15:53:50Z,,,,parent,,BabylonRAT,,,2018-06-05T15:53:50Z,2018-06-05T15:53:50Z,2018-06-05T15:53:50.195Z,7,,,,,course_of_action
+6,2018-06-05T15:53:36Z,,,,parent,,Conficker,,,2018-06-05T15:53:36Z,2018-06-05T15:53:36Z,2018-06-05T15:53:37.003Z,6,,,,,course_of_action
+5,2018-06-05T15:53:23Z,,,,parent,,Backoff POS,,,2018-06-05T15:53:23Z,2018-06-05T15:53:23Z,2018-06-05T15:53:23.937Z,5,,,,,course_of_action
+4,2018-06-05T15:53:10Z,,,,parent,,CommFake,,,2018-06-05T15:53:10Z,2018-06-05T15:53:10Z,2018-06-05T15:53:10.750Z,4,,,,,course_of_action
+3,2018-06-05T15:52:57Z,,,,parent,,SANDTRAP,,,2018-06-05T15:52:57Z,2018-06-05T15:52:57Z,2018-06-05T15:52:57.630Z,3,,,,,course_of_action
+2,2018-06-05T15:52:44Z,,,,parent,,BlackEnergy,tag RDYl,,2018-06-05T15:52:44Z,2018-06-05T15:52:44Z,2018-06-05T15:52:44.572Z,2,,,,,course_of_action
+1,2018-06-05T15:52:31Z,,,,parent,,Permission Groups Discovery,tag djom,,2018-06-05T15:52:31Z,2018-06-05T15:52:31Z,2018-06-05T15:52:31.043Z,1,,,,,course_of_action

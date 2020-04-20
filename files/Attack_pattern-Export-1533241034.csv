@@ -1,0 +1,67 @@
+created_at,value,type,status,tags,sources
+2018-06-06T13:39:06Z,Parameter Injection,parent,,,CAPEC
+2018-06-06T13:38:41Z,Inject Unexpected Items,parent,,,CAPEC
+2018-06-06T13:37:26Z,TCP Timestamp Probe,parent,,,CAPEC
+2018-06-06T13:35:01Z,IP (DF) 'Don't Fragment Bit' Echoing Probe,parent,,,CAPEC
+2018-06-06T13:32:31Z,IP 'ID' Echoed Byte-Order Probe,parent,,,CAPEC
+2018-06-06T13:28:32Z,IP ID Sequencing Probe,parent,,,CAPEC
+2018-06-06T13:27:44Z,Cryptanalysis of Cellular Encryption,parent,,,CAPEC
+2018-06-06T13:27:11Z,Padding Oracle Crypto Attack,parent,,,CAPEC
+2018-06-06T13:26:40Z,Compromising Emanations Attack,parent,,,CAPEC
+2018-06-06T13:26:15Z,Electromagnetic Side-Channel Attack,parent,,,CAPEC
+2018-06-06T13:25:50Z,Analysis of Packet Timing and Sizes,parent,,,CAPEC
+2018-06-06T13:24:07Z,Smudge Attack,parent,,,CAPEC
+2018-06-06T13:23:40Z,Retrieve Embedded Sensitive Data,parent,,,CAPEC
+2018-06-06T13:22:53Z,Lifting Sensitive Data Embedded in Cache,parent,,,CAPEC
+2018-06-06T13:22:23Z,Read Sensitive Strings Within an Executable,parent,,,CAPEC
+2018-06-06T13:21:56Z,Reverse Engineer an Executable to Expose Assumed Hidden Functionality or Content,parent,,,CAPEC
+2018-06-06T13:18:24Z,Security Software Footprinting,parent,,,CAPEC
+2018-06-06T13:15:36Z,Owner Footprinting,parent,,,CAPEC
+2018-06-06T13:15:03Z,Group Permission Footprinting,parent,,,CAPEC
+2018-06-06T13:14:08Z,Account Footprinting,parent,,,CAPEC
+2018-06-06T13:13:12Z,Services Footprinting,parent,,,CAPEC
+2018-06-06T13:12:36Z,Process Footprinting,parent,,,CAPEC
+2018-06-06T13:07:46Z,Explore for Predictable Temporary File Names,parent,,,CAPEC
+2018-06-06T12:58:07Z,Activity Hijack,parent,,,CAPEC
+2018-06-06T12:57:12Z,Intent Intercept,parent,,,CAPEC
+2018-06-06T12:56:36Z,Sniff Application Code,parent,,,CAPEC
+2018-06-06T12:56:07Z,Cellular Traffic Intercept,parent,,,CAPEC
+2018-06-06T12:49:32Z,Sniffing Network Traffic,parent,,,CAPEC
+2018-06-06T12:49:12Z,Capture Credentials via Keylogger,parent,,,CAPEC
+2018-06-06T12:48:47Z,Dump Password Hashes,parent,,,CAPEC
+2018-06-06T12:48:20Z,Probe Application Memory,parent,,,CAPEC
+2018-06-06T12:47:51Z,Probe iOS Screenshots,parent,,,CAPEC
+2018-06-06T12:47:31Z,WSDL Scanning,parent,,,CAPEC
+2018-06-06T12:47:01Z,Cross-Domain Search Timing,parent,,,CAPEC
+2018-06-06T12:46:21Z,Fuzzing for garnering other adjacent user/sensitive data,parent,,,CAPEC
+2018-06-06T12:45:48Z,Fuzzing and observing application log data/errors for application mapping,parent,,,john wick|CAPEC
+2018-06-06T12:45:06Z,"Fuzzing for garnering J2EE/.NET-based stack traces, for application mapping",parent,,,CAPEC
+2018-06-06T12:44:34Z,Directory Indexing,parent,,,CAPEC
+2018-06-06T12:43:40Z,Accessing/Intercepting/Modifying HTTP Cookies,parent,,,CAPEC
+2018-06-06T12:43:05Z,Screen Temporary Files for Sensitive Information,parent,,,CAPEC
+2018-06-06T12:42:42Z,Detect Unpublicized Web Services,parent,,,CAPEC
+2018-06-06T12:42:18Z,Detect Unpublicized Web Pages,parent,,,CAPEC
+2018-06-06T12:41:41Z,Traceroute Route Enumeration,parent,,,CAPEC
+2018-06-06T12:41:17Z,DNS Zone Transfers,parent,,,CAPEC
+2018-06-06T12:40:53Z,Enumerate Mail Exchange (MX) Records,parent,,,CAPEC
+2018-06-06T12:40:26Z,UDP Scan,parent,,,CAPEC
+2018-06-06T12:40:02Z,TCP RPC Scan,parent,,,Super@threatq.com
+2018-06-06T12:39:29Z,TCP Window Scan,parent,,,CAPEC
+2018-06-06T12:38:56Z,TCP ACK Scan,parent,,,CAPEC
+2018-06-06T12:38:20Z,TCP Null Scan,parent,,,CAPEC
+2018-06-06T12:37:54Z,TCP Xmas Scan,parent,,,CAPEC
+2018-06-06T12:37:29Z,TCP FIN scan,parent,,,CAPEC
+2018-06-06T12:37:01Z,TCP Connect Scan,parent,,,CAPEC
+2018-06-06T12:36:14Z,TCP SYN Scan,parent,,,CAPEC
+2018-06-06T12:30:44Z,Signal Strength Tracking,parent,,,CAPEC
+2018-06-06T12:30:13Z,Cellular Broadcast Message Request,parent,,,CAPEC
+2018-06-06T12:29:47Z,WiFi SSID Tracking,parent,,,CAPEC
+2018-06-06T12:29:05Z,WiFi MAC Address Tracking,parent,,,CAPEC
+2018-06-06T12:28:24Z,TCP SYN Ping,parent,,,CAPEC
+2018-06-06T12:27:57Z,UDP Ping,parent,,,CAPEC
+2018-06-06T12:27:36Z,TCP ACK Ping,parent,,,CAPEC
+2018-06-06T12:27:04Z,ICMP Information Request,parent,,,CAPEC
+2018-06-06T12:26:38Z,ICMP Timestamp Request,parent,,,CAPEC
+2018-06-06T12:26:08Z,ICMP Address Mask Request,parent,,,CAPEC
+2018-06-06T12:25:44Z,ICMP Echo Request Ping,parent,,,CAPEC
+2018-06-06T12:25:12Z,Footprinting,parent,,,CAPEC

@@ -1,0 +1,120 @@
+Return-Path: <fabianaalmiron@soremer.com>
+Delivered-To: clinthart@comcast.net
+Received: from dovdir2-asc-06o.email.comcast.net ([69.252.207.12])
+	by dovback2-asc-15o.email.comcast.net with LMTP id EAyuA8Jn0FqxCQAAGSZ7zA
+	for <clinthart@comcast.net>; Fri, 13 Apr 2018 08:18:10 +0000
+Received: from dovpxy-asc-13o.email.comcast.net ([69.252.207.12])
+	by dovdir2-asc-06o.email.comcast.net with LMTP id WNiKA8Jn0FrVHQAA3MlXFA
+	; Fri, 13 Apr 2018 08:18:10 +0000
+Received: from resimta-ch2-12v.sys.comcast.net ([69.252.207.12])
+	by dovpxy-asc-13o.email.comcast.net with LMTP id qD7FML9n0FrwLAAAKsibjw
+	; Fri, 13 Apr 2018 08:18:10 +0000
+Received: from smtp35.allytech.com ([200.68.105.35])
+	by resimta-ch2-12v.sys.comcast.net with SMTP
+	id 6tuJfzSLGavDy6tuKfa9XE; Fri, 13 Apr 2018 08:18:09 +0000
+X-CAA-SPAM: N00001
+X-Authority-Analysis: v=2.3 cv=doH19Wo4 c=1 sm=1 tr=0 p=Lk1LmhHnAAAA:8
+ a=mRxGbaWme3DuNTUVcp758w==:117 a=mRxGbaWme3DuNTUVcp758w==:17
+ a=Z0qTDMZm8oIA:10 a=khwyK8DuSVkA:10 a=Kd1tUaAdevIA:10 a=QYjXa0pGGWIA:10
+ a=O0zBmYcMAAAA:8 a=it52m7_1AAAA:8 a=ogvxa4SGbICr-O6Yh94A:9
+ a=6atUsUfEgLWSI9Gk:21 a=_W_S_7VecoQA:10 a=-FEs8UIgK8oA:10 a=NWVoK91CQyQA:10
+ a=UfCdYl3NWfbDYn0YqE2g:22 a=mRPBZ8S_gCsxOaUV2biF:22
+X-Xfinity-Message-Heuristics: IPv6:N;TLS=1;SPF=1;DMARC=
+X-AuthUser: fabianaalmiron@soremer.com
+X-DomainKeys: Sendmail DomainKeys Filter v1.0.2 smtp35.allytech.com w3D8Cqxn007728
+DomainKey-Signature: a=rsa-sha1; s=main; d=soremer.com; c=nofws; q=dns;
+	h=message-id:from:to:subject:date:mime-version:content-type:
+	content-transfer-encoding:x-priority:x-mailer:x-mimeole;
+	b=eDbJZKrEoGHR/uKRv+EbGv0bjoaqAsYKpufw7XO4dF/6A8PPifuYsyMbIlqPsaiJj
+	NmS5TxKqeENPS2tHCFS2A==
+Received: from WIN-113SAP4RMCB (server.abboitt.com [109.200.24.36] (may be forged))
+	(authenticated bits=0)
+	by smtp35.allytech.com (8.15.2/8.15.2) with ESMTPSA id w3D8Cqxn007728
+	(version=TLSv1 cipher=DES-CBC3-SHA bits=112 verify=NO)
+	for <clinthart@comcast.net>; Fri, 13 Apr 2018 05:12:54 -0300
+Message-ID: <0305b1ba-43203-084a3457317708@win-113sap4rmcb>
+From: "Service@netflix.com" <fabianaalmiron@soremer.com>
+To: clinthart@comcast.net
+Subject: Reminder : Your membership has been suspended
+Date: Fri, 13 Apr 2018 08:16:59 -0700
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-Mailer: Hotmail
+X-MimeOLE: Hotmail
+X-CMAE-Envelope: MS4wfCPcOLiCIYGUC1LeE3++YL6fSDg6KuRjtboy6PdXI0Hg60RoqM0TmlXXvrVdBlHZtH+hsw2q0WkpXlph/DasoZQ3XKHwNmrKXMwS3kCKMHw6x1kRPQm7
+ xSYJ8n3bzqlkKcEYfaA4AJqeW2rY/x0MmQYwvh9UK6SrZkm5RdIIL2ywgsk5l8mqAUHK6hKygICq2w==
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="container" style="background-color: rgb(234, 234, 234); margin-top: 0px; color: rgb(34, 31, 31); font-family: Helvetica, Arial, sans; font-size: 15px;" width="100%">
+	<tbody>
+		<tr>
+			<td align="center">
+			<table border="0" cellpadding="0" cellspacing="0" class="shell" width="600">
+				<tbody>
+					<tr>
+						<td bgcolor="#ffffff" class="content-shell" style="background: url(&quot;http://cdn.nflximg.com/us/email/hitch/netflix-crop.png&quot;) no-repeat rgb(255, 255, 255);">
+						<table border="0" cellpadding="0" cellspacing="0" class="content" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="logo" style="padding: 46px 0px 0px;"><a href="https://www.netflix.com/browse?lnktrk=EMP&amp;g=4DBFE37DA02170541A5B1238295176A264551C95&amp;lkid=URL_HOME" rel="noreferrer"><img align="center" alt="Netflix" src="http://cdn.nflximg.com/us/email/logo/newDesign/logo_v2.png" style="border: none; outline: none;" width="145" /></a></td>
+								</tr>
+								<tr>
+									<td class="copy" style="padding: 22px 90px 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="toaster-shell" style="padding: 0px 0px 0px 90px; margin: 0px; background-color: rgb(0, 113, 235);">
+									<table border="0" cellpadding="0" cellspacing="0" class="toaster-table" style="color: rgb(255, 255, 255); font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; font-size: 16px;" width="100%">
+										<tbody>
+											<tr>
+												<td class="toaster-alert" style="padding: 0px 4px 0px 0px;" width="19"><img alt="[!!]" src="http://cdn.nflximg.com/us/email/toaster/alert20.png" style="border: none; outline: none; border-collapse: collapse; display: block;" width="19" /></td>
+												<td class="toaster" style="padding: 12px 0px;">Your account is on hold.</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="headline" style="font-weight: bold; font-size: 32px; line-height: 36px; padding: 40px 90px 10px;">Update your account to get back to watching</td>
+								</tr>
+								<tr>
+									<td class="copy" style="padding: 22px 90px 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased;">Hi,</td>
+								</tr>
+								<tr>
+									<td class="copy" style="padding: 22px 90px 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased;">We&#39;re having some trouble with your current billing information. We&#39;ll try again, but in the meantime you may want to update your payment details.</td>
+								</tr>
+								<tr>
+									<td class="button-shell" style="padding: 22px 90px 0px;">
+									<table border="0" cellpadding="0" cellspacing="0" class="button red">
+										<tbody>
+											<tr>
+												<td style="color: rgb(255, 255, 255); background-color: rgb(229, 9, 20); padding: 10px 16px; max-width: 265px; border-radius: 2px;"><a class="button-link" href="http://sebisoxo.beget.tech/E4DR5T6Y78UR5T6Y78URFTGY7FGYHU/" rel="noreferrer" style="color: rgb(255, 255, 255); font-size: 16px; line-height: 24px; text-align: center; text-decoration-line: none; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; letter-spacing: 0.025em;">UPDATE ACCOUNT NOW</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="copy" style="padding: 22px 90px 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased;">Need help? We&rsquo;re here if you need it. Visit the&nbsp;<a href="https://help.netflix.com/support/2065?lnktrk=EMP&amp;g=4DBFE37DA02170541A5B1238295176A264551C95&amp;lkid=URL_HELP" rel="noreferrer" style="font-family: Helvetica, Arial, sans;">Help Center</a>&nbsp;or&nbsp;<a href="https://help.netflix.com/contactus?lnktrk=EMP&amp;g=4DBFE37DA02170541A5B1238295176A264551C95&amp;lkid=URL_CONTACT" rel="noreferrer" style="font-family: Helvetica, Arial, sans;">contact us</a>&nbsp;now.</td>
+								</tr>
+								<tr>
+									<td class="copy" style="padding: 22px 90px 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; font-size: 18px; line-height: 24px; -webkit-font-smoothing: antialiased;">&ndash;Your friends at Netflix</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+

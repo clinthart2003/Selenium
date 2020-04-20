@@ -1,0 +1,26 @@
+[
+ {
+    "code": "testing",
+    "name": "Testing",
+    "name_plural": "Testing",
+    "description": "STIX: Testing",
+    "icon": "/tmp/crown.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#566ddb",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "status_id",
+        "name": "Status"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+ }
+]
+

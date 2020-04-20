@@ -1,0 +1,226 @@
+[
+  {
+    "code": "attack_pattern",
+    "name": "Attack Pattern",
+    "name_plural": "Attack Patterns",
+    "description": "STIX: Attack Pattern",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/attackpattern.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#db4e4e",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+  },
+  {
+    "code": "campaign",
+    "name": "Campaign",
+    "name_plural": "Campaigns",
+    "description": "STIX: Campaign",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/campaign.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#db4e4e",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      },
+      {
+        "field": "objective",
+        "name": "Objective",
+        "definition": "text",
+        "required": "No"
+      },
+      {
+        "field": "started_at",
+        "name": "First Seen"
+      },
+      {
+        "field": "ended_at",
+        "name": "Last Seen"
+      }
+    ]
+  },
+  {
+    "code": "course_of_action",
+    "name": "Course of Action",
+    "name_plural": "Courses of Action",
+    "description": "STIX: Course of Action",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/courseofaction.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#566ddb",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+  },
+  {
+    "code": "identity",
+    "name": "Identity",
+    "name_plural": "Identities",
+    "description": "STIX: Identity",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/identity.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#566ddb",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      },
+      {
+        "field": "contact_information",
+        "name": "Contact Information",
+        "definition": "text",
+        "required": "No"
+      }
+    ]
+  },
+  {
+    "code": "intrusion_set",
+    "name": "Intrusion Set",
+    "name_plural": "Intrusion Sets",
+    "description": "STIX: Intrusion Set",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/intrusionset.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#e89212",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      },
+      {
+        "field": "started_at",
+        "name": "First Seen"
+      },
+      {
+        "field": "ended_at",
+        "name": "Last Seen"
+      }
+    ]
+  },
+  {
+    "code": "malware",
+    "name": "Malware",
+    "name_plural": "Malware",
+    "description": "STIX: Malware",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/malware.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#db4e4e",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+  },
+  {
+    "code": "report",
+    "name": "Report",
+    "name_plural": "Reports",
+    "description": "STIX: Report",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/report.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#74afdc",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+  },
+  {
+    "code": "stix_pattern",
+    "name": "STIX Indicator Pattern",
+    "name_plural": "STIX Indicator Patterns",
+    "description": "STIX: Indicator Pattern",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/stix_pattern.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#e89212",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      },
+      {
+        "field": "pattern",
+        "name": "Pattern",
+        "definition": "text",
+        "required": "No"
+      }
+    ]
+  },
+  {
+    "code": "tool",
+    "name": "Tool",
+    "name_plural": "Tools",
+    "description": "STIX: Tool",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/tool.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#e89212",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+  },
+  {
+    "code": "vulnerability",
+    "name": "Vulnerability",
+    "name_plural": "Vulnerabilities",
+    "description": "STIX: Vulnerability",
+    "icon": "/var/www/api/database/seeds/data/icons/images/custom_objects/vulnerability.svg",
+    "fg_color": "#ffffff",
+    "bg_color": "#db4e4e",
+    "fields": [
+      {
+        "field": "value",
+        "name": "Name"
+      },
+      {
+        "field": "description",
+        "name": "Description"
+      }
+    ]
+  }
+]

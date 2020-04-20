@@ -1,0 +1,40 @@
+Delivered-To: ted.cruz@geocities.com
+Received: by 10.129.28.212 with SMTP id c203csp2925824ywc;
+        Wed, 23 Nov 2016 10:40:32 -0800 (PST)
+X-Received: by 10.200.42.93 with SMTP id l29mr4517280qtl.289.1479926432559;
+        Wed, 23 Nov 2016 10:40:32 -0800 (PST)
+Return-Path: <v-jhhjaa_bnhkngoagj_dobipkdo_dobipkdo_a@bounce.thecolorrun.mkt7626.com>
+Received: from mail7027.thecolorrun.mkt7626.com (mail7027.thecolorrun.mkt7626.com. [74.121.49.239])
+        by mx.google.com with ESMTPS id t77si20036639qkt.160.2016.11.23.10.40.31
+        for <tedcruz@senate.gov>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Nov 2016 10:40:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of v-jhhjaa_bnhkngoagj_dobipkdo_dobipkdo_a@bounce.thecolorrun.mkt7626.com designates 74.121.49.239 as permitted sender) client-ip=74.121.49.239;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of v-jhhjaa_bnhkngoagj_dobipkdo_dobipkdo_a@bounce.thecolorrun.mkt7626.com designates 74.121.49.239 as permitted sender) smtp.mailfrom=v-jhhjaa_bnhkngoagj_dobipkdo_dobipkdo_a@bounce.thecolorrun.mkt7626.com
+Received: by mail7027.thecolorrun.mkt7626.com id h6nha019if4a for <tedcruz@senate.gov>; Wed, 23 Nov 2016 14:14:42 +0000 (envelope-from <v-jhhjaa_bnhkngoagj_dobipkdo_dobipkdo_a@bounce.thecolorrun.mkt7626.com>)
+Date: Wed, 23 Nov 2016 14:14:42 +0000 (GMT)
+From: The Color Run Store <support@thecolorrun.com>
+Reply-To: support@thecolorrun.com
+To: tedcruz@senate.gov
+Message-ID: <1637119122.597242441479910482336.JavaMail.app@rbg23.atlis1>
+Subject: Black Friday Early Access
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+    boundary="----=_Part_160705_333302079.1479910467705"
+x-mid: 9926912
+x-rpcampaign: sp9926912
+Feedback-ID: pod2_26228_9926912_1041824318:pod2_26228:ibmsilverpop
+x-job: 9926912
+x-orgId: 26228
+List-Unsubscribe: <mailto:v-jhhjaa_bnhkngoagj_dobipkdo_dobipkdo_a@bounce.thecolorrun.mkt7626.com?subject=Unsubscribe>
+------=_Part_160705_333302079.1479910467705
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>The Color Run Store<sup><span style="font-size:8px;">TM</span></sup></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+<meta name="format-detection" content="telephone=no" />
