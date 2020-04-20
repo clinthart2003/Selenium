@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+{font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+iframe {
+  display: block;       /* iframes are inline by default */
+  border: none;         /* Reset default border */
+  height: 100vh;        /* Viewport-relative units */
+  width: 100vw;
+}
+
+</style>
+</head>
+<body>
+
+<p>ThreatQ Performance graphs </p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openGraph(event, 'Average Load')">Average Load</button>
+  <button class="tablinks" onclick="openGraph(event, 'System Memory')">System Memory</button>
+  <button class="tablinks" onclick="openGraph(event, 'Disk IO')">Disk IO</button>
+  <button class="tablinks" onclick="openGraph(event, 'MySQL')">MySQL</button>
+  <button class="tablinks" onclick="openGraph(event, 'Solr')">Solr</button>
+  <button class="tablinks" onclick="openGraph(event, 'TQController')">TQController</button>
+  <button class="tablinks" onclick="openGraph(event, 'Dynamo')">Dynamo</button>
+  <button class="tablinks" onclick="openGraph(event, 'Journald')">Journald</button>
+</div>
+
+<div id="Average Load" class="tabcontent">
+        <form id="form" name="form" method="post" action="">
+		<label>
+			Select A Graph:
+			<select name="graph" id="graph" onchange="setIframeSource('graph',  'iframe')">
+				<option value="./blank.html">Select a graph ...</option>
+				<option value="./qa-gold01_Average Load.html">qa-gold01</option>
+				<option value="./430-ova04_Average Load.html">430-ova03</option>
+			</select>
+		</label>
+		</form>
+  <iframe id="iframe" src ="430-ova04_Average Load.html"></iframe>
+</div>
+
+<div id="System Memory" class="tabcontent">
+        <form id="form1" name="form1" method="post" action="">
+		<label>
+			Select A Graph:
+			<select name="graph1" id="graph1" onchange="setIframeSource('graph1',  'iframe1')">
+				<option value="./blank.html">Select a graph ...</option>
+				<option value="./qa-gold01_KiB Mem.html">qa-gold01</option>
+				<option value="./430-ova04_KiB Mem.html">430-ova03</option>
+			</select>
+		</label>
+		</form>
+    <iframe id="iframe1" src ="430-ova04_KiB Mem.html"></iframe>
+</div>
+
+<div id="Disk IO" class="tabcontent">
+        <form id="form2" name="form2" method="post" action="">
+		<label>
+			Select A Graph:
+			<select name="graph2" id="graph2" onchange="setIframeSource('graph2',   'iframe2')">
+				<option value="./blank.html">Select a graph ...</option>
+				<option value="./qa-gold01_IOStat.html">qa-gold01</option>
+				<option value="./430-ova04_IOStat.html">430-ova03</option>
+			</select>
+		</label>
+		</form>
+    <iframe id="iframe2" src ="430-ova04_IOStat.html"></iframe>
+</div>
+
+<div id="MySQL" class="tabcontent">
+        <form id="form3" name="form3" method="post" action="">
+		<label>
+			Select A Graph:
+			<select name="graph3" id="graph3" onchange="setIframeSource('graph3', 'iframe3')">
+				<option value="./blank.html">Select a graph ...</option>
+				<option value="./qa-gold01_mysqld.html">qa-gold01</option>
+				<option value="./430-ova04_mysqld.html">430-ova03</option>
+			</select>
+		</label>
+		</form>
+    <iframe id="iframe3" src ="430-ova04_mysqld.html"></iframe>
+</div>
+
+<div id="Solr" class="tabcontent">
+        <form id="form4" name="form4" method="post" action="">
+		<label>
+			Select A Graph:
+			<select name="graph4" id="graph4" onchange="setIframeSource('graph4',   'iframe4')">
+				<option value="./blank.html">Select a graph ...</option>
+				<option value="./qa-gold01_solr.html">qa-gold01</option>
+				<option value="./430-ova04_solr.html">430-ova03</option>
+			</select>
+		</label>
+		</form>
+    <iframe id="iframe4" src ="430-ova04_solr.html"></iframe>
+</div>
+
+<div id="TQController" class="tabcontent">
+        <form id="form5" name="form5" method="post" action="">
+		<label>
+			Select A Graph:
+			<select name="graph5" id="graph5" onchange="setIframeSource('graph5',   'iframe5')">
+				<option value="./blank.html">Select a graph ...</option>
+				<option value="./qa-gold01_tqcontroller.html">qa-gold01</option>
+				<option value="./430-ova04_tqcontroller.html">430-ova03</option>
+			</select>
+		</label>
+		</form>
+    <iframe id="iframe5" src ="430-ova04_tqcontroller.html"></iframe>
+</div>
+
+<div id="Dynamo" class="tabcontent">
+        <form id="form6" name="form6" method="post" action="">
+		<label>
+			Select A Graph:
+			<select name="graph6" id="graph6" onchange="setIframeSource('graph6',   'iframe6')">
+				<option value="./blank.html">Select a graph ...</option>
+				<option value="./qa-gold01_dynamo.html">qa-gold01</option>
+				<option value="./430-ova04_dynamo.html">430-ova03</option>
+			</select>
+		</label>
+		</form>
+    <iframe id="iframe6" src ="430-ova04_dynamo.html"></iframe>
+</div>
+
+<div id="Journald" class="tabcontent">
+        <form id="form7" name="form7" method="post" action="">
+		<label>
+			Select A Graph:
+			<select name="graph7" id="graph7" onchange="setIframeSource('graph7', 'iframe7')">
+				<option value="./blank.html">Select a graph ...</option>
+				<option value="./qa-gold01_systemd-journald.html">qa-gold01</option>
+				<option value="./430-ova04_systemd-journald.html">430-ova03</option>
+			</select>
+		</label>
+		</form>
+    <iframe id="iframe7" src ="430-ova04_systemd-journald.html"></iframe>
+</div>
+
+<script>
+
+function openGraph(evt, graphName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(graphName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+    function setIframeSource(graph, frame) {
+        var theSelect = document.getElementById(graph);
+        var theIframe = document.getElementById(frame);
+        var theUrl;
+
+        theUrl = theSelect.options[theSelect.selectedIndex].value;
+        theIframe.src = theUrl;
+        }
+
+</script>
+
+</body>
+</html>

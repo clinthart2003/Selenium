@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title>TQ Memory Stats</title>
+<style>
+iframe {
+display: block;       /* iframes are inline by default */
+border: none;         /* Reset default border */
+height: 85vh;        /* Viewport-relative units */
+width: 90vw;
+}
+</style>
+</head>
+<body>
+		<h1>ThreatQ Performance Metric</h1>
+   <div class="select-container"></div>
+   <iframe id="myIframe" src="./blank.html"></iframe>
+
+  <script src="http://d3js.org/d3.v3.js"></script>
+
+  <script>
+
+  d3.csv("graphList.csv", function(error, data) {
+    var select = d3.select(".select-container")
+      .append("select");
+
+    select
+      .on("change", function(d) {
+        var theSelect = d3.select(this).property("value");
+        var theIframe = document.getElementById('myIframe');
+        var theUrl;
+
+        theUrl = theSelect
+        theIframe.src = theUrl;
+      });
+
+    select.selectAll("option")
+      .data(data)
+      .enter()
+        .append("option")
+        .attr("value", function (d) { return d.value; })
+        .text(function (d) { return d.label; });
+  });
+  </script>
+
+</body>
+</html>
