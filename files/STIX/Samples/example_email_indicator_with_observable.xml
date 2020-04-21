@@ -1,0 +1,73 @@
+<stix:STIX_Package
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+    xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+    xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
+    xmlns:example="http://example.com"
+    xmlns:incident="http://stix.mitre.org/Incident-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+    http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+    http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+    http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd
+    http://cybox.mitre.org/objects#EmailMessageObject-2 http://cybox.mitre.org/XMLSchema/objects/Email_Message/2.1/Email_Message_Object.xsd
+    http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+    http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd
+    http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+    http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+    http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd" id="example:Package-7c034026-006f-4818-a182-c3eb4fb952a1" version="1.1.1" timestamp="2014-07-31T19:17:25.725000+00:00">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="example:Observable-e4387d52-bbc0-4a26-a388-5f2196423e7c">
+            <cybox:Observable_Source>
+                <cyboxCommon:Time>
+                    <cyboxCommon:Received_Time>2014-07-31T19:17:25.725000+00:00</cyboxCommon:Received_Time>
+                </cyboxCommon:Time>
+            </cybox:Observable_Source>
+            <cybox:Object id="example:Object-4d8b95e1-747d-4859-b53b-8fe84bb47718">
+                <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                    <EmailMessageObj:Header>
+                        <EmailMessageObj:To>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>rand321@victim.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:To>
+                        <EmailMessageObj:From xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                            <AddressObj:Address_Value>rand123@malicious.com</AddressObj:Address_Value>
+                        </EmailMessageObj:From>
+                        <EmailMessageObj:Subject>Sweepstakes Winner</EmailMessageObj:Subject>
+                    </EmailMessageObj:Header>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-94586129-dd36-4839-b71c-c3e0fdcf68d7" timestamp="2014-07-31T19:18:11.792000+00:00" xsi:type='indicator:IndicatorType' negate="false" version="2.1.1">
+            <indicator:Title>Malicious E-mail Subject Line</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malicious E-mail</indicator:Type>
+            <indicator:Observable id="example:Observable-7501c7e5-e886-46b4-a5d0-115063e66bdb">
+                <cybox:Object id="example:EmailMessage-6ec7f184-6552-42a7-9d77-95ae9548b159">
+                    <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                        <EmailMessageObj:Header>
+                            <EmailMessageObj:Subject condition="Equals">Sweepstakes Winner</EmailMessageObj:Subject>
+                        </EmailMessageObj:Header>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+            <indicator:Sightings>
+                <indicator:Sighting>
+                    <indicator:Related_Observables>
+                        <indicator:Related_Observable>
+                            <stixCommon:Observable idref="example:Observable-e4387d52-bbc0-4a26-a388-5f2196423e7c" />
+                        </indicator:Related_Observable>
+                    </indicator:Related_Observables>
+                </indicator:Sighting>
+            </indicator:Sightings>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

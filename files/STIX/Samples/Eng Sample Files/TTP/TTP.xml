@@ -1,0 +1,197 @@
+<stix:STIX_Package xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1" 
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" 
+    xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1" 
+    xmlns:stix-maec="http://stix.mitre.org/extensions/Malware#MAEC4.1-1" 
+    xmlns:xal="urn:oasis:names:tc:ciq:xal:3" 
+    xmlns:ta="http://stix.mitre.org/ThreatActor-1" 
+    xmlns:stix="http://stix.mitre.org/stix-1" 
+    xmlns:stixCommon="http://stix.mitre.org/common-1" 
+    xmlns:cybox="http://cybox.mitre.org/cybox-2" 
+    xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3" 
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
+    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" 
+    xmlns:et="http://stix.mitre.org/ExploitTarget-1" 
+    xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3" 
+    xmlns:ttp="http://stix.mitre.org/TTP-1" 
+    xmlns:example="http://example.com" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="example:Package-528904d1-891e-4923-bd41-54f67a884925" version="1.2">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="example:Observable-627c021e-564b-483e-b5b0-3fd963556f30">
+            <cybox:Object id="example:DomainName-f5d2f56d-eea1-4106-bc5b-30ebedb05a08">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                    <DomainNameObj:Value>totally-not-malware.biz</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="example:Observable-f9bfa227-f8cd-4809-84e8-5a0bee39035a">
+            <cybox:Object id="example:DomainName-646c40bd-10ab-469a-ae7c-18b2ef7096c9">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                    <DomainNameObj:Value>www.bobricca.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-4eaa4080-64d1-4472-802f-07c5e5b0a833" timestamp="2018-10-03T12:36:02.319955+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Phishing</ttp:Title>
+            <ttp:Description>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</ttp:Description>
+            <ttp:Short_Description>Etiam Vestibulum Elit Ligula</ttp:Short_Description>
+            <ttp:Intended_Effect timestamp="2018-10-03T12:36:02.320730+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Account Takeover</stixCommon:Value>
+            </ttp:Intended_Effect>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern capec_id="CAPEC-98">
+                        <ttp:Description>Phishing</ttp:Description>
+                        <ttp:Short_Description>Phishing</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+            <ttp:Resources>
+                <ttp:Tools>
+                    <ttp:Tool>
+                        <cyboxCommon:Type xsi:type="stixVocabs:AttackerToolTypeVocab-1.0">Malware</cyboxCommon:Type>
+                        <cyboxCommon:Description>Tool Description</cyboxCommon:Description>
+                        <stixCommon:Title>malware.exe</stixCommon:Title>
+                        <stixCommon:Short_Description>Tool Short Description</stixCommon:Short_Description>
+                    </ttp:Tool>
+                </ttp:Tools>
+                <ttp:Infrastructure>
+                    <ttp:Title>Leveraged Domains</ttp:Title>
+                    <ttp:Type xsi:type="stixVocabs:AttackerInfrastructureTypeVocab-1.0">Domain Registration</ttp:Type>
+                    <ttp:Description>Infrastructure Description</ttp:Description>
+                    <ttp:Short_Description>Infrastructure Short Description</ttp:Short_Description>
+                    <ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+                        <cybox:Observable idref="example:Observable-627c021e-564b-483e-b5b0-3fd963556f30">
+                        </cybox:Observable>
+                    </ttp:Observable_Characterization>
+                </ttp:Infrastructure>
+                <ttp:Personas>
+                    <ttp:Persona>
+                        <stixCommon:Name>Stephen Golub</stixCommon:Name>
+                    </ttp:Persona>
+                </ttp:Personas>
+            </ttp:Resources>
+            <ttp:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase name="Infect Machine"/>
+            </ttp:Kill_Chain_Phases>
+        </stix:TTP>
+        <stix:TTP id="example:ttp-9642146e-ecf8-4703-a4c0-560ab40d5a10" timestamp="2018-10-03T12:36:02.323580+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Poison Ivy Variant</ttp:Title>
+            <ttp:Behavior>
+                <ttp:Malware>
+                    <ttp:Malware_Instance>
+                        <ttp:Type xsi:type="stixVocabs:MalwareTypeVocab-1.0">Remote Access Trojan</ttp:Type>
+                        <ttp:Title>Poison Ivy Variant d1c6</ttp:Title>
+                        <ttp:Description>Attack Pattern Description</ttp:Description>
+                        <ttp:Short_Description>Attack Pattern Short Description</ttp:Short_Description>
+                    </ttp:Malware_Instance>
+                    <ttp:Malware_Instance xsi:type='stix-maec:MAEC4.1InstanceType'>
+                        <ttp:Type xsi:type="stixVocabs:MalwareTypeVocab-1.0">Exploit Kits</ttp:Type>
+                        <ttp:Name>Poison Ivy Variant v4392-acc</ttp:Name>
+                    </ttp:Malware_Instance>
+                </ttp:Malware>
+            </ttp:Behavior>
+            <ttp:Victim_Targeting>
+                <ttp:Identity xsi:type="stix-ciqidentity:CIQIdentity3.0InstanceType">
+                    <stix-ciqidentity:Specification xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+                        <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+                            <xnl:PersonName xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">
+                                <xnl:NameElement>Bob Ricca</xnl:NameElement>
+                            </xnl:PersonName>
+                            <xnl:PersonName xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">
+                                <xnl:NameElement>Robert Ricca</xnl:NameElement>
+                            </xnl:PersonName>
+                            <xnl:OrganisationName xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">
+                                <xnl:NameElement>ThreatQuotient</xnl:NameElement>
+                            </xnl:OrganisationName>
+                        </xpil:PartyName>
+                        <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+                            <xpil:Address>
+                                <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+                                    <xal:NameElement>Germany</xal:NameElement>
+                                </xal:Country>
+                            </xpil:Address>
+                            <xpil:Address>
+                                <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+                                    <xal:NameElement>United States</xal:NameElement>
+                                </xal:Country>
+                            </xpil:Address>
+                        </xpil:Addresses>
+                        <xpil:ContactNumbers xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+                            <xpil:ContactNumber>
+                                <xpil:ContactNumberElement>727-867-5309</xpil:ContactNumberElement>
+                            </xpil:ContactNumber>
+                        </xpil:ContactNumbers>
+                        <xpil:ElectronicAddressIdentifiers xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+                            <xpil:ElectronicAddressIdentifier>bricca</xpil:ElectronicAddressIdentifier>
+                            <xpil:ElectronicAddressIdentifier xpil:Type="Email">bricca@threatq.com</xpil:ElectronicAddressIdentifier>
+                        </xpil:ElectronicAddressIdentifiers>
+                        <xpil:OrganisationInfo xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3" xpil:IndustryType="Cybersecurity"/>
+                        <xpil:Languages xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+                            <xpil:Language>German</xpil:Language>
+                            <xpil:Language>English</xpil:Language>
+                        </xpil:Languages>
+                        <xpil:Nationalities xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+                            <xpil:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+                                <xal:NameElement>American</xal:NameElement>
+                            </xpil:Country>
+                        </xpil:Nationalities>
+                    </stix-ciqidentity:Specification>
+                </ttp:Identity>
+                <ttp:Targeted_Systems xsi:type="stixVocabs:SystemTypeVocab-1.0">Enterprise Systems</ttp:Targeted_Systems>
+                <ttp:Targeted_Information xsi:type="stixVocabs:InformationTypeVocab-1.0">Information Assets - User Credentials</ttp:Targeted_Information>
+                <ttp:Targeted_Technical_Details cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+                    <cybox:Observable idref="example:Observable-f9bfa227-f8cd-4809-84e8-5a0bee39035a">
+                    </cybox:Observable>
+                </ttp:Targeted_Technical_Details>
+            </ttp:Victim_Targeting>
+            <ttp:Related_TTPs>
+                <ttp:Related_TTP>
+                    <stixCommon:TTP idref="example:ttp-4eaa4080-64d1-4472-802f-07c5e5b0a833" xsi:type='ttp:TTPType'/>
+                </ttp:Related_TTP>
+            </ttp:Related_TTPs>
+        </stix:TTP>
+        <stix:TTP id="example:ttp-bd5c4744-fe1c-4a13-8f9c-39ebe594a845" timestamp="2018-10-03T12:36:02.324113+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Remote Exploit of Server Software</ttp:Title>
+            <ttp:Behavior>
+                <ttp:Exploits>
+                    <ttp:Exploit>
+                        <ttp:Title>Exploit Apache</ttp:Title>
+                        <ttp:Description>Exploit Description</ttp:Description>
+                        <ttp:Short_Description>Short Description</ttp:Short_Description>
+                    </ttp:Exploit>
+                </ttp:Exploits>
+            </ttp:Behavior>
+            <ttp:Victim_Targeting>
+                <ttp:Identity>
+                    <stixCommon:Name>Steve Franchak</stixCommon:Name>
+                </ttp:Identity>
+            </ttp:Victim_Targeting>
+            <ttp:Exploit_Targets>
+                <ttp:Exploit_Target>
+                    <stixCommon:Exploit_Target idref="example:et-25e4eb67-0140-4035-b305-8887709bb2fd" xsi:type='et:ExploitTargetType'/>
+                </ttp:Exploit_Target>
+            </ttp:Exploit_Targets>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Exploit_Targets>
+        <stixCommon:Exploit_Target id="example:et-25e4eb67-0140-4035-b305-8887709bb2fd" timestamp="2018-10-03T12:36:02.324323+00:00" xsi:type='et:ExploitTargetType'>
+            <et:Title>Apache HTTP Vulnerability - CVE-2018-1312</et:Title>
+        </stixCommon:Exploit_Target>
+    </stix:Exploit_Targets>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-10284268-23c5-4bb8-940e-c6d2ebbd72c4" timestamp="2018-10-03T12:36:02.323130+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Adversary Bravo</ta:Title>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-4eaa4080-64d1-4472-802f-07c5e5b0a833" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>
+

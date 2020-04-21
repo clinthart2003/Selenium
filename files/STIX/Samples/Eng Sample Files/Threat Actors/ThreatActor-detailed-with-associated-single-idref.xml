@@ -1,0 +1,37 @@
+<stix:STIX_Package xmlns:stix="http://stix.mitre.org/stix-1" 
+    xmlns:stixCommon="http://stix.mitre.org/common-1" 
+    xmlns:ta="http://stix.mitre.org/ThreatActor-1" 
+    xmlns:example="http://example.com" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" id="example:Package-f47a7659-ecdd-4434-b389-5c4a48e12a1d" version="1.2">
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-f43a324d-f280-4b3a-a64e-1a34526ab177" timestamp="2018-06-26T13:55:26.603539+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Convoluted Toucan</ta:Title>
+            <ta:Description>Nullam quis risus eget urna mollis ornare vel eu leo.</ta:Description>
+            <ta:Motivation timestamp="2018-06-26T13:55:26.603539+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Political</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Motivation timestamp="2018-06-26T13:55:26.603539+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Military</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Sophistication timestamp="2018-06-26T13:55:26.603539+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorSophisticationVocab-1.0">Practitioner</stixCommon:Value>
+            </ta:Sophistication>
+            <ta:Intended_Effect timestamp="2018-06-26T13:55:26.603539+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Advantage - Political</stixCommon:Value>
+            </ta:Intended_Effect>
+            <ta:Associated_Actors>
+                <ta:Associated_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-6e2a159e-399c-419e-bf9d-618b72ddf751" timestamp="2018-06-26T13:55:38.355945+00:00" xsi:type='ta:ThreatActorType'/>
+                </ta:Associated_Actor>
+            </ta:Associated_Actors>
+        </stix:Threat_Actor>
+        <stix:Threat_Actor id="example:threatactor-6e2a159e-399c-419e-bf9d-618b72ddf751" timestamp="2018-06-26T13:55:38.355945+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Robust Hummingbird</ta:Title>
+            <ta:Description>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</ta:Description>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

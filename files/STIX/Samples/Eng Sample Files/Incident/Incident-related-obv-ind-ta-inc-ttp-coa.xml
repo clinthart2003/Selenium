@@ -1,0 +1,146 @@
+<stix:STIX_Package 
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:coa="http://stix.mitre.org/CourseOfAction-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-d0224d1b-32ef-4bcd-a408-78ebed64683c" version="1.2">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="example:Observable-c821dbfb-03d7-4597-8d85-f33ae027dc68">
+            <cybox:Object id="example:Address-dbe6e89e-4b18-4334-aaa7-5f75224a3493">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                    <AddressObj:Address_Value>181.241.112.188</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-9c1b8754-8fda-485b-abc8-886f017935e8" timestamp="2018-09-17T14:58:30.457697+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Observable id="example:Observable-a984c7ee-1813-4992-9d8d-6d5f52a78a98">
+                <cybox:Object id="example:Address-6db5514e-b73f-4c73-974e-c625c5081d87">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>62.189.234.81</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-43b3237d-84f8-4c59-98c2-d4f6cacdca5d" timestamp="2018-09-17T14:58:30.460718+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Phishing</ttp:Title>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern capec_id="CAPEC-98">
+                        <ttp:Description>Phishing</ttp:Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-8e843417-a6a3-40fe-b500-8be59f7aaaaf" timestamp="2018-09-17T14:58:30.452773+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>We got hacked</incident:Title>
+            <incident:Time>
+                <incident:First_Malicious_Action precision="second">2018-08-22T14:00:05.470947+00:00</incident:First_Malicious_Action>
+                <incident:Initial_Compromise precision="second">2018-08-22T14:00:05.470947+00:00</incident:Initial_Compromise>
+                <incident:First_Data_Exfiltration precision="second">2018-08-22T14:00:05.470947+00:00</incident:First_Data_Exfiltration>
+                <incident:Incident_Discovery precision="second">2018-08-23T14:00:05.470947+00:00</incident:Incident_Discovery>
+                <incident:Incident_Opened precision="second">2018-08-23T14:00:05.470947+00:00</incident:Incident_Opened>
+                <incident:Containment_Achieved precision="second">2018-08-24T14:00:05.470947+00:00</incident:Containment_Achieved>
+                <incident:Restoration_Achieved precision="second">2018-08-24T14:00:05.470947+00:00</incident:Restoration_Achieved>
+                <incident:Incident_Reported precision="second">2018-08-23T14:00:05.470947+00:00</incident:Incident_Reported>
+                <incident:Incident_Closed precision="second">2018-08-24T14:00:05.470947+00:00</incident:Incident_Closed>
+            </incident:Time>
+            <incident:Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</incident:Description>
+            <incident:Categories>
+                <incident:Category xsi:type="stixVocabs:IncidentCategoryVocab-1.0">Unauthorized Access</incident:Category>
+            </incident:Categories>
+            <incident:Reporter>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Alice</stixCommon:Name>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Responder>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Frank</stixCommon:Name>
+                </stixCommon:Identity>
+            </incident:Responder>
+            <incident:Coordinator>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Fred</stixCommon:Name>
+                </stixCommon:Identity>
+            </incident:Coordinator>
+            <incident:Victim>
+                <stixCommon:Name>Bob</stixCommon:Name>
+            </incident:Victim>
+            <incident:Related_Indicators>
+                <incident:Related_Indicator>
+                    <stixCommon:Indicator idref="example:indicator-9c1b8754-8fda-485b-abc8-886f017935e8" xsi:type='indicator:IndicatorType'/>
+                </incident:Related_Indicator>
+            </incident:Related_Indicators>
+            <incident:Related_Observables>
+                <incident:Related_Observable>
+                    <stixCommon:Observable idref="example:Observable-c821dbfb-03d7-4597-8d85-f33ae027dc68">
+                    </stixCommon:Observable>
+                </incident:Related_Observable>
+            </incident:Related_Observables>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-43b3237d-84f8-4c59-98c2-d4f6cacdca5d" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-5e9c4261-472a-4218-bc43-8320e1c6b827" xsi:type='ta:ThreatActorType'>
+                    </stixCommon:Threat_Actor>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Intended_Effect timestamp="2018-09-17T14:58:30.456143+00:00">
+                <stixCommon:Value>Destruction</stixCommon:Value>
+            </incident:Intended_Effect>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-2.0">NIDS</incident:Discovery_Method>
+            <incident:Related_Incidents>
+                <incident:Related_Incident>
+                    <stixCommon:Incident idref="example:incident-f88840d3-2775-4f0a-8733-fa71ebaffe53" xsi:type='incident:IncidentType'/>
+                </incident:Related_Incident>
+            </incident:Related_Incidents>
+            <incident:COA_Requested>
+                <incident:Course_Of_Action idref="example:coa-03246515-2642-4f96-8be7-7f24681054f5" xsi:type='coa:CourseOfActionType'/>
+            </incident:COA_Requested>
+            <incident:COA_Taken>
+                <incident:Course_Of_Action idref="example:coa-03246515-2642-4f96-8be7-7f24681054f5" xsi:type='coa:CourseOfActionType'/>
+            </incident:COA_Taken>
+            <incident:Confidence timestamp="2018-09-17T14:58:30.456192+00:00">
+                <stixCommon:Value>High</stixCommon:Value>
+            </incident:Confidence>
+        </stix:Incident>
+        <stix:Incident id="example:incident-f88840d3-2775-4f0a-8733-fa71ebaffe53" timestamp="2018-09-17T14:58:30.460320+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Malware outbreak</incident:Title>
+            <incident:Time>
+                <incident:First_Malicious_Action precision="second">2018-06-12T11:00:05.470947+00:00</incident:First_Malicious_Action>
+            </incident:Time>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Courses_Of_Action>
+        <stix:Course_Of_Action id="example:coa-03246515-2642-4f96-8be7-7f24681054f5" timestamp="2018-09-17T14:58:30.462027+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>Block traffic</coa:Title>
+        </stix:Course_Of_Action>
+    </stix:Courses_Of_Action>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-5e9c4261-472a-4218-bc43-8320e1c6b827" timestamp="2018-09-17T14:58:30.459580+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Albino Rhino</ta:Title>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>
+

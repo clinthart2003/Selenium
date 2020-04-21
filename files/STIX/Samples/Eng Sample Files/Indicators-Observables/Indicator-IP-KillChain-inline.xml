@@ -1,0 +1,42 @@
+<stix:STIX_Package
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-39db5aaa-42a8-4339-8e55-f33259c5320a" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-ee8ece7b-efe6-45e4-b7ba-ffa5ba69fd55" timestamp="2018-08-14T13:49:39.949683+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Malicious IP</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Exfiltration</indicator:Type>
+            <indicator:Observable id="example:Observable-6e0fc6d5-60b9-46ad-b11a-989b39108ef0">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-ecfb436e-6ccd-4443-8791-1d7f7fc95237">
+                        <cybox:Object id="example:Address-8b98b7ff-8d81-4827-bdd5-002329cb1f03">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">160.70.131.82</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-7fe85c80-e7fa-4aa8-960f-9c53e0bfe1db">
+                        <cybox:Object id="example:Address-9d084cd7-9316-45b2-9dff-99e411333963">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">240.232.65.54</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase name="Delivery"/>
+            </indicator:Kill_Chain_Phases>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

@@ -1,0 +1,1056 @@
+<stix:STIX_Package xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:AIS="http://www.us-cert.gov/STIXMarkingStructure#AISConsentMarking-2" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:stix-ciq="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1" xmlns:xal="urn:oasis:names:tc:ciq:xal:3" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:TOUMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1" xmlns:MutexObj="http://cybox.mitre.org/objects#MutexObject-2" xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:NCCIC="http://www.us-cert.gov/nccic" xmlns:HTTPSessionObj="http://cybox.mitre.org/objects#HTTPSessionObject-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:CISCP="http://us-cert.gov/ciscp" xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3" xsi:schemaLocation="  http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd  http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd  http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd  http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd  http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd  http://cybox.mitre.org/objects#HTTPSessionObject-2 http://cybox.mitre.org/XMLSchema/objects/HTTP_Session/2.1/HTTP_Session_Object.xsd  http://cybox.mitre.org/objects#MutexObject-2 http://cybox.mitre.org/XMLSchema/objects/Mutex/2.1/Mutex_Object.xsd  http://data-marking.mitre.org/Marking-1 http://stix.mitre.org/XMLSchema/data_marking/1.1.1/data_marking.xsd  http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.1.1/tlp_marking.xsd  http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1 http://stix.mitre.org/XMLSchema/extensions/marking/terms_of_use/1.0.1/terms_of_use_marking.xsd  http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd  http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd  http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd  http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd     http://us-cert.gov/ciscp http://www.us-cert.gov/sites/default/files/STIX_Namespace/ciscp_vocab_v1.1.1.xsd     http://www.us-cert.gov/STIXMarkingStructure#AISConsentMarking-2 http://www.us-cert.gov/sites/default/files/STIX_Namespace/AIS_Bundle_Marking_1.1.1_v1.0.xsd     http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd     urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="TA-17-163B.xml" version="1.1.1" timestamp="2017-07-07T00:00:00">
+	<!-- SOURCE: FED -->
+	<stix:STIX_Header>
+		<stix:Title>TA17-163B</stix:Title>
+		<stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</stix:Package_Intent>
+		<stix:Description>Crash Override</stix:Description>
+		<stix:Handling>
+			<marking:Marking>
+				<marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+				<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+			</marking:Marking>
+		</stix:Handling>
+		<stix:Information_Source>
+			<stixCommon:Time>
+				<cyboxCommon:Produced_Time>2017-07-07T00:00:00</cyboxCommon:Produced_Time>
+			</stixCommon:Time>
+		</stix:Information_Source>
+	</stix:STIX_Header>
+	<stix:Indicators>
+		<stix:Indicator id="NCCIC:indicator-ef6cacb0-6336-11e7-b0f9-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious IPv4 Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cacb2-6336-11e7-99da-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cacb1-6336-11e7-892e-eccd6dca154b">
+					<cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr" is_spoofed="false">
+						<AddressObj:Address_Value condition="Equals">195.16.88.6</AddressObj:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cacb3-6336-11e7-97e7-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious IPv4 Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cacb5-6336-11e7-8efd-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cacb4-6336-11e7-9374-eccd6dca154b">
+					<cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr" is_spoofed="false">
+						<AddressObj:Address_Value condition="Equals">46.28.200.132</AddressObj:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cacb6-6336-11e7-9ba6-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious IPv4 Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cacb8-6336-11e7-959b-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cacb7-6336-11e7-ae1b-eccd6dca154b">
+					<cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr" is_spoofed="false">
+						<AddressObj:Address_Value condition="Equals">188.42.253.43</AddressObj:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cacb9-6336-11e7-89f4-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious IPv4 Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cacbb-6336-11e7-9040-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cacba-6336-11e7-9240-eccd6dca154b">
+					<cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr" is_spoofed="false">
+						<AddressObj:Address_Value condition="Equals">5.39.218.152</AddressObj:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cacbc-6336-11e7-bcc8-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious IPv4 Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cacbe-6336-11e7-beab-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cacbd-6336-11e7-a3bd-eccd6dca154b">
+					<cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr" is_spoofed="false">
+						<AddressObj:Address_Value condition="Equals">93.115.27.57</AddressObj:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cd3c0-6336-11e7-b85c-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cd3c2-6336-11e7-9979-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cd3c1-6336-11e7-ae11-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">F6C21F8189CED6AE150F9EF2E82A3A57843B587D</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cd3c3-6336-11e7-9608-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cd3c5-6336-11e7-8875-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cd3c4-6336-11e7-9a61-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">CCCCE62996D578B984984426A024D9B250237533</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfacf-6336-11e7-bd87-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfad1-6336-11e7-9fc1-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfad0-6336-11e7-a6aa-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">8E39ECA1E48240C01EE570631AE8F0C9A9637187</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfad2-6336-11e7-879f-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfad4-6336-11e7-9eeb-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfad3-6336-11e7-a768-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">2CB8230281B86FA944D3043AE906016C8B5984D9</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfad5-6336-11e7-bbd8-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfad7-6336-11e7-a1c6-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfad6-6336-11e7-9442-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">79CA89711CDAEDB16B0CCCCFDCFBD6AA7E57120A</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfad8-6336-11e7-8d69-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfada-6336-11e7-ba35-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfad9-6336-11e7-b34f-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">94488F214B165512D2FC0438A581F5C9E3BD4D4C</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfadb-6336-11e7-8f64-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfadd-6336-11e7-8ac1-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfadc-6336-11e7-bf52-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">5A5FAFBC3FEC8D36FD57B075EBF34119BA3BFF04</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfade-6336-11e7-b5ee-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfae0-6336-11e7-ac6d-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfadf-6336-11e7-8c66-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">B92149F046F00BB69DE329B8457D32C24726EE00</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfae1-6336-11e7-9028-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfae3-6336-11e7-ba24-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfae2-6336-11e7-9c33-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">B335163E6EB854DF5E08E85026B2C3518891EDA8</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfae4-6336-11e7-811f-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfae6-6336-11e7-ac90-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfae5-6336-11e7-8683-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">a71fabd764a3b0116fefb14433ffb2c51629b2c6</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6cfae7-6336-11e7-aab8-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6cfae9-6336-11e7-bf37-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6cfae8-6336-11e7-9a8c-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">82d96268c6679f30b40d0eaade50efc4e15a63a4</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6d21de-6336-11e7-af88-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6d21e0-6336-11e7-8268-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6d21df-6336-11e7-afe2-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">7fac2eddf22ff692e1b4e7f99910e5dbb51295e6</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6d21e1-6336-11e7-a579-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6d21e3-6336-11e7-a8a9-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6d21e2-6336-11e7-85a0-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">ecf6adf20a7137a84a1b319ccaa97cb0809a8454</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6d21e4-6336-11e7-9021-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6d21e6-6336-11e7-b838-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6d21e5-6336-11e7-8c3e-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">37d54e3d5e8b838f366b9c202f75fa264611a12444e62ae759c31a0d041aa6e4</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6d21e7-6336-11e7-9a26-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6d21e9-6336-11e7-be67-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6d21e8-6336-11e7-8e87-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">6d707e647427f1ff4a7a9420188a8831f433ad8c5325dc8b8cc6fc5e7f1f6f47</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6d21ea-6336-11e7-a7c3-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6d21ec-6336-11e7-a2fd-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6d21eb-6336-11e7-92d3-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">3e3ab9674142dec46ce389e9e759b6484e847f5c1e1fc682fc638fc837c13571</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6d21ed-6336-11e7-b067-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6d21ef-6336-11e7-8d38-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6d21ee-6336-11e7-ba67-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">ecaf150e087ddff0ec6463c92f7f6cca23cc4fd30fe34c10b3cb7c2a6d135c77</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6d21f0-6336-11e7-9cc9-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6d21f2-6336-11e7-aa67-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6d21f1-6336-11e7-95a3-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">21c1fdd6cfd8ec3ffe3e922f944424b543643dbdab99fa731556f8805b0d5561</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef6d21f3-6336-11e7-bdbe-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef6d21f5-6336-11e7-9d45-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef6d21f4-6336-11e7-bdc3-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">7907dd95c1d36cf3dc842a1bd804f0db511a0f68f4b3d382c23a3c974a383cad</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef711980-6336-11e7-9f35-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef711982-6336-11e7-b6d6-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef711981-6336-11e7-a64e-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">018eb62e174efdcdb3af011d34b0bf2284ed1a803718fba6edffe5bc0b446b81</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef711983-6336-11e7-860f-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef711985-6336-11e7-9d21-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef711984-6336-11e7-89bf-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">ad23c7930dae02de1ea3c6836091b5fb3c62a89bf2bcfb83b4b39ede15904910</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef711986-6336-11e7-b1e0-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef711988-6336-11e7-ad58-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef711987-6336-11e7-8711-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value condition="Equals">893e4cca7fe58191d2f6722b383b5e8009d3885b5913dcd2e3577e5a763cdb3f</cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef711989-6336-11e7-823c-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef71198b-6336-11e7-828a-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef71198a-6336-11e7-9cf6-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Avtask.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef71198c-6336-11e7-b839-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef71198e-6336-11e7-84ca-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef71198d-6336-11e7-a818-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Ws.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef71198f-6336-11e7-b568-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef711991-6336-11e7-8f47-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef711990-6336-11e7-bf5d-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Alg.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef711992-6336-11e7-b191-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef711994-6336-11e7-881e-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef711993-6336-11e7-81b8-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Tiersvc.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef711995-6336-11e7-b4a8-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef711997-6336-11e7-9f00-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef711996-6336-11e7-9f79-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Svchost.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef71408f-6336-11e7-839b-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef714091-6336-11e7-a777-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef714090-6336-11e7-95b9-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">104.dll</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef714092-6336-11e7-9e01-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef714094-6336-11e7-baf5-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef714093-6336-11e7-a0dd-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Haslo.dat</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef714095-6336-11e7-9016-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef714097-6336-11e7-a7e9-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef714096-6336-11e7-99ba-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Haslo.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef714098-6336-11e7-9c33-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef71409a-6336-11e7-be7d-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef714099-6336-11e7-a64c-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">D2.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef71409b-6336-11e7-b6d0-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef71409d-6336-11e7-ab57-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef71409c-6336-11e7-9ee0-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Swprv.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef71409e-6336-11e7-9fa9-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef7140a0-6336-11e7-9317-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef71409f-6336-11e7-887e-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Dos.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef7140a1-6336-11e7-9599-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef7140a3-6336-11e7-afa5-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef7140a2-6336-11e7-a963-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Opc.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef7140a4-6336-11e7-bafc-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef7140a6-6336-11e7-ac54-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef7140a5-6336-11e7-aba4-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">61850.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef7140a7-6336-11e7-a38a-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef7140a9-6336-11e7-916e-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef7140a8-6336-11e7-acd2-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">defragsvc.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef7140aa-6336-11e7-a7be-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef7140ac-6336-11e7-a15d-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef7140ab-6336-11e7-87ec-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">port.exe</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef7167a1-6336-11e7-ac8e-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious File Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef7167a3-6336-11e7-9c8f-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef7167a2-6336-11e7-89be-eccd6dca154b">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name condition="Equals">Aabdul</FileObj:File_Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef71b5c0-6336-11e7-a823-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious User Agent Indicator</indicator:Title>
+			<indicator:Description>User Agent String</indicator:Description>
+			<indicator:Observable id="NCCIC:Observable-ef71b5c2-6336-11e7-9184-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef71b5c1-6336-11e7-bd9f-eccd6dca154b">
+					<cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+						<HTTPSessionObj:HTTP_Request_Response>
+							<HTTPSessionObj:HTTP_Client_Request>
+								<HTTPSessionObj:HTTP_Request_Header>
+									<HTTPSessionObj:Parsed_Header>
+										<HTTPSessionObj:User_Agent condition="Equals">Mozilla/4.0 (compatible; MSIE 7.0; Windows
+NT 5.1; InfoPath.1)</HTTPSessionObj:User_Agent>
+									</HTTPSessionObj:Parsed_Header>
+								</HTTPSessionObj:HTTP_Request_Header>
+							</HTTPSessionObj:HTTP_Client_Request>
+						</HTTPSessionObj:HTTP_Request_Response>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+		<stix:Indicator id="NCCIC:indicator-ef71b5c3-6336-11e7-b291-eccd6dca154b" xsi:type="indicator:IndicatorType">
+			<indicator:Title>Malicious Mutex Indicator</indicator:Title>
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+			<indicator:Observable id="NCCIC:Observable-ef71b5c5-6336-11e7-9d2e-eccd6dca154b">
+				<cybox:Object id="NCCIC:Object-ef71b5c4-6336-11e7-ac90-eccd6dca154b">
+					<cybox:Properties xsi:type="MutexObj:MutexObjectType">
+						<MutexObj:Name condition="Equals">ApiPortection9d3</MutexObj:Name>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+			<indicator:Handling>
+				<marking:Marking>
+					<marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+					<marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+						<TOUMarking:Terms_Of_Use>DISCLAIMER: This report is provided "as is" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. The DHS does not endorse any commercial product or service, referenced in this bulletin or otherwise. This document is distributed as TLP:WHITE: Disclosure is not limited. For more information on the Traffic Light Protocol, see http://www.us-cert.gov/tlp.</TOUMarking:Terms_Of_Use>
+					</marking:Marking_Structure>
+				</marking:Marking>
+			</indicator:Handling>
+		</stix:Indicator>
+	</stix:Indicators>
+	<stix:TTPs>
+		<stix:Kill_Chains>
+			<stixCommon:Kill_Chain reference="http://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf" number_of_phases="7" id="stix:KillChainPhase-af3e707f-2fb9-49e5-8c37-14026ca0a5ff" definer="LMCO" name="LM Cyber Kill Chain">
+				<stixCommon:Kill_Chain_Phase ordinality="1" name="Reconnaissance" phase_id="stix:KillChainPhase-af1016d6-a744-4ed7-ac91-00fe2272185a"/>
+				<stixCommon:Kill_Chain_Phase ordinality="2" name="Weaponization" phase_id="stix:KillChainPhase-445b4827-3cca-42bd-8421-f2e947133c16"/>
+				<stixCommon:Kill_Chain_Phase ordinality="3" name="Delivery" phase_id="stix:KillChainPhase-79a0e041-9d5f-49bb-ada4-8322622b162d"/>
+				<stixCommon:Kill_Chain_Phase ordinality="4" name="Exploitation" phase_id="stix:KillChainPhase-f706e4e7-53d8-44ef-967f-81535c9db7d0"/>
+				<stixCommon:Kill_Chain_Phase ordinality="5" name="Installation" phase_id="stix:KillChainPhase-e1e4e3f7-be3b-4b39-b80a-a593cfd99a4f"/>
+				<stixCommon:Kill_Chain_Phase ordinality="6" name="Command and Control" phase_id="stix:KillChainPhase-d6dc32b9-2538-4951-8733-3cb9ef1daae2"/>
+				<stixCommon:Kill_Chain_Phase ordinality="7" name="Actions on Objectives" phase_id="stix:KillChainPhase-786ca8f9-2d9a-4213-b38e-399af4a2e5d6"/>
+			</stixCommon:Kill_Chain>
+		</stix:Kill_Chains>
+	</stix:TTPs>
+</stix:STIX_Package>

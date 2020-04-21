@@ -1,0 +1,109 @@
+<stix:STIX_Package 
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:campaign="http://stix.mitre.org/Campaign-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-a67762d8-5f97-484d-8f7e-8641d13eece3" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-1487e99d-71c8-47e7-b632-d8dff8320752" timestamp="2018-09-11T20:38:24.083393+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Observable id="example:Observable-c2e788a2-8592-459e-af1f-f398d249c2cc">
+                <cybox:Object id="example:Address-d9ebfb60-cf37-4045-9626-c5314659b4ab">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>125.58.127.117</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+            <indicator:Related_Campaigns>
+                <indicator:Related_Campaign>
+                    <stixCommon:Campaign idref="example:campaign-f531342a-f65a-4be7-8389-451d7d9455e7"/>
+                </indicator:Related_Campaign>
+            </indicator:Related_Campaigns>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-9fdd3aac-56b9-48fd-a5c3-736ccba0c486" timestamp="2018-09-11T20:38:24.060509+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Malware Variant XYZ</ttp:Title>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-e149ed79-2af5-40ef-8b98-eae0be4c8418" timestamp="2018-09-11T20:38:24.061077+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>We got hacked</incident:Title>
+            <incident:Time>
+                <incident:Incident_Opened precision="second">2018-09-11T00:00:00</incident:Incident_Opened>
+            </incident:Time>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Campaigns>
+        <stix:Campaign id="example:campaign-f213d97a-54e0-438a-b976-a62213d43f78" timestamp="2018-09-11T20:38:24.058734+00:00" xsi:type='campaign:CampaignType'>
+            <campaign:Title>Compromise Machines</campaign:Title>
+            <campaign:Description>Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</campaign:Description>
+            <campaign:Short_Description>Mattis Ipsum Ultricies Quam Malesuada</campaign:Short_Description>
+            <campaign:Names>
+                <campaign:Name>Operation Sparky</campaign:Name>
+                <campaign:Name>Operation Dingo</campaign:Name>
+            </campaign:Names>
+            <campaign:Intended_Effect timestamp="2018-09-11T20:38:24.060355+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Extortion</stixCommon:Value>
+            </campaign:Intended_Effect>
+            <campaign:Status xsi:type="stixVocabs:CampaignStatusVocab-1.0">Ongoing</campaign:Status>
+            <campaign:Related_TTPs>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="example:ttp-9fdd3aac-56b9-48fd-a5c3-736ccba0c486" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+            </campaign:Related_TTPs>
+            <campaign:Related_Incidents>
+                <campaign:Related_Incident>
+                    <stixCommon:Incident idref="example:incident-e149ed79-2af5-40ef-8b98-eae0be4c8418" xsi:type='incident:IncidentType'/>
+                </campaign:Related_Incident>
+            </campaign:Related_Incidents>
+            <campaign:Related_Indicators>
+                <campaign:Related_Indicator>
+                    <stixCommon:Indicator idref="example:indicator-1487e99d-71c8-47e7-b632-d8dff8320752" xsi:type='indicator:IndicatorType'/>
+                </campaign:Related_Indicator>
+            </campaign:Related_Indicators>
+            <campaign:Attribution>
+                <campaign:Attributed_Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-223c888e-c36a-4786-a5bd-aff536dbcbc6" xsi:type='ta:ThreatActorType'>
+                    </stixCommon:Threat_Actor>
+                </campaign:Attributed_Threat_Actor>
+            </campaign:Attribution>
+            <campaign:Associated_Campaigns>
+                <campaign:Associated_Campaign>
+                    <stixCommon:Campaign idref="example:campaign-992c2571-3afd-41d8-a15e-9fe408daf83f" xsi:type='campaign:CampaignType'/>
+                </campaign:Associated_Campaign>
+            </campaign:Associated_Campaigns>
+            <campaign:Confidence timestamp="2018-09-11T20:38:24.060403+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+            </campaign:Confidence>
+            <campaign:Activity>
+                <stixCommon:Description>Foo</stixCommon:Description>
+            </campaign:Activity>
+        </stix:Campaign>
+        <stix:Campaign id="example:campaign-992c2571-3afd-41d8-a15e-9fe408daf83f" timestamp="2018-09-11T20:38:24.086071+00:00" xsi:type='campaign:CampaignType'>
+            <campaign:Title>Another Campaign</campaign:Title>
+        </stix:Campaign>
+    </stix:Campaigns>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-223c888e-c36a-4786-a5bd-aff536dbcbc6" timestamp="2018-09-11T20:38:24.085208+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Albino Rhino</ta:Title>
+            <ta:Associated_Campaigns>
+                <ta:Associated_Campaign>
+                    <stixCommon:Campaign idref="example:campaign-f531342a-f65a-4be7-8389-451d7d9455e7" xsi:type='campaign:CampaignType'/>
+                </ta:Associated_Campaign>
+            </ta:Associated_Campaigns>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>
+

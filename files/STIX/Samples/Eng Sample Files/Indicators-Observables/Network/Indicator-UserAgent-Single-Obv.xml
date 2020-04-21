@@ -1,0 +1,33 @@
+<stix:STIX_Package
+	xmlns:HTTPSessionObj="http://cybox.mitre.org/objects#HTTPSessionObject-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-dfe0bea0-96c7-49c6-a4b7-a9297172502f" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-ceee1a21-9b3d-4b58-9473-15cffb94d7be" timestamp="2018-07-10T14:45:18.572737+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Single HTTP Request Header/User Agent Observable - User-Agent in TQ</indicator:Title>
+            <indicator:Observable id="example:Observable-4f06ccb7-1be0-4590-bba6-75d8e059db39">
+                <cybox:Object id="example:HTTPSession-fde66557-6850-44b9-a113-6e1b27999997">
+                    <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                        <HTTPSessionObj:HTTP_Request_Response>
+                            <HTTPSessionObj:HTTP_Client_Request>
+                                <HTTPSessionObj:HTTP_Request_Header>
+                                    <HTTPSessionObj:Parsed_Header>
+                                        <HTTPSessionObj:User_Agent>Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_12_7 rv:6.0; tn-ZA) AppleWebKit/533.27.5 (KHTML, like Gecko) Version/5.0 Safari/533.27.5</HTTPSessionObj:User_Agent>
+                                    </HTTPSessionObj:Parsed_Header>
+                                </HTTPSessionObj:HTTP_Request_Header>
+                            </HTTPSessionObj:HTTP_Client_Request>
+                        </HTTPSessionObj:HTTP_Request_Response>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

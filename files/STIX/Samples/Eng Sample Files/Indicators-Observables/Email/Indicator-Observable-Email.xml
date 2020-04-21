@@ -1,0 +1,59 @@
+<stix:STIX_Package xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" 
+    xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2" 
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
+    xmlns:cybox="http://cybox.mitre.org/cybox-2" 
+    xmlns:stixCommon="http://stix.mitre.org/common-1" 
+    xmlns:stix="http://stix.mitre.org/stix-1" 
+    xmlns:indicator="http://stix.mitre.org/Indicator-2" 
+    xmlns:example="http://example.com" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="example:Package-d5ebf622-0cb2-4787-ae7a-c6bb5fec30af" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-8c4c6a15-13cf-4cb4-a2f0-88760c39fe7f" timestamp="2018-07-19T12:58:59.572079+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Single Email Indicator</indicator:Title>
+            <indicator:Description>Email Addresses, Email Subject, IP Address</indicator:Description>
+            <indicator:Observable id="example:Observable-c07dd53c-08f1-482b-abf8-7049b03c1e27">
+                <cybox:Object id="example:EmailMessage-5f8fb7fa-6057-4f46-8615-687ac51eb530">
+                    <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                        <EmailMessageObj:Header>
+                            <EmailMessageObj:To>
+                                <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                    <AddressObj:Address_Value>bob@company.biz</AddressObj:Address_Value>
+                                </EmailMessageObj:Recipient>
+                                <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                    <AddressObj:Address_Value>tom@company.biz</AddressObj:Address_Value>
+                                </EmailMessageObj:Recipient>
+                            </EmailMessageObj:To>
+                            <EmailMessageObj:CC>
+                                <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                    <AddressObj:Address_Value>bill@company.biz</AddressObj:Address_Value>
+                                </EmailMessageObj:Recipient>
+                            </EmailMessageObj:CC>
+                            <EmailMessageObj:BCC>
+                                <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                    <AddressObj:Address_Value>tina@company.biz</AddressObj:Address_Value>
+                                </EmailMessageObj:Recipient>
+                            </EmailMessageObj:BCC>
+                            <EmailMessageObj:From xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>trevor74@yahoo.com</AddressObj:Address_Value>
+                            </EmailMessageObj:From>
+                            <EmailMessageObj:Sender xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>trevor74@yahoo.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Sender>
+                            <EmailMessageObj:Subject>Re,PAYMENT INFORMATION</EmailMessageObj:Subject>
+                            <EmailMessageObj:Reply_To xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>trevor74@yahoo.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Reply_To>
+                            <EmailMessageObj:X_Originating_IP xsi:type="AddressObj:AddressObjectType">
+                                <AddressObj:Address_Value>151.69.92.113</AddressObj:Address_Value>
+                            </EmailMessageObj:X_Originating_IP>
+                            <EmailMessageObj:User_Agent>mozilla/4.0 (compatible; msie 7.0; windows nt 6.2; wow64; trident/7.0; .net4.0e; .net4.0c; .net clr 3.5.30729; .net clr 2.0.50727; .net clr 3.0.30729; bri/2; asu2js; microsoft outlook 15.0.4701; ms-office; msoffice 15)</EmailMessageObj:User_Agent>
+                        </EmailMessageObj:Header>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

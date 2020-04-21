@@ -1,0 +1,28 @@
+<stix:STIX_Package
+	xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-eeadd010-752e-4473-b196-f829e00961b9" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-7221c319-5cd9-4547-a845-4749f7b69d47" timestamp="2018-07-10T14:04:36.851774+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Single Domain Observable - FQDN Indicator in TQ</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Observable id="example:Observable-03f95631-2913-434a-a8fa-f5a21a571b44">
+                <cybox:Object id="example:DomainName-3f86d01a-feff-4b42-8a1d-13b0d70bfee3">
+                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                        <DomainNameObj:Value>example.com</DomainNameObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

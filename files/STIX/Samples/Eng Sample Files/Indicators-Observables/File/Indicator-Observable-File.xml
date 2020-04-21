@@ -1,0 +1,52 @@
+<stix:STIX_Package
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:MutexObj="http://cybox.mitre.org/objects#MutexObject-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-511afd93-634c-4b56-b00e-a1d6aeec4f93" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-d7419a45-1898-484c-83e3-3fd720697064" timestamp="2018-07-16T13:24:32.690377+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Single File Indicator</indicator:Title>
+            <indicator:Description>File Name, File Path, Size in Bytes, SHA-256, SSDEEP, Mutex</indicator:Description>
+            <indicator:Observable id="example:Observable-4205724f-10f7-4c05-af2c-015567cb9c93">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-eb974a6e-b6a5-4653-8365-fd4c6bd68e6e">
+                        <cybox:Object id="example:File-7da1cfb1-28f0-4f10-a47f-e63f9cbe4d62">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:File_Name>totally_not_malware.exe</FileObj:File_Name>
+                                <FileObj:File_Path>/super/secret/path/</FileObj:File_Path>
+                                <FileObj:Size_In_Bytes>3282</FileObj:Size_In_Bytes>
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value>ad42b704926b1385eb468b028a23c97a13bdc85380c433ca662860cdb279a3f7</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SSDEEP</cyboxCommon:Type>
+                                        <cyboxCommon:Fuzzy_Hash_Value>3072:k8dcjGgWU36hfaa68BYsp6gPeYVZURg9/bG9rzXbkXl:39RU36ka6+9J/TTGJoX</cyboxCommon:Fuzzy_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-829f2ce1-ed83-4264-a8fb-74a11cc3bb34">
+                        <cybox:Object id="example:Mutex-1397d288-fd2d-4168-b34f-1f3dd22121b5">
+                            <cybox:Properties xsi:type="MutexObj:MutexObjectType">
+                                <MutexObj:Name>abc1234</MutexObj:Name>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

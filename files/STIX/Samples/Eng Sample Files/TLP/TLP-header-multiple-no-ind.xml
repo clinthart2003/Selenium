@@ -1,0 +1,614 @@
+<stix:STIX_Package xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1" 
+    xmlns:marking="http://data-marking.mitre.org/Marking-1"
+    xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+    xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" 
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" 
+    xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2" 
+    xmlns:HTTPSessionObj="http://cybox.mitre.org/objects#HTTPSessionObject-2" 
+    xmlns:indicator="http://stix.mitre.org/Indicator-2" 
+    xmlns:cybox="http://cybox.mitre.org/cybox-2" 
+    xmlns:stixCommon="http://stix.mitre.org/common-1" 
+    xmlns:stix="http://stix.mitre.org/stix-1" 
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
+    xmlns:example="http://example.com" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="example:Package-8336d0e8-975d-432c-acfa-17f28093898b" version="1.2">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <!-- Every Indicator in TQ is assigned a TLP of RED -->
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="RED"/>
+                <marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-ce268e21-f16f-4be1-8629-88babf097de7" timestamp="2018-07-12T15:31:12.537290+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Multiple Network indicator types</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">C2</indicator:Type>
+            <indicator:Description>Long description...</indicator:Description>
+            <indicator:Short_Description>Short description...</indicator:Short_Description>
+            <indicator:Observable id="example:Observable-6a666836-3f46-4aac-b17a-0a54a67a3b2e">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-3e9db1bd-493c-42de-ae75-c569f8180017">
+                        <cybox:Object id="example:Address-faf7c8d2-9f19-49db-8667-9de71d3a319b">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">117.229.117.151</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-776e5b46-5d73-4eb5-8058-1c4ff8fea942">
+                        <cybox:Object id="example:Address-afa51261-7cd3-46d5-aa5f-1c18785f7eef">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">28.8.231.109</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-c1558dc0-a6d0-49c0-bcbf-a5b4e53cf4eb">
+                        <cybox:Object id="example:HTTPSession-043376b9-fc1a-46d5-a1fe-269197be4e8d">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Opera/8.66.(X11; Linux x86_64; fy-NL) Presto/2.9.189 Version/11.00</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-66b6ba09-69b5-4210-9224-11a4ab01ee71">
+                        <cybox:Object id="example:HTTPSession-fb6e66d6-e051-48bf-9805-e5dee9356cba">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (compatible; MSIE 5.0; Windows NT 5.01; Trident/4.1)</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-c98e11f7-549b-46c5-acd6-fe86f8aaaa14">
+                        <cybox:Object id="example:DomainName-37a80d2b-55ac-4a18-9eea-1c7c13daa370">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>alvarez.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-03b0d7bd-340f-459e-b521-790a6b0957f7">
+                        <cybox:Object id="example:DomainName-387a2e71-dc09-4e59-89aa-40ef1681b8fe">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>howard.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-cc09e787-4da8-4b8f-b7c8-1f64e615762f">
+                        <cybox:Object id="example:DomainName-99f18ceb-a700-4f4a-b44f-1b5dc46a61b6">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>gilmore.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-615d9e72-1017-40a7-b171-4b95d663154c">
+                        <cybox:Object id="example:URI-11a36177-7fe6-4713-8eeb-7913dee94f88">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.dean.com/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-344597b8-aec4-4570-b170-17e425b12fc1">
+                        <cybox:Object id="example:URI-a30b8960-2c4d-481f-ac2f-6e96156d2a13">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://hartman-brown.com/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-71b7c708-08a3-4083-9541-556dcfa01984">
+                        <cybox:Object id="example:URI-a3f9d4f8-1555-448d-be1f-90cd06fb36bc">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>https://shaw.com/main/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase name="Command and Control"/>
+            </indicator:Kill_Chain_Phases>
+            <indicator:Confidence timestamp="2018-07-12T15:31:12.539685+00:00">
+                <stixCommon:Value>Medium</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Secret Source</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2018-07-12T11:31:12.539413</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="example:indicator-ba8169bb-8f76-4b6a-8b5b-6e026f8c0b1e" timestamp="2018-07-12T15:31:12.543675+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Multiple Network indicator types</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">C2</indicator:Type>
+            <indicator:Description>Long description...</indicator:Description>
+            <indicator:Short_Description>Short description...</indicator:Short_Description>
+            <indicator:Observable id="example:Observable-cb96e038-1860-44a6-901a-a18560941228">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-2593e1fb-1f0c-4158-beac-8bc96a37771d">
+                        <cybox:Object id="example:Address-563fd44f-4b88-44a7-b4c1-d1d6858b8fc7">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">138.234.175.245</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-fb52d6f5-a00d-4dbf-86e0-d3f2664b8ee8">
+                        <cybox:Object id="example:HTTPSession-773e7b0a-55f5-4fbc-8b81-37332a633042">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (Windows NT 6.0) AppleWebKit/5340 (KHTML, like Gecko) Chrome/14.0.861.0 Safari/5340</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-cc5bd3bd-382e-4fb8-966d-bace07db5a27">
+                        <cybox:Object id="example:HTTPSession-3076ed14-b687-4313-a099-6ed8e28d8717">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.2; Trident/3.0)</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-0045f0db-3157-423d-8c85-242efc34de63">
+                        <cybox:Object id="example:HTTPSession-65082987-b744-439c-8bbb-ff5d4281b502">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (Windows NT 5.1) AppleWebKit/5342 (KHTML, like Gecko) Chrome/35.0.832.0 Safari/5342</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-f28559d7-4051-4d5d-944f-4ce47a1e8dca">
+                        <cybox:Object id="example:HTTPSession-33a5e41b-18e2-449b-a093-f187ef4bb758">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (X11; Linux i686; rv:1.9.6.20) Gecko/2012-12-06 18:04:14 Firefox/3.6.18</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-7d84c725-bbea-4881-a7b8-f5f48905dbb1">
+                        <cybox:Object id="example:HTTPSession-e4655dfc-e2cb-4cfe-ad82-1bd33ce560c0">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (iPod; U; CPU iPhone OS 4_2 like Mac OS X; lzh-TW) AppleWebKit/534.25.3 (KHTML, like Gecko) Version/4.0.5 Mobile/8B114 Safari/6534.25.3</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-6d8a5016-2ea9-49b6-8f6b-eac98b994849">
+                        <cybox:Object id="example:DomainName-4b8a86b0-2717-43c6-a3c5-5191e40ca366">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>mccoy.info</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-c138f496-b47d-41f8-bc6e-d6c8a0379a29">
+                        <cybox:Object id="example:DomainName-31418b5c-7363-4718-a1d4-5f8034f65f53">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>bailey-zimmerman.org</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-a5f15690-3264-458e-8058-965edf7c75a8">
+                        <cybox:Object id="example:DomainName-979d8541-c839-43db-8c64-0937177616c9">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>henderson-kemp.org</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-4fa97bf7-f6eb-4c08-b952-ade5e7aef9a7">
+                        <cybox:Object id="example:DomainName-8093f074-8c2d-4885-bd28-a3e8d9d228f8">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>williams.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-11a09962-0036-43ac-bd48-eb7697858755">
+                        <cybox:Object id="example:URI-5279fba3-fe6b-4bf4-8325-c7b99bb881b0">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>https://www.stewart.net/post.html</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase name="Delivery"/>
+            </indicator:Kill_Chain_Phases>
+            <indicator:Confidence timestamp="2018-07-12T15:31:12.543913+00:00">
+                <stixCommon:Value>Low</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Secret Source</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2018-07-12T11:31:12.543800</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="example:indicator-a84944ab-2c35-4f22-86d5-1e05cb096fd8" timestamp="2018-07-12T15:31:12.547543+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Multiple Network indicator types</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Description>Long description...</indicator:Description>
+            <indicator:Short_Description>Short description...</indicator:Short_Description>
+            <indicator:Observable id="example:Observable-b6caad5d-ddc3-4a54-96f0-d5200aec43ed">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-7bdd08ea-2c6b-4ad6-b9ed-ccb6c724a532">
+                        <cybox:Object id="example:HTTPSession-a837c453-2e57-4ba2-8218-723469863909">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (iPod; U; CPU iPhone OS 3_2 like Mac OS X; mn-MN) AppleWebKit/532.25.5 (KHTML, like Gecko) Version/3.0.5 Mobile/8B111 Safari/6532.25.5</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-5caaf886-20ee-438f-a811-1704071db196">
+                        <cybox:Object id="example:HTTPSession-82373a59-c536-4b3f-b198-dcb0af4fc6ad">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Opera/8.11.(X11; Linux i686; nso-ZA) Presto/2.9.188 Version/12.00</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-3f147ea9-e900-477c-99a0-ca5b5dea6149">
+                        <cybox:Object id="example:DomainName-d1a62ebf-49ae-4620-89ff-a744425612c0">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>spencer.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-e09b01bf-37b2-4b21-a19e-1cc743229a0d">
+                        <cybox:Object id="example:DomainName-3cda3351-d54e-413c-b003-098638e813ef">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>rice.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-bc8995ff-f56e-41e5-a122-8d7cb8c3993e">
+                        <cybox:Object id="example:DomainName-43d7e5cb-ec3b-4ba0-8a73-5eed337d5c7d">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>parks.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-4db17a60-1b1b-44d7-a319-0c4d0ce9612a">
+                        <cybox:Object id="example:DomainName-84c0c061-9f52-4c7d-a9e4-3e67474ad8a0">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>mayer-clark.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-708fd4a6-7f7f-442a-807c-40d0ffca8fbc">
+                        <cybox:Object id="example:DomainName-ce5b2f48-7085-4801-b7b6-c74c7cd9708e">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>rivers.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-bed88afb-3c50-4ed5-8b02-8246a79215bf">
+                        <cybox:Object id="example:URI-f226284d-15f2-4cda-9fd2-45b3f5a7479a">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://wang-gallegos.com/main/posts/index/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-f96c158b-3be8-40d4-a371-783ce82b8aee">
+                        <cybox:Object id="example:URI-a4322082-e7c8-4211-9bb5-d0c298cd748a">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://www.buckley-jackson.info/app/about/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase name="Weaponization"/>
+            </indicator:Kill_Chain_Phases>
+            <indicator:Confidence timestamp="2018-07-12T15:31:12.547737+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Secret Source</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2018-07-12T11:31:12.547652</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="example:indicator-ab923efb-7f75-43c3-bc86-bf3ed52d8369" timestamp="2018-07-12T15:31:12.550431+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Multiple Network indicator types</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Exfiltration</indicator:Type>
+            <indicator:Description>Long description...</indicator:Description>
+            <indicator:Short_Description>Short description...</indicator:Short_Description>
+            <indicator:Observable id="example:Observable-6556cc7a-5351-4a84-8eda-7b25335c4765">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-31577598-ba5f-4842-a216-ff143d444bdc">
+                        <cybox:Object id="example:Address-93c9b42d-e8bf-4e10-b984-d0a2d78f8897">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">149.201.55.166</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-ddd2ce8a-4389-4187-8f7c-dbcc12187ac4">
+                        <cybox:Object id="example:Address-2860dfdd-b5f2-42f8-a55b-c3413881d4a6">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">184.229.80.41</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-4315414b-dc51-41c4-ada6-74d5d4efbd64">
+                        <cybox:Object id="example:HTTPSession-63a491c0-2115-4844-8540-28b955fd3eee">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3 like Mac OS X; az-IN) AppleWebKit/535.45.6 (KHTML, like Gecko) Version/3.0.5 Mobile/8B115 Safari/6535.45.6</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-391b2254-ccb5-4a6e-9ec5-ac10879774b7">
+                        <cybox:Object id="example:HTTPSession-b89278a7-8656-4085-be0e-d47aa3bc491a">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/3.0)</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-98044455-b847-4a4c-904c-7bc471cec2a0">
+                        <cybox:Object id="example:HTTPSession-9eafe800-5a4e-4ecd-b61d-b8045a3d6a89">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Opera/9.11.(X11; Linux i686; sv-FI) Presto/2.9.182 Version/12.00</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-972c2929-71b4-416d-bd75-f7468f72dc23">
+                        <cybox:Object id="example:DomainName-5f5e86e1-90bc-4857-a3d4-f314e6cf078a">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>hall.info</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-7ac4913c-973d-4406-a967-7040eea778db">
+                        <cybox:Object id="example:DomainName-7887fdcc-daad-413d-bfcb-a2b1e1823545">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>murphy.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-69807506-91ae-4ba7-8266-0d1c513f203b">
+                        <cybox:Object id="example:DomainName-c7c2af9f-950b-4d7b-a767-481343392cce">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>malone.net</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-da3ef37c-c987-4e2d-9270-9b306001a8f7">
+                        <cybox:Object id="example:DomainName-9a1f655b-2c15-4112-989b-bd882bf23409">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>calderon.info</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-f44c2ab3-3e9d-41f9-acd6-25fc74452bc2">
+                        <cybox:Object id="example:DomainName-cc87eae3-8073-4bd3-9af4-f8d909a61f33">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                                <DomainNameObj:Value>russell.com</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase name="Weaponization"/>
+            </indicator:Kill_Chain_Phases>
+            <indicator:Confidence timestamp="2018-07-12T15:31:12.550595+00:00">
+                <stixCommon:Value>Low</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Secret Source</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2018-07-12T11:31:12.550518</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="example:indicator-61f4a4a4-1e8a-4779-ac51-145e58dc44e7" timestamp="2018-07-12T15:31:12.552924+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Multiple Network indicator types</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">C2</indicator:Type>
+            <indicator:Description>Long description...</indicator:Description>
+            <indicator:Short_Description>Short description...</indicator:Short_Description>
+            <indicator:Observable id="example:Observable-f5cb03de-1c1b-4b46-b7aa-dca1e980e810">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-a91fa125-5e14-4269-ae43-2bae1563b2de">
+                        <cybox:Object id="example:Address-51834c86-3e64-4e26-b34a-7af72166208b">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">245.158.200.108</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-9bffa69b-907b-429b-9438-66c2090be572">
+                        <cybox:Object id="example:Address-92c4229e-6910-4980-a011-d39d297ab2d9">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">34.4.68.82</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-1d764398-b615-4118-9f63-b7a41aa8c0f9">
+                        <cybox:Object id="example:Address-aa03cdcc-e814-4aba-badd-271b47c75149">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">211.203.226.200</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-9580c633-107d-46a1-b941-8d50f4bcd1bb">
+                        <cybox:Object id="example:HTTPSession-8331aeaa-4ae6-4f4b-80ba-d3815998f357">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (compatible; MSIE 5.0; Windows NT 5.2; Trident/5.1)</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-014db12d-6235-4f01-8619-0523923e956f">
+                        <cybox:Object id="example:HTTPSession-87e7a458-d8e9-4c68-aaec-e3d80914de7d">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/5342 (KHTML, like Gecko) Chrome/30.0.853.0 Safari/5342</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-ed0c8f0c-7cbd-4f31-9ec8-dac86b105a2d">
+                        <cybox:Object id="example:HTTPSession-0a3b8c08-dbb3-4282-8187-d42250c14c24">
+                            <cybox:Properties xsi:type="HTTPSessionObj:HTTPSessionObjectType">
+                                <HTTPSessionObj:HTTP_Request_Response>
+                                    <HTTPSessionObj:HTTP_Client_Request>
+                                        <HTTPSessionObj:HTTP_Request_Header>
+                                            <HTTPSessionObj:Parsed_Header>
+                                                <HTTPSessionObj:User_Agent>Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_9_7 rv:3.0; ff-SN) AppleWebKit/531.13.2 (KHTML, like Gecko) Version/5.0.2 Safari/531.13.2</HTTPSessionObj:User_Agent>
+                                            </HTTPSessionObj:Parsed_Header>
+                                        </HTTPSessionObj:HTTP_Request_Header>
+                                    </HTTPSessionObj:HTTP_Client_Request>
+                                </HTTPSessionObj:HTTP_Request_Response>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-22785686-96be-4a67-b9d9-ce5de960fd66">
+                        <cybox:Object id="example:URI-879b27a3-cc0f-49b4-91b9-94e6edd806c5">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>https://holt.com/tag/privacy/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-a8122848-f063-44bb-9886-0a59e6307359">
+                        <cybox:Object id="example:URI-a148954f-1086-4002-8703-62d9ab3395a7">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>http://carroll.com/tags/search/wp-content/faq/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-540a8121-aeea-4d4a-a0a7-ae43c52bae10">
+                        <cybox:Object id="example:URI-d3cda489-ff69-443c-9e7c-c67da1955519">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>https://www.oneill.biz/login/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase name="Installation"/>
+            </indicator:Kill_Chain_Phases>
+            <indicator:Confidence timestamp="2018-07-12T15:31:12.553072+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Secret Source</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2018-07-12T11:31:12.553002</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>
+

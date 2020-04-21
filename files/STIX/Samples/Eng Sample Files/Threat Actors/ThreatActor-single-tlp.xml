@@ -1,0 +1,18 @@
+<ta:Threat_Actor
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:threatactor-c93a2f77-c252-4e7a-b29a-9aac01f62f30" timestamp="2018-07-16T16:56:12.630214+00:00" xsi:type='ta:ThreatActorType'>
+    <ta:Title>Foo</ta:Title>
+    <ta:Description>Threat Actor with TLP of GREEN</ta:Description>
+    <ta:Handling>
+        <marking:Marking>
+            <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+        </marking:Marking>
+    </ta:Handling>
+</ta:Threat_Actor>

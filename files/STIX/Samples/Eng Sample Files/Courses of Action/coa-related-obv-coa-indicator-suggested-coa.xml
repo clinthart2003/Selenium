@@ -1,0 +1,81 @@
+<stix:STIX_Package 
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:coa="http://stix.mitre.org/CourseOfAction-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-f27b7e58-6466-41a4-b1ad-5b56182da457" version="1.2">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="example:Observable-de860e10-c3a5-441a-a886-b5421bd74d46">
+            <cybox:Object id="example:Address-b4badb7b-fe8a-4c02-9752-d7c086e7cadc">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                    <AddressObj:Address_Value>20.98.79.6</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-a1ffa79d-906b-413f-8914-78a5ce82d165" timestamp="2018-09-07T17:20:06.848257+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Indicator</indicator:Title>
+            <indicator:Observable id="example:Observable-22e4bc65-bfab-4f29-915d-b1e33c4ba298">
+                <cybox:Object id="example:DomainName-caa5b0fb-6490-4f44-9245-ff8a02058cab">
+                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                        <DomainNameObj:Value>torres.biz</DomainNameObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+            <indicator:Suggested_COAs>
+                <indicator:Suggested_COA>
+                    <stixCommon:Course_Of_Action idref="example:coa-9fc50844-1daa-4d1d-9ded-84a11169233c" xsi:type='coa:CourseOfActionType'/>
+                </indicator:Suggested_COA>
+            </indicator:Suggested_COAs>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:Courses_Of_Action>
+        <stix:Course_Of_Action id="example:coa-55f08995-d981-46c9-93e1-47814e3c5320" timestamp="2018-09-07T17:20:06.846086+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>Block traffic to Malicious C2 Server (20.98.79.6)</coa:Title>
+            <coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Response</coa:Stage>
+            <coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Perimeter Blocking</coa:Type>
+            <coa:Description>Maecenas sed diam eget risus varius blandit sit amet non magna.</coa:Description>
+            <coa:Short_Description>Tristique Venenatis Tortor Mollis Vestibulum</coa:Short_Description>
+            <coa:Objective>
+                <coa:Description>Block communication between the infected agents and the C2 Server</coa:Description>
+                <coa:Short_Description>Block traffic</coa:Short_Description>
+                <coa:Applicability_Confidence timestamp="2018-09-07T17:20:06.846934+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+                </coa:Applicability_Confidence>
+            </coa:Objective>
+            <coa:Parameter_Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+                <cybox:Observable idref="example:Observable-de860e10-c3a5-441a-a886-b5421bd74d46">
+                </cybox:Observable>
+            </coa:Parameter_Observables>
+            <coa:Impact timestamp="2018-09-07T17:20:06.847000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+            </coa:Impact>
+            <coa:Cost timestamp="2018-09-07T17:20:06.847042+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Low</stixCommon:Value>
+            </coa:Cost>
+            <coa:Efficacy timestamp="2018-09-07T17:20:06.847066+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </coa:Efficacy>
+            <coa:Related_COAs>
+                <coa:Related_COA>
+                    <stixCommon:Course_Of_Action idref="example:coa-9fc50844-1daa-4d1d-9ded-84a11169233c" xsi:type='coa:CourseOfActionType'/>
+                </coa:Related_COA>
+            </coa:Related_COAs>
+        </stix:Course_Of_Action>
+        <stix:Course_Of_Action id="example:coa-9fc50844-1daa-4d1d-9ded-84a11169233c" timestamp="2018-09-07T17:20:06.847984+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>Block domain traffic to torres.biz</coa:Title>
+        </stix:Course_Of_Action>
+    </stix:Courses_Of_Action>
+</stix:STIX_Package>
+

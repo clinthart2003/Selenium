@@ -1,0 +1,94 @@
+<stix:STIX_Package xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:edh2="urn:edm:edh:cyber:v3" xmlns:edh2cyberMarking="http://www.us-cert.gov/sites/default/files/STIX_Namespace/ISAMarkingsType.v2.xsd" xmlns:edh2cyberMarkingAssert="http://www.us-cert.gov/sites/default/files/STIX_Namespace/ISAMarkingsAssertionsType.v2.xsd" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:isa="http://isa.org" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:ttp="http://stix.mitre.org/TTP-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="isa:guide.19001.Package-50744056-5f1a-4738-85b3-56cc1ac3ac7c" timestamp="2018-07-18T13:50:11.266841+00:00" version="1.1.1">
+    <stix:STIX_Header>
+        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</stix:Package_Intent>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+                <marking:Marking_Structure isam_version="2.0" xsi:type="edh2cyberMarking:ISAMarkingsType">
+                    <edh2:Identifier>isa:guide.19001.89460ea8-251c-43a4-9ae7-8abd14a56fd7</edh2:Identifier>
+                    <edh2:CreateDateTime>2018-07-18T13:50:11.269382+00:00</edh2:CreateDateTime>
+                    <edh2:ResponsibleEntity>CUST:USA.NSA ORIG:USA.NSA</edh2:ResponsibleEntity>
+                </marking:Marking_Structure>
+                <marking:Marking_Structure default_marking="true" isam_version="2.0" most_restrictive="true" xsi:type="edh2cyberMarkingAssert:ISAMarkingsAssertionType">
+                    <edh2:PolicyRef>urn:isa:policy:acs:ns:3.0?privdefault=permit&amp;sharedefault=deny</edh2:PolicyRef>
+                    <edh2:AuthRef>urn:isa:authority:misa</edh2:AuthRef>
+                    <edh2:AccessPrivilege>
+                        <edh2:privilegeAction>ANONYMOUSACCESS</edh2:privilegeAction>
+                        <edh2:privilegeScope>ALL</edh2:privilegeScope>
+                        <edh2:ruleEffect>deny</edh2:ruleEffect>
+                    </edh2:AccessPrivilege>
+                    <edh2:FurtherSharing>
+                        <edh2:sharingScope>USA.USG</edh2:sharingScope>
+                        <edh2:ruleEffect>permit</edh2:ruleEffect>
+                    </edh2:FurtherSharing>
+                    <edh2:ControlSet>CLS:U FD:FOUO</edh2:ControlSet>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+        <stix:Information_Source>
+            <stixCommon:Identity>
+                <stixCommon:Name>SHARKSEER</stixCommon:Name>
+            </stixCommon:Identity>
+            <stixCommon:Contributing_Sources>
+                <stixCommon:Source>
+                    <stixCommon:Identity>
+                        <stixCommon:Name>FireEye</stixCommon:Name>
+                    </stixCommon:Identity>
+                </stixCommon:Source>
+            </stixCommon:Contributing_Sources>
+            <stixCommon:Time>
+                <cyboxCommon:Produced_Time>2018-07-18T13:50:11.265688+00:00</cyboxCommon:Produced_Time>
+            </stixCommon:Time>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="isa:guide.19001.indicator-311ad627-65df-4680-87ad-4c5611ea9e06" timestamp="2018-07-18T13:50:11.272636+00:00" xsi:type="indicator:IndicatorType">
+            <indicator:Title>Indicator of Compromise with hash '405a2ed3ba908d779903aafd268a4f65'</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">URL Watchlist</indicator:Type>
+            <indicator:Description>severity level: Major</indicator:Description>
+            <indicator:Observable id="isa:guide.19001.Observable-d12f233d-8ed8-4eaf-946b-a02294310484">
+                <cybox:Object id="isa:guide.19001.File-9769407e-0f32-4d5f-8e1c-b62cf5ce01eb">
+                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                        <FileObj:Hashes>
+                            <cyboxCommon:Hash>
+                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                <cyboxCommon:Simple_Hash_Value condition="Equals">405a2ed3ba908d779903aafd268a4f65</cyboxCommon:Simple_Hash_Value>
+                            </cyboxCommon:Hash>
+                        </FileObj:Hashes>
+                    </cybox:Properties>
+                    <cybox:Related_Objects>
+                        <cybox:Related_Object id="isa:guide.19001.URI-ca569609-c264-449c-82ab-de0df9b3c33d">
+                            <cybox:Properties type="URL" xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>neelejay.de/Jul2018/US/Order/HRI-Monthly-Invoice/</URIObj:Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Downloaded_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                    </cybox:Related_Objects>
+                </cybox:Object>
+            </indicator:Observable>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP id="isa:guide.19001.ttp-5f9c7cf9-5ff2-46a7-9f38-84c0999d25d8" timestamp="2018-07-18T13:50:11.271357+00:00" xsi:type="ttp:TTPType">
+                    <ttp:Title>Malicious File</ttp:Title>
+                    <ttp:Description>category: Malware-Object severity: Major</ttp:Description>
+                    <ttp:Behavior>
+                        <ttp:Malware>
+                            <ttp:Malware_Instance>
+                                <ttp:Name>Phish.URL.Emotet</ttp:Name>
+                            </ttp:Malware_Instance>
+                        </ttp:Malware>
+                    </ttp:Behavior>
+                </stixCommon:TTP>
+            </indicator:Indicated_TTP>
+            <indicator:Confidence timestamp="2018-07-18T13:50:12.049289+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                <stixCommon:Description>File was not previously known.
+Information for the related URL:
+URL Reputation: Unknown
+URL Categories: Online Shopping,Spyware/Adware/Keyloggers
+URL Secure: no</stixCommon:Description>
+            </indicator:Confidence>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>
+    

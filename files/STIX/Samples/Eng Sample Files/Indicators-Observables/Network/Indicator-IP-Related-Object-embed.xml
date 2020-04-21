@@ -1,0 +1,37 @@
+<stix:STIX_Package
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-bbbcc759-3fd5-4566-a7b1-b82191cabc97" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-b83eee92-2bed-46c4-a199-9b5afa9c5110" timestamp="2018-08-08T14:50:48.363419+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Indicator 2</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+            <indicator:Observable id="example:Observable-74d8e4db-952d-43bc-b820-eb3fd13e154f">
+                <cybox:Object id="example:Address-058b4a4a-6987-40ec-abee-e476c7cdeeb0">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>221.137.206.166</AddressObj:Address_Value>
+                    </cybox:Properties>
+                    <cybox:Related_Objects>
+                        <cybox:Related_Object id="example:Address-a51e7b5e-559c-49b8-ba98-4562de9af1b2">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>163.24.4.222</AddressObj:Address_Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Connected_To</cybox:Relationship>
+                        </cybox:Related_Object>
+                    </cybox:Related_Objects>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

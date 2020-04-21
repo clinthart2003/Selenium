@@ -1,0 +1,95 @@
+<stix:STIX_Package
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-a8bb7c1a-702e-4906-9e7d-39d2cb8e2a7f" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-4f27619d-ae38-43a2-ad99-6f536719b870" timestamp="2018-07-10T14:29:15.939385+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Multiple URI Observable - Multiple, related URI Indicator in TQ</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Observable id="example:Observable-cfee8e58-26f7-4d67-8aa5-abc7aca7d6b4">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-67b2cd8a-10cb-4168-aa0d-74d6f08c6875">
+                        <cybox:Object id="example:URI-0dff9231-9fb4-4971-ba33-f39f7a3df02d">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>https://www.bryant.org/homepage/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-daa99664-82cb-424f-bc6d-74ab3183a49f">
+                        <cybox:Object id="example:URI-8f8aa958-ed95-46ec-8e29-294c65204fea">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>https://www.andersen-gonzalez.com/explore/app/main/main.htm</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-fdb2b047-cc68-4186-9fac-1d9467b6a8c5">
+                        <cybox:Object id="example:URI-40e6fd09-8016-4767-abfb-5b51ce152297">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>https://garrett.net/homepage.php</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-b2bbd221-f431-45bf-8816-e07a74df4b09">
+                        <cybox:Object id="example:URI-a8d29c18-790c-457c-85fa-b122a290cac3">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>http://bush.net/main/index.php</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-45186613-5e93-4d1f-8996-67d2bf6f06d5">
+                        <cybox:Object id="example:URI-341866b0-6033-4ebb-bbd3-40cf16c1b938">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>http://chavez.com/about/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-9b4c1ebf-6940-4d20-b46c-494a8e919e1b">
+                        <cybox:Object id="example:URI-6d1d7158-38ee-4874-a762-3956fb2f8e5a">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>https://www.merritt.com/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-d92ece06-56c5-4719-b9c9-66c121185cd2">
+                        <cybox:Object id="example:URI-9f99fc9d-fda7-4a4b-b97a-3a4a06d7b0db">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>http://www.clark.net/tags/explore/blog/login/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-9b2b539f-b031-4ed1-a93c-87bdee5645b4">
+                        <cybox:Object id="example:URI-ea0a6dc6-cac0-4d14-bee6-1722937aac71">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>http://www.fox.com/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-27141e5e-1da0-48df-8a96-3ac415d33f97">
+                        <cybox:Object id="example:URI-22e423a2-1948-4bdc-8fec-6bc9ad47f18b">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>http://davis-bullock.com/register.html</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-997ded0f-24c1-44c4-a8d5-e58fcc42f883">
+                        <cybox:Object id="example:URI-7eb8eba6-a0bc-4cad-b7da-ab0376feebdc">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType">
+                                <URIObj:Value>https://www.medina.com/tag/blog/category.htm</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

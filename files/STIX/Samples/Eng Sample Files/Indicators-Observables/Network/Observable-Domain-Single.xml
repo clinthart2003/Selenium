@@ -1,0 +1,21 @@
+<stix:STIX_Package
+	xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-e8429f31-af57-41d4-be5a-adf5ef0c7e4e" version="1.2">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="example:Observable-779eba6e-f370-45c4-b3e1-a0dfba2da374">
+            <cybox:Object id="example:DomainName-3f86d01a-feff-4b42-8a1d-13b0d70bfee3">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+                    <DomainNameObj:Value>shadysite.biz</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+</stix:STIX_Package>

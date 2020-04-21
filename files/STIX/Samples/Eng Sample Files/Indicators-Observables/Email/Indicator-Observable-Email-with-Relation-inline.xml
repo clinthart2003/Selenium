@@ -1,0 +1,46 @@
+<stix:STIX_Package xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" 
+    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" 
+    xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2" 
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
+    xmlns:cybox="http://cybox.mitre.org/cybox-2" 
+    xmlns:stix="http://stix.mitre.org/stix-1" 
+    xmlns:indicator="http://stix.mitre.org/Indicator-2" 
+    xmlns:example="http://example.com" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="example:Package-8fff2b89-055d-4ff3-ad8b-f5dc69b7bdf4" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-fbcdfd0b-7e13-435e-88c1-88d3c77e29db" timestamp="2018-07-19T13:23:57.058351+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Single Email Indicator with related inline</indicator:Title>
+            <indicator:Observable id="example:Observable-5c83fd0d-6b6c-416a-a5e0-54ed9f30b494">
+                <cybox:Object id="example:EmailMessage-88cbceb2-3a0d-4c5a-b54f-36739e3febbb">
+                    <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                        <EmailMessageObj:Header>
+                            <EmailMessageObj:To>
+                                <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                    <AddressObj:Address_Value>ricardo02@yahoo.com</AddressObj:Address_Value>
+                                </EmailMessageObj:Recipient>
+                            </EmailMessageObj:To>
+                            <EmailMessageObj:From xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>kschneider@yahoo.com</AddressObj:Address_Value>
+                            </EmailMessageObj:From>
+                            <EmailMessageObj:Sender xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>kschneider@yahoo.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Sender>
+                            <EmailMessageObj:Subject>Give me youre password</EmailMessageObj:Subject>
+                        </EmailMessageObj:Header>
+                    </cybox:Properties>
+                    <cybox:Related_Objects>
+                        <cybox:Related_Object id="example:Address-9ca73eac-51a0-44ac-a760-2c16ea329eea">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>48.173.126.212</AddressObj:Address_Value>
+                            </cybox:Properties>
+                            <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Received_From</cybox:Relationship>
+                        </cybox:Related_Object>
+                    </cybox:Related_Objects>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

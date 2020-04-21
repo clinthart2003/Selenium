@@ -1,0 +1,698 @@
+<stix:STIX_Package 
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:exampledata="http://stix.exampledata.org"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:report="http://stix.mitre.org/Report-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="exampledata:Package-8cc8d0f2-bc97-4cd6-857c-660d6c2cb29d" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="exampledata:indicator-16e76388-2998-4e00-aa38-21661fa0b69b" timestamp="2018-03-19T20:45:45.644544+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Test Indicators</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Description>This is a set of false indicators for testing purposes and should not be used in production.</indicator:Description>
+            <indicator:Valid_Time_Position>
+                <indicator:Start_Time precision="second">2018-03-19T20:45:45.644855+00:00</indicator:Start_Time>
+                <indicator:End_Time precision="second">2018-03-26T20:45:45.644859+00:00</indicator:End_Time>
+            </indicator:Valid_Time_Position>
+            <indicator:Observable id="exampledata:Observable-4fbb2eae-0ce7-4851-8bdf-fdbe32f32028">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="exampledata:Observable-f69eb19b-fbe8-4bbf-96fe-67e6dba404b6">
+                        <cybox:Observable_Composition operator="AND">
+                            <cybox:Observable id="exampledata:Observable-60b95bfa-b030-406e-b888-47979b36c53f">
+                                <cybox:Object id="exampledata:URI-7d55872b-bdd7-4845-a3bc-985964278a6e">
+                                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                        <URIObj:Value condition="Equals">http://poises-australasia.academy/excruciatingly-poll/dangled.htm</URIObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-dfdb168b-bc9c-4a95-aaac-93ef5c3e7b98">
+                                <cybox:Object id="exampledata:File-d4fb30ca-2f6a-4028-8d50-8e8d29206b0e">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">73df0fbb685ee4bd09b5f2b86e0d339b</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-19291f26-1d9c-4e16-b248-eab27ca11983">
+                                <cybox:Object id="exampledata:File-358b0c63-f7ff-44b4-8d83-7efc4f705dce">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">015b61b30e744aa5a05aac754164a2f2b2ce1cb1</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-d5117a9c-8b29-4ac1-a2f4-9f1a9b57569b">
+                                <cybox:Object id="exampledata:File-ff4ed975-5238-4912-9711-569f1885e9ce">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">37e516af5fef8e2801a5ac9af8d4c563</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-ecdc1eff-666b-4c63-8b15-f2311ae800ae">
+                                <cybox:Object id="exampledata:URI-d9b4037d-c7d8-48cb-8951-f85cad27e1f4">
+                                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                        <URIObj:Value condition="Equals">http://speer-finaglers.jetzt/interests-yokel/parenthesize.cgi</URIObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-df9b250f-e5f9-47e5-9cf6-7bea7749ba7e">
+                                <cybox:Object id="exampledata:DomainName-d60e3731-caba-4d63-9bdf-b6b37182eaba">
+                                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                        <DomainNameObj:Value condition="Equals">inveigle-suffused.download</DomainNameObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-16a9932e-93a7-4435-a27d-4cb5abfdeba8">
+                        <cybox:Observable_Composition operator="AND">
+                            <cybox:Observable id="exampledata:Observable-952a42a2-f18e-491a-a024-a644e76a5ce7">
+                                <cybox:Object id="exampledata:File-68d447fe-9b34-492d-83ff-5081202c228d">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">850e596cd0d682d5c9eb399e2d5772b2</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-7b91ca07-44a8-4dee-b236-462b3f6da21d">
+                                <cybox:Object id="exampledata:Address-d9e86c7e-b217-44c2-b29b-09066c852127">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">251.90.54.255</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-dae46925-8ff8-4188-b6d2-3451d77212c0">
+                        <cybox:Observable_Composition operator="OR">
+                            <cybox:Observable id="exampledata:Observable-2329ee53-c5ec-4908-8c13-0bbf143b4e42">
+                                <cybox:Object id="exampledata:File-49190e9c-bcb7-437c-b38e-6709fd64da43">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">6eae0a93e000a4369a27f9024a853e0e</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-7955a302-4551-4094-a3f4-5d2896b973e9">
+                                <cybox:Object id="exampledata:File-b3355b4a-5dca-4146-910d-7728d370666b">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">2ce901e5bca3dd82634f26399ac9b546a1d73532</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-e260205d-ffcf-4842-97e6-d683b833e3ef">
+                        <cybox:Observable_Composition operator="AND">
+                            <cybox:Observable id="exampledata:Observable-77af9917-b033-44fd-aa18-96401973a74a">
+                                <cybox:Object id="exampledata:File-8b7a66a0-1436-4471-8daa-6537dfcffda8">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">8676872349243de1443adf3997ee5d08</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-684eaa0e-97e1-41dd-8027-84cb69b11708">
+                                <cybox:Object id="exampledata:File-7846ac10-9f88-4cf2-9db5-4aaa20ba9453">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">77c66422e8c63203cafc514a816556a3</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-aa1ba056-8b7a-48c6-a97b-c07eb81840f1">
+                                <cybox:Object id="exampledata:File-9f1fe07d-2606-464e-908c-c9f25aab1f6b">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">775a96e0f4441d34df9288c335ee3b4fd5eaf4a8</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-4d0f3fa2-f194-4e6a-be09-c64745d3c698">
+                                <cybox:Object id="exampledata:URI-fcb1b16b-303a-45be-8a57-e02c4651d898">
+                                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                        <URIObj:Value condition="Equals">http://jamaican-vents.autos/deanne-patricides/rochester.aspx</URIObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-939fbda6-7666-490c-a326-12b2dfcab737">
+                                <cybox:Object id="exampledata:File-42dab1a6-3e0b-4f76-9ce1-71c2badd1d75">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">5fab89d1206baec209e0ba455a0fd2dab05f0f18</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-ab4a0a2d-bc32-4d9e-bc49-707cbbd8dc29">
+                        <cybox:Object id="exampledata:DomainName-613cc967-de93-4465-8ca0-3dd54ce2ee91">
+                            <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                <DomainNameObj:Value condition="Equals">speer-finaglers.jetzt</DomainNameObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-0a326f5e-5bc8-4527-9574-ba16945e1a31">
+                        <cybox:Observable_Composition operator="AND">
+                            <cybox:Observable id="exampledata:Observable-418bbb76-5e1b-422c-9b25-e8c15acc0946">
+                                <cybox:Object id="exampledata:File-d2abdee0-7655-49ce-a4f4-951e1a9f5ed3">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">62921b966228350603706e7af5d3cfc7</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-1109ed42-790e-48f4-8e9a-ded369e599cd">
+                                <cybox:Object id="exampledata:Address-0cb9a894-301e-4606-a622-7f0e0d1de512">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">251.230.239.173</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-48b6a40e-a4cb-4054-bb22-4fdd7025668a">
+                                <cybox:Object id="exampledata:DomainName-48229bee-89be-4de0-8169-9ed59d211bdc">
+                                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                        <DomainNameObj:Value condition="Equals">dens-discuss.vn</DomainNameObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-9e7582ad-0b71-48d5-902a-4cbce10b089e">
+                        <cybox:Observable_Composition operator="AND">
+                            <cybox:Observable id="exampledata:Observable-2630b80c-5ab7-4192-8894-63ff8208d526">
+                                <cybox:Object id="exampledata:DomainName-7cff7ed4-05e1-4f3c-97e7-c127dd82d472">
+                                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                        <DomainNameObj:Value condition="Equals">telethon-molten.black</DomainNameObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-469b41eb-5b88-4649-95c1-5dc9d09e1a25">
+                                <cybox:Object id="exampledata:URI-d9875ff6-1348-4ed5-a078-600e07ba4801">
+                                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                        <URIObj:Value condition="Equals">http://oppress-legitimated.accenture/announced-cameos/continua.aspx</URIObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-389e5024-7705-41ca-80d0-064105c064f7">
+                                <cybox:Object id="exampledata:File-dd138e4c-442f-49df-b4d0-70d18de6443c">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">31d6e62372c1fef9c6adba219b271caccc1457b8</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-2964ccfa-2ea7-4d68-9645-f3509661a825">
+                                <cybox:Object id="exampledata:File-29c1a9d0-6ad2-45c3-a0b6-b8aa1c6fa831">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">0238d503af163de913a7f5f9c2d90557</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-166760d8-04b7-4c2a-b68d-160b498b0c4c">
+                        <cybox:Observable_Composition operator="AND">
+                            <cybox:Observable id="exampledata:Observable-e448d7c9-222d-484f-b0cc-464993fc6fb9">
+                                <cybox:Object id="exampledata:Address-4c6314aa-f28a-435b-937f-345969ea4bf5">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">207.166.209.69</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-9074defb-61a6-4b33-a883-54f89ec45287">
+                                <cybox:Object id="exampledata:File-3787a887-611c-46d0-b857-9dca00f3de4c">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">2ac4277e66522d91a7bb8190297b5a0f</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-664fe1d7-228d-4201-b26d-74021623fccd">
+                                <cybox:Object id="exampledata:File-44ceda39-5a9c-4267-bbd0-ccbef29eb8c4">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">60924b6b496ce771478c1c75f6d04c75</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-26e91e08-73eb-45f5-bd0e-0a46a9b31a14">
+                                <cybox:Object id="exampledata:DomainName-b06eba42-6992-4a50-b9f8-59c852e253c5">
+                                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                        <DomainNameObj:Value condition="Equals">speer-finaglers.jetzt</DomainNameObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-59c32290-5e52-49e8-9010-f82f2735ca9e">
+                        <cybox:Observable_Composition operator="OR">
+                            <cybox:Observable id="exampledata:Observable-7aba4ff3-c298-4fd3-b89a-4cca7703634d">
+                                <cybox:Object id="exampledata:File-5d0dd8db-ef51-49b6-8ee9-716a61e97cf0">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">c5d1c51428f931d08c556cd1ac43930281384567</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-b783c2f2-b2f1-4556-87b5-fe5ce343f57c">
+                                <cybox:Object id="exampledata:DomainName-462f4c67-048d-4196-aa17-39537c38de05">
+                                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                        <DomainNameObj:Value condition="Equals">kicks-gestapos.date</DomainNameObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-c059271e-094a-4578-ace9-1ee26850b524">
+                                <cybox:Object id="exampledata:File-c5645c5f-9e99-414b-8402-5f089025c79e">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">f6c050ccfb19e197c591666c7b93e23dfd5cf2fb</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-e463e8f4-ade0-494e-b175-e5c2e63894c8">
+                                <cybox:Object id="exampledata:File-d4bc555f-da1a-4388-800e-f1329bc08a3c">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">ebbaeca07101c4e67a21d54aea86b57d1328c807</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-b12776f2-643a-42e9-978e-d411edd69ffb">
+                                <cybox:Object id="exampledata:Address-ba678102-624a-4346-9c5c-2002fd64972d">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">251.230.239.173</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-d8ff1020-4d2f-41ed-8a31-48224a96e9ad">
+                                <cybox:Object id="exampledata:DomainName-37709051-0fcd-4b50-9916-f84baccd1021">
+                                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                        <DomainNameObj:Value condition="Equals">preregister-turbulence.sk</DomainNameObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-121c996d-78d1-49fd-bba8-41a68694573a">
+                                <cybox:Object id="exampledata:File-c83c6f82-5d1e-4456-8e57-29b50b162714">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">7575916a3391af7bec120ab3f488024a88a37db7</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-28de3acf-26d8-4e7e-be62-b97261ef7bf0">
+                        <cybox:Observable_Composition operator="OR">
+                            <cybox:Observable id="exampledata:Observable-087b0f87-dc80-4050-83cb-241b2aa913be">
+                                <cybox:Object id="exampledata:DomainName-0f0e1afb-8fde-44eb-81d5-7054ddced973">
+                                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                        <DomainNameObj:Value condition="Equals">oddly-immensity.netbank</DomainNameObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-666e3aab-088a-4b91-b11f-f0cd5d57853c">
+                                <cybox:Object id="exampledata:File-f1ae8326-57ff-49b8-9382-c4d01dca809c">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">bdc964a1ad66e069bd29a482dc512cc4</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-42d2cc0d-a540-443b-8d2f-41be5b76584a">
+                                <cybox:Object id="exampledata:Address-3dcce7d6-3acb-45bd-a16b-df4404067c6b">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">99.196.144.31</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-c471e8f3-b634-41a1-8aee-aab54d9cb502">
+                        <cybox:Observable_Composition operator="AND">
+                            <cybox:Observable id="exampledata:Observable-bd0336a2-0f37-481a-9d57-021582c5729b">
+                                <cybox:Object id="exampledata:Address-0d799902-f43b-46c4-99ab-8861fef4bb54">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">118.224.82.10</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-5008029d-ec64-40b9-9ee6-76edbdb8869c">
+                                <cybox:Object id="exampledata:URI-42095e29-4949-463b-a947-38eee1ff968e">
+                                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                        <URIObj:Value condition="Equals">http://shoestring-loath.vet/blacklisted-conquerors/approbations.jsp</URIObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-f7e73494-bfd4-41d7-a119-e4855a126016">
+                        <cybox:Observable_Composition operator="OR">
+                            <cybox:Observable id="exampledata:Observable-eaca7954-15ee-4841-8a98-b7bc71ef755b">
+                                <cybox:Object id="exampledata:File-11027c7d-b03b-46b9-9eca-971a73b5f31d">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">6af1dbf46503f275cea22b408d709d4e6ed60942</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-01115ad4-addf-48e2-a1b6-05721d766733">
+                                <cybox:Object id="exampledata:Address-5b11971b-252b-4da0-a2cb-77c69957daa2">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">200.168.97.252</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-7389ce4d-8afa-4cf8-a9de-81fd6085f3ed">
+                                <cybox:Object id="exampledata:File-222712fd-c4f1-4aaa-ae6e-64eea512cdc7">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">0ed2ba4bb85b19d42123394159e45af3dc4981dc</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-c9dd6c52-25fe-4093-a58e-5dfa3a2bcf12">
+                        <cybox:Observable_Composition operator="OR">
+                            <cybox:Observable id="exampledata:Observable-aa0c81a8-0f39-4bcf-8d36-8e4a07154975">
+                                <cybox:Object id="exampledata:File-f165164f-1e55-427a-8e2f-e91444d3ed81">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">b9b7d5edb989e7593a8decb1e3ece193</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-f384deb9-d5d1-4b2c-9c16-2cd1fcdc2aa4">
+                                <cybox:Object id="exampledata:File-32690fa1-49df-46b5-91a9-c9b1685ade7c">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">33d421121e863dd826140c3c7f6dfdf9</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-04621d7a-d55f-42d7-9935-7a3252b71bbb">
+                                <cybox:Object id="exampledata:File-37751bd6-5b36-4a19-becb-74e99a4e9186">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">01313d1f2cf184365d183a2b501617ec</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-f29af824-3769-47ae-b4ce-31eb3d4197de">
+                                <cybox:Object id="exampledata:File-db53df04-8983-4cf8-b008-cbf6006ff540">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">d34aeb522e7bbac93b794c616ebe7fe51039f94d</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-eb9b2f55-b3e5-4e3c-8eaf-1752a65d6a18">
+                                <cybox:Object id="exampledata:File-61cb707f-30dd-470a-b742-3cd7c30ef7c4">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">5bbb243df67aa21207285bb193fb3538</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-2b8a799d-c06f-44d7-b79b-c523214c81d6">
+                                <cybox:Object id="exampledata:DomainName-203ae008-74f8-49ee-9911-958297474338">
+                                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                                        <DomainNameObj:Value condition="Equals">oversupply-pleasanter.pharmacy</DomainNameObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-caa25648-ff14-46c4-8800-dcef1008f607">
+                        <cybox:Observable_Composition operator="AND">
+                            <cybox:Observable id="exampledata:Observable-fc9e2620-1134-44b1-b535-d20e01823009">
+                                <cybox:Object id="exampledata:URI-116ca9f3-4b2c-4216-bab3-208b9baf307b">
+                                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                        <URIObj:Value condition="Equals">http://jamaican-vents.autos/elapse-poppycock/fjord.html</URIObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-2f0bd7a3-689a-4ed3-9faa-6f0206131927">
+                                <cybox:Object id="exampledata:Address-93105da5-8355-4476-b531-08d2f47e5b79">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">157.93.151.47</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-83a01ae2-f61a-4adb-931c-f34a1566514e">
+                                <cybox:Object id="exampledata:File-c94442fa-fe2e-48f7-93a9-26feb6cad032">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">03c422b4e7589297118f91a89303e46e</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-126ae1a8-babb-45bd-9466-d44ec719b1af">
+                                <cybox:Object id="exampledata:File-8fbd5906-8db6-40c7-8140-0c2b6fb5b47c">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">4bfed3b01756749c9590b89f1643e383</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-0ff254ac-efe8-4865-b056-8ff349d0df6f">
+                                <cybox:Object id="exampledata:File-dcef9ca1-8f37-450b-aa4d-ed5dded66c53">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">bb99696146bfec877e75de66820d6c4e</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-5aa13d58-1449-4dc3-bbc9-af8314bd664d">
+                                <cybox:Object id="exampledata:Address-bdb7a898-4a50-4139-9996-83a834b92829">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">115.13.23.181</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-409fa862-a59b-4666-a2ff-2a74c1e55235">
+                                <cybox:Object id="exampledata:File-3315f41e-ed5d-4c11-81a4-fc1b55dbfc4c">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:Hashes>
+                                            <cyboxCommon:Hash>
+                                                <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                                <cyboxCommon:Simple_Hash_Value condition="Equals">5dd09ed1429ff0a32b0a9fa05a449bdd33faa50a</cyboxCommon:Simple_Hash_Value>
+                                            </cyboxCommon:Hash>
+                                        </FileObj:Hashes>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-8d980563-52bc-40a2-8212-6f700cbec2ee">
+                        <cybox:Object id="exampledata:Address-201203e5-c96a-4cc4-b559-0f00895a800b">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">84.9.165.142</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-107ef9dc-7ad7-4a98-aeeb-8d92bdd6fc69">
+                        <cybox:Observable_Composition operator="OR">
+                            <cybox:Observable id="exampledata:Observable-cb28d24d-af92-465c-b92e-ea767c9e169b">
+                                <cybox:Object id="exampledata:Address-de6a5ea1-aba5-489f-b98d-30630edb26b4">
+                                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                        <AddressObj:Address_Value condition="Equals">19.120.86.253</AddressObj:Address_Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                            <cybox:Observable id="exampledata:Observable-6050273c-610a-4969-99f1-7bb10df42197">
+                                <cybox:Object id="exampledata:URI-8282b341-e114-4c64-91cb-7f352b9aef60">
+                                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                        <URIObj:Value condition="Equals">http://tight-rs.estate/gonzalez-turks/wheeled.htm</URIObj:Value>
+                                    </cybox:Properties>
+                                </cybox:Object>
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-08c3f452-6947-4262-b2db-0d44111543a6">
+                        <cybox:Object id="exampledata:File-4ae96fc8-9d7d-4304-b967-5c69c5112cef">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value condition="Equals">8241fa1d3a41a70a835cf445d8c97a05</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="exampledata:Observable-2fa0ebc7-7e43-4110-9d65-d627cb538a14">
+                        <cybox:Object id="exampledata:File-561c3cca-e0cb-4e86-8fc8-6216d3667736">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type condition="Equals" xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value condition="Equals">70815bad4d508b6a80decfd777b2b273</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP id="exampledata:ttp-e43e0467-8db0-dc33-f6e9-c70786ab6a25" timestamp="2018-03-19T20:45:45.644956+00:00" xsi:type='ttp:TTPType'>
+                    <ttp:Title>External TTP</ttp:Title>
+                </stixCommon:TTP>
+            </indicator:Indicated_TTP>
+            <indicator:Confidence timestamp="2018-03-19T20:45:45.644797+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">None</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Cosive STIX Example Generator</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2018-03-19T20:45:45.644752+00:00</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:Reports>
+        <stix:Report timestamp="2018-03-19T20:45:45.644279+00:00" id="exampledata:Report-e7d6b935-f1f3-44ad-a338-b3a0dacc1c51" xsi:type='report:ReportType' version="1.0">
+            <report:Header>
+                <report:Title>[TESTING] Test Indicators</report:Title>
+                <report:Intent xsi:type="stixVocabs:ReportIntentVocab-1.0">Indicators - Watchlist</report:Intent>
+                <report:Description>These indicators are automatically generated and should not be used in live environments.</report:Description>
+            </report:Header>
+        </stix:Report>
+    </stix:Reports>
+</stix:STIX_Package>

@@ -1,0 +1,57 @@
+<!--
+https://stixproject.github.io/documentation/idioms/incident-vs-indicator/
+-->
+<stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+    <cybox:Observable id="example:Observable-6a93879e-58b9-47b0-a44a-77fdb0cf1bb7">
+        <cybox:Object id="example:Address-7e4f44b8-a0f9-4940-9de4-da313b6a2827">
+            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                <AddressObj:Address_Value>192.168.1.1</AddressObj:Address_Value>
+            </cybox:Properties>
+        </cybox:Object>
+    </cybox:Observable>
+</stix:Observables>
+<stix:Indicators>
+    <stix:Indicator id="example:indicator-de988b8f-538b-40d8-b4f3-36378ba18d48" timestamp="2014-08-25T15:55:45.338000+00:00" xsi:type='indicator:IndicatorType' negate="false" version="2.1.1">
+        <indicator:Title>192.168.1.1</indicator:Title>
+        <indicator:Observable id="example:Observable-c80170c3-64f0-49a7-b16c-be9dc290583f">
+            <cybox:Object id="example:Address-85953adb-21ba-447c-8d8b-df8fe4d7e894">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                    <AddressObj:Address_Value condition="Equals">192.168.1.1</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </indicator:Observable>
+        <indicator:Indicated_TTP>
+            <stixCommon:TTP idref="example:ttp-e16098ed-8135-43b0-96d1-1d93e52fdab2" xsi:type='ttp:TTPType' version="1.2"/>
+        </indicator:Indicated_TTP>
+    </stix:Indicator>
+</stix:Indicators>
+<stix:TTPs>
+    <stix:TTP id="example:ttp-e16098ed-8135-43b0-96d1-1d93e52fdab2" timestamp="2014-08-25T15:55:45.338000+00:00" xsi:type='ttp:TTPType' version="1.2">
+        <ttp:Title>ZBot</ttp:Title>
+    </stix:TTP>
+</stix:TTPs>
+<stix:Incidents>
+    <stix:Incident id="example:incident-d6f8f6d6-e9ea-4d8f-b066-20a492ac9561" timestamp="2014-08-25T15:55:45.339000+00:00" xsi:type='incident:IncidentType' version="1.2">
+        <incident:Title>192.168.1.1</incident:Title>
+        <incident:Time>
+            <incident:First_Malicious_Action precision="second">2014-01-01T09:23:23+00:00</incident:First_Malicious_Action>
+        </incident:Time>
+        <incident:Related_Indicators>
+            <incident:Related_Indicator>
+                <stixCommon:Indicator idref="example:indicator-de988b8f-538b-40d8-b4f3-36378ba18d48" xsi:type='indicator:IndicatorType' negate="false" version="2.1.1"/>
+            </incident:Related_Indicator>
+        </incident:Related_Indicators>
+        <incident:Related_Observables>
+            <incident:Related_Observable>
+                <stixCommon:Observable idref="example:Observable-6a93879e-58b9-47b0-a44a-77fdb0cf1bb7">
+                </stixCommon:Observable>
+            </incident:Related_Observable>
+        </incident:Related_Observables>
+        <incident:Leveraged_TTPs>
+            <incident:Leveraged_TTP>
+                <stixCommon:Relationship>Used Malware</stixCommon:Relationship>
+                <stixCommon:TTP idref="example:ttp-e16098ed-8135-43b0-96d1-1d93e52fdab2" xsi:type='ttp:TTPType' version="1.2"/>
+            </incident:Leveraged_TTP>
+        </incident:Leveraged_TTPs>
+    </stix:Incident>
+</stix:Incidents>

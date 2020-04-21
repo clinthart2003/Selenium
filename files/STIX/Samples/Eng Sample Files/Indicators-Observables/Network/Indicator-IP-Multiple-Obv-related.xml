@@ -1,0 +1,38 @@
+<stix:STIX_Package
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	 id="example:Package-2232d4b3-e923-42a6-a300-9a27e700cb6a" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-b8449a95-1125-4402-98c2-5d05f0341a0e" timestamp="2018-07-10T14:03:41.901938+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Multiple Address Observable - Multiple, related Address Indicator in TQ</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+            <indicator:Observable id="example:Observable-f94e6bc2-e045-414e-b013-4938786a739c">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="example:Observable-1a327857-3ec6-48a2-beb3-3ab9c46f8fca">
+                        <cybox:Object id="example:Address-653fbe93-a2af-44e6-858a-7980873c3f72">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">1.1.1.1</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-95f0d697-1003-470e-9f66-fae6d0256a6b">
+                        <cybox:Object id="example:Address-01fcd0d9-8909-4351-8dde-1daf9aa090b2">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value condition="Equals">2.2.2.2</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

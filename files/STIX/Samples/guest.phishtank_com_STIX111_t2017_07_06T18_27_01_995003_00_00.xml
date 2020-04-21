@@ -1,0 +1,41 @@
+<stix:STIX_Package xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1" xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1" xmlns:TOUMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1" xmlns:opensource="http://hailataxii.com" xmlns:edge="http://soltra.com/" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:ttp="http://stix.mitre.org/TTP-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:taxii="http://taxii.mitre.org/messages/taxii_xml_binding-1" xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1" xmlns:tdq="http://taxii.mitre.org/query/taxii_default_query-1" id="edge:Package-d0fdd2ef-4100-4701-9ef7-95fafbd4f498" version="1.1.1" timestamp="2017-07-06T18:27:01.992380+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node()</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" color="WHITE"/>
+                <marking:Marking_Structure xsi:type="TOUMarking:TermsOfUseMarkingStructureType">
+                    <TOUMarking:Terms_Of_Use>TBD</TOUMarking:Terms_Of_Use>
+                </marking:Marking_Structure>
+                <marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
+                    <simpleMarking:Statement>Unclassified (Public)</simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="opensource:indicator-f361a6bd-1d48-4b95-a729-f4b1bf04a97d" timestamp="2017-07-06T02:06:16.584321+00:00" xsi:type="indicator:IndicatorType" version="2.1.1">
+            <indicator:Title>phishTank.com id:5082811 with malicious URL:http://sicoobbankingrecada...</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">URL Watchlist</indicator:Type>
+            <indicator:Description>This URL:[http://sicoobbankingrecadastramento.com/home.php] was identified by phishtank.com as part of a phishing email. This URL appears to still be online as of 2017-07-05T21:36:09+00:00. More detailed infomation can be found at http://www.phishtank.com/phish_detail.php?phish_id=5082811</indicator:Description>
+            <indicator:Short_Description>phishTank.com id:5082811 with malicious URL:http://sicoobbankingrecada...</indicator:Short_Description>
+            <indicator:Observable idref="opensource:Observable-77685a52-440d-462f-826d-7910619005b8">
+            </indicator:Observable>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="opensource:ttp-c819f3ef-fbc3-4077-8d56-bf619c8d9b29" xsi:type="ttp:TTPType" version="1.1.1"/>
+            </indicator:Indicated_TTP>
+            <indicator:Confidence timestamp="2017-07-06T02:06:16.584347+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity id="opensource:Identity-5c4e64fc-2d9f-43b8-b5ad-12bf52eca79f">
+                    <stixCommon:Name>http://www.phishtank.com/</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2017-07-05T21:36:09+00:00</cyboxCommon:Produced_Time>
+                    <cyboxCommon:Received_Time>2017-07-06T02:05:21+00:00</cyboxCommon:Received_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

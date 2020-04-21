@@ -1,0 +1,36 @@
+<stix:STIX_Package xmlns:ta="http://stix.mitre.org/ThreatActor-1" 
+    xmlns:stix="http://stix.mitre.org/stix-1" 
+    xmlns:stixCommon="http://stix.mitre.org/common-1" 
+    xmlns:example="http://example.com" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="example:Package-6c59a8c5-eb7c-43a6-ac13-b9e6ff011c21" version="1.2">
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-2dee929d-e695-4882-8d80-03ded98977c5" timestamp="2018-06-26T15:01:44.555241+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Astonishing Pheasant</ta:Title>
+            <ta:Associated_Actors>
+                <ta:Associated_Actor>
+                    <stixCommon:Threat_Actor id="example:threatactor-36dd7ea2-b5b9-4fdc-a35a-4331f5544133" timestamp="2018-06-26T15:01:44.555323+00:00" xsi:type='ta:ThreatActorType'>
+                        <ta:Title>Determined Rabbit</ta:Title>
+                    </stixCommon:Threat_Actor>
+                </ta:Associated_Actor>
+                <ta:Associated_Actor>
+                    <stixCommon:Threat_Actor id="example:threatactor-39a13def-1812-4221-aa08-b36b805b84c7" timestamp="2018-06-26T15:01:44.555384+00:00" xsi:type='ta:ThreatActorType'>
+                        <ta:Title>Stunning Narwhal</ta:Title>
+                    </stixCommon:Threat_Actor>
+                </ta:Associated_Actor>
+                <ta:Associated_Actor>
+                    <stixCommon:Threat_Actor id="example:threatactor-aea3c0f8-aac6-4bb9-862c-43715393d314" timestamp="2018-06-26T15:01:44.555443+00:00" xsi:type='ta:ThreatActorType'>
+                        <ta:Title>Agitated Rhinoceros</ta:Title>
+                    </stixCommon:Threat_Actor>
+                </ta:Associated_Actor>
+                <ta:Associated_Actor>
+                    <stixCommon:Threat_Actor id="example:threatactor-8a552585-c5dc-47a4-bbb4-29616a164020" timestamp="2018-06-26T15:01:44.555499+00:00" xsi:type='ta:ThreatActorType'>
+                        <ta:Title>Jolly Mongoose</ta:Title>
+                    </stixCommon:Threat_Actor>
+                </ta:Associated_Actor>
+            </ta:Associated_Actors>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

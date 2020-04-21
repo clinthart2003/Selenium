@@ -1,0 +1,36 @@
+<stix:STIX_Package xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" 
+    xmlns:cybox="http://cybox.mitre.org/cybox-2" 
+    xmlns:stix="http://stix.mitre.org/stix-1" 
+    xmlns:ttp="http://stix.mitre.org/TTP-1" 
+    xmlns:stixCommon="http://stix.mitre.org/common-1" 
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
+    xmlns:indicator="http://stix.mitre.org/Indicator-2" 
+    xmlns:example="http://example.com" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="example:Package-b3428f5a-3e2b-4a11-a384-4f6e6c8e7c35" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-efe1dec4-2f86-44ce-9977-543d15507892" timestamp="2014-10-09T21:38:50.631509+00:00" xsi:type='indicator:IndicatorType' negate="false" version="2.1.1">
+            <indicator:Title>Malicious IP</indicator:Title>
+            <indicator:Observable id="example:Observable-d8714ca9-616b-4091-8dfd-d709addfcd99">
+                <cybox:Object id="example:Address-8046a88a-374d-4d91-9e29-11ca21c4bf2b">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>3.244.46.203</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+            <indicator:Kill_Chain_Phases>
+                <stixCommon:Kill_Chain_Phase phase_id="example:killchainphase-32628418-b677-4bb3-8543-3e7e6c0c7500" kill_chain_id="example:killchain-13c00902-fc04-4d63-9362-29afedd50805"/>
+            </indicator:Kill_Chain_Phases>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:Kill_Chains>
+            <stixCommon:Kill_Chain id="example:killchain-13c00902-fc04-4d63-9362-29afedd50805" name="Organization-specific Kill Chain">
+                <stixCommon:Kill_Chain_Phase name="Infect Machine" phase_id="example:killchainphase-32628418-b677-4bb3-8543-3e7e6c0c7500"/>
+                <stixCommon:Kill_Chain_Phase name="Exfiltrate Data" phase_id="example:killchainphase-3ffb6f6d-042f-49a4-8eea-0e0b6686090b"/>
+            </stixCommon:Kill_Chain>
+        </stix:Kill_Chains>
+    </stix:TTPs>
+</stix:STIX_Package>

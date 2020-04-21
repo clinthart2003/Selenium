@@ -1,0 +1,31 @@
+<stix:STIX_Package
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-90dc281f-35c9-4c59-86be-01fcef0e2bf5" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-85c8c00c-e462-4245-b2fc-fc1ffc4c6000" timestamp="2018-08-08T15:15:05.974119+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Indicator 2</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+            <indicator:Observable id="example:Observable-6aaf798a-4789-4bda-978c-96ee66b6585e">
+                <cybox:Object id="example:Address-8f5713a2-e283-4db2-816c-70d2628d7132">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>63.126.148.89</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+            <indicator:Likely_Impact timestamp="2018-08-08T15:15:05.974328+00:00">
+                <stixCommon:Value>Things going to get messed up</stixCommon:Value>
+            </indicator:Likely_Impact>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

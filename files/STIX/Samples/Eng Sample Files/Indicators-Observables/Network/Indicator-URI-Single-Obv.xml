@@ -1,0 +1,28 @@
+<stix:STIX_Package
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:example="http://example.com"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-b965a5dc-0efc-44ad-b140-82b599eacd4f" version="1.2">
+    <stix:Indicators>
+        <stix:Indicator id="example:indicator-228f629b-0b2c-411b-ac6b-a8b899a750d5" timestamp="2018-07-10T14:23:30.174689+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Single URI Observable - URL Indicator in TQ</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Observable id="example:Observable-c78d3c39-66eb-46bf-b6d5-a261863f541d">
+                <cybox:Object id="example:URI-4023eee4-874c-4fc1-846a-0c2d2a8cb5fd">
+                    <cybox:Properties xsi:type="URIObj:URIObjectType">
+                        <URIObj:Value>efax.pfdregistry.net/eFax/37486.ZIP</URIObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STIX_Package id="isight:package-14-29738-1-530694a98c69d84c288b456e" version="1.0" xmlns="http://stix.mitre.org/stix-1" xmlns:AddrObj="http://cybox.mitre.org/objects#AddressObject-2" xmlns:AddressObject="http://cybox.mitre.org/objects#AddressObject-2" xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:isight="http://www.isightpartners.com" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0.1/cybox_core.xsd http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.0.1/File_Object.xsd http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.1/cybox_default_vocabularies.xsd http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.0.1/indicator.xsd http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.0.1/stix_core.xsd http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.0.1/stix_common.xsd http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd http://data-marking.mitre.org/Marking-1 http://stix.mitre.org/XMLSchema/data_marking/1.0.1/data_marking.xsd http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 http://stix.mitre.org/XMLSchema/extensions/marking/simple_marking/1.0.1/simple_marking.xsd ">
+	<STIX_Header>
+		<Title>CryptoWall Ransomware</Title>
+		<Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</Package_Intent>
+		<Description>CryptoWall is a successor to CryptoDefense ransomware. CryptoWall has been observed being distributed through exploit kits and spam.</Description>
+		<Handling>
+			<marking:Marking>
+				<marking:Controlled_Structure>//node()</marking:Controlled_Structure>
+				<marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
+					<simpleMarking:Statement>Copyright 2014 iSIGHT Partners All rights reserved.</simpleMarking:Statement>
+				</marking:Marking_Structure>
+			</marking:Marking>
+		</Handling>
+		<Information_Source>
+			<stixCommon:Identity>
+				<stixCommon:Name>iSIGHT Partners Inc.</stixCommon:Name>
+			</stixCommon:Identity>
+			<stixCommon:Time>
+				<cyboxCommon:Produced_Time>2014-06-25T17:47:57Z</cyboxCommon:Produced_Time>
+			</stixCommon:Time>
+			<stixCommon:References>
+				<stixCommon:Reference>https://mysight.isightpartners.com//report/full/14-31270</stixCommon:Reference>
+				<stixCommon:Reference>https://mysight.isightpartners.com//threatscape/detail/CIP-592373</stixCommon:Reference>
+			</stixCommon:References>
+		</Information_Source>
+	</STIX_Header>
+	<stix:Indicators>
+		<stix:Indicator xsi:type="indicator:IndicatorType">
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.0">File Hash Watchlist</indicator:Type>
+			<indicator:Observable>
+				<cybox:Description>CryptoWall sample</cybox:Description>
+				<cybox:Object id="isight:Object-14-31270-2-180736-72bedcbf73e2b596b82d0e5fc4c8e858">
+					<cybox:Properties xsi:type="FileObj:FileObjectType">
+						<FileObj:File_Name>KB652695765.exe</FileObj:File_Name>
+						<FileObj:File_Extension>EXE</FileObj:File_Extension>
+						<FileObj:Size_In_Bytes>180736</FileObj:Size_In_Bytes>
+						<FileObj:Hashes>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value>72bedcbf73e2b596b82d0e5fc4c8e858 </cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value>c7492ab35dbfa52965124b83368248203e27f1e4 </cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+								<cyboxCommon:Simple_Hash_Value>4fa4b91c61c85af9405b4fdb1689253b8898b51ac4d88c3e6686bc619a5eb55d </cyboxCommon:Simple_Hash_Value>
+							</cyboxCommon:Hash>
+							<cyboxCommon:Hash>
+								<cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SSDEEP</cyboxCommon:Type>
+								<cyboxCommon:Fuzzy_Hash_Value>3072:a68itcrnjHYn9iu4PJSZWdfQtBzRWOJomsEUwD7w70sqfV:j8WcrT8trsdfQXd3KEz7 </cyboxCommon:Fuzzy_Hash_Value>
+							</cyboxCommon:Hash>
+						</FileObj:Hashes>
+						<FileObj:Modified_Time>06/09/14 10:00:00 AM</FileObj:Modified_Time>
+						<FileObj:Accessed_Time>06/09/14 10:00:00 AM</FileObj:Accessed_Time>
+						<FileObj:Created_Time>06/09/14 10:00:00 AM</FileObj:Created_Time>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+		</stix:Indicator>
+		<stix:Indicator xsi:type="indicator:IndicatorType">
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.0">IP Watchlist</indicator:Type>
+			<indicator:Description>Attacker - 162.213.250.163 - 06/09/14 10:00:00 AM</indicator:Description>
+			<indicator:Observable>
+				<cybox:Object>
+					<cybox:Properties category="ipv4-addr" xsi:type="AddressObject:AddressObjectType">
+						<AddressObject:Address_Value condition="Equals">162.213.250.163</AddressObject:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+		</stix:Indicator>
+		<stix:Indicator xsi:type="indicator:IndicatorType">
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.0">IP Watchlist</indicator:Type>
+			<indicator:Description>Related - 193.105.210.49 - 06/09/14 10:00:00 AM</indicator:Description>
+			<indicator:Observable>
+				<cybox:Object>
+					<cybox:Properties category="ipv4-addr" xsi:type="AddressObject:AddressObjectType">
+						<AddressObject:Address_Value condition="Equals">193.105.210.49</AddressObject:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+		</stix:Indicator>
+		<stix:Indicator xsi:type="indicator:IndicatorType">
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.0">IP Watchlist</indicator:Type>
+			<indicator:Description>Attacker - 199.188.203.16 - 06/09/14 10:00:00 AM</indicator:Description>
+			<indicator:Observable>
+				<cybox:Object>
+					<cybox:Properties category="ipv4-addr" xsi:type="AddressObject:AddressObjectType">
+						<AddressObject:Address_Value condition="Equals">199.188.203.16</AddressObject:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+		</stix:Indicator>
+		<stix:Indicator xsi:type="indicator:IndicatorType">
+			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.0">IP Watchlist</indicator:Type>
+			<indicator:Description>Attacker - 5.101.146.182 - 06/09/14 10:00:00 AM</indicator:Description>
+			<indicator:Observable>
+				<cybox:Object>
+					<cybox:Properties category="ipv4-addr" xsi:type="AddressObject:AddressObjectType">
+						<AddressObject:Address_Value condition="Equals">5.101.146.182</AddressObject:Address_Value>
+					</cybox:Properties>
+				</cybox:Object>
+			</indicator:Observable>
+		</stix:Indicator>
+	</stix:Indicators>
+</STIX_Package>
