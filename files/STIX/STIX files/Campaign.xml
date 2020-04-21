@@ -1,0 +1,193 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:campaign="http://stix.mitre.org/Campaign-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:threatq="https://www.threatq.com"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3" id="edge:Package-22a3efd2-1018-4707-8380-820232258e0d" version="1.1.1" timestamp="2018-10-08T20:10:08.025382+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="WHITE"/>
+                <marking:Marking_Structure xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                    <simpleMarking:Statement>We do nothing</simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:TTPs>
+        <stix:TTP id="threatq:ttp-8fb33ad9-954a-49ef-9dba-c2ef81500fca" timestamp="2018-09-12T17:07:40.971840+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>drama</ttp:Title>
+            <ttp:Description>drama2</ttp:Description>
+            <ttp:Short_Description>drama1</ttp:Short_Description>
+            <ttp:Victim_Targeting>
+                <ttp:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <stixCommon:Name>some tole</stixCommon:Name>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:FreeTextLines xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:FreeTextLine xpil:Type="string">1234567890</xpil:FreeTextLine>
+  </xpil:FreeTextLines>
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">role</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:ElectronicAddressIdentifiers xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:ElectronicAddressIdentifier>dfghjj</xpil:ElectronicAddressIdentifier>
+  </xpil:ElectronicAddressIdentifiers>
+  <xpil:Languages xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Language>minionese</xpil:Language>
+  </xpil:Languages>
+</ExtSch:Specification>
+                    <stix-ciqidentity:Role>some dumb</stix-ciqidentity:Role>
+                </ttp:Identity>
+            </ttp:Victim_Targeting>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Campaigns>
+        <stix:Campaign id="threatq:campaign-c0055bb2-ee32-42e8-a9cb-80a5c2652b8b" timestamp="2018-08-27T17:49:29.382046+00:00" xsi:type='campaign:CampaignType'>
+            <campaign:Title>nidhi</campaign:Title>
+            <campaign:Status xsi:type="stixVocabs:CampaignStatusVocab-1.0">Ongoing</campaign:Status>
+            <campaign:Confidence timestamp="2018-08-27T17:49:29.382104+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </campaign:Confidence>
+        </stix:Campaign>
+    </stix:Campaigns>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="threatq:threatactor-66644657-33c0-48e2-89cb-c34085f0b4e5" timestamp="2018-10-08T20:09:36.285211+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Revoke: Threat Actor</ta:Title>
+            <ta:Associated_Actors>
+                <ta:Associated_Actor>
+                    <stixCommon:Relationship>Revokes</stixCommon:Relationship>
+                    <stixCommon:Threat_Actor idref="threatq:threatactor-c53824db-c405-445b-9d3f-d4973bae7870" timestamp="2018-10-08T20:08:54.430630+00:00" xsi:type='ta:ThreatActorType'/>
+                </ta:Associated_Actor>
+            </ta:Associated_Actors>
+        </stix:Threat_Actor>
+        <stix:Threat_Actor id="threatq:threatactor-c53824db-c405-445b-9d3f-d4973bae7870" timestamp="2018-10-08T20:08:54.430630+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Threat Actor</ta:Title>
+            <ta:Description>Description for Threat Actor for Name - THREATQ-THREATACTOR</ta:Description>
+            <ta:Short_Description>Short Description for Threat Actor</ta:Short_Description>
+            <ta:Identity>
+                <stixCommon:Name>THREATQ</stixCommon:Name>
+            </ta:Identity>
+            <ta:Type timestamp="2018-10-08T20:08:54.431280+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">eCrime Actor - Credential Theft Botnet Operator</stixCommon:Value>
+                <stixCommon:Description>Type Description is malicious</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>Random Source</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-08T20:08:54.431172+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Type>
+            <ta:Motivation timestamp="2018-10-08T20:08:54.431435+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Ideological - Anti-Establishment</stixCommon:Value>
+                <stixCommon:Description>Motivation for this Threat Actor</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>Motivation Source</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-08T20:08:54.431404+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Motivation>
+            <ta:Sophistication timestamp="2018-10-08T20:08:54.431528+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorSophisticationVocab-1.0">Innovator</stixCommon:Value>
+                <stixCommon:Description>Sophistications description</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>A source for Sophistications</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-08T20:08:54.431501+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Sophistication>
+            <ta:Intended_Effect timestamp="2018-10-08T20:08:54.431650+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Disruption</stixCommon:Value>
+                <stixCommon:Description>DISRUPT DESCRIPTION</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>Source for Descriptions</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-08T20:08:54.431629+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Intended_Effect>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="threatq:ttp-8fb33ad9-954a-49ef-9dba-c2ef81500fca" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+            <ta:Associated_Campaigns>
+                <ta:Associated_Campaign>
+                    <stixCommon:Campaign idref="threatq:campaign-c0055bb2-ee32-42e8-a9cb-80a5c2652b8b" xsi:type='campaign:CampaignType'/>
+                </ta:Associated_Campaign>
+            </ta:Associated_Campaigns>
+            <ta:Associated_Actors>
+                <ta:Associated_Actor>
+                    <stixCommon:Threat_Actor idref="threatq:threatactor-7513f51d-2aa3-442c-9e34-ad125fb77249" xsi:type='ta:ThreatActorType'/>
+                </ta:Associated_Actor>
+            </ta:Associated_Actors>
+        </stix:Threat_Actor>
+        <stix:Threat_Actor id="threatq:threatactor-7513f51d-2aa3-442c-9e34-ad125fb77249" timestamp="2018-09-10T20:14:59.316889+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>TATA</ta:Title>
+            <ta:Description>TATATATATATATAT
+TATATATATATTATAT</ta:Description>
+            <ta:Short_Description>TATATATATATA</ta:Short_Description>
+            <ta:Identity>
+                <stixCommon:Name>TATAT</stixCommon:Name>
+            </ta:Identity>
+            <ta:Type timestamp="2018-09-10T20:14:59.317670+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Hacker - Black hat</stixCommon:Value>
+                <stixCommon:Description>BHBHBH</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>BHBHBH</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-09-10T20:14:59.317537+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Type>
+            <ta:Motivation timestamp="2018-09-10T20:14:59.317802+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Ideological - Anti-Corruption</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Sophistication timestamp="2018-09-10T20:14:59.317900+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorSophisticationVocab-1.0">Innovator</stixCommon:Value>
+                <stixCommon:Description>INN</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>NNI</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-09-10T20:14:59.317878+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Sophistication>
+            <ta:Intended_Effect timestamp="2018-09-10T20:14:59.318018+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Embarrassment</stixCommon:Value>
+                <stixCommon:Description>EMB</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>EMB</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-09-10T20:14:59.317997+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Intended_Effect>
+            <ta:Planning_And_Operational_Support timestamp="2018-09-10T20:14:59.318134+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:PlanningAndOperationalSupportVocab-1.0.1">Skill Development / Recruitment</stixCommon:Value>
+                <stixCommon:Description>1221</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>122421</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-09-10T20:14:59.318094+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Planning_And_Operational_Support>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

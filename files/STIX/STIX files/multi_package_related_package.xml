@@ -1,0 +1,184 @@
+<stix:STIX_Package
+        xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+        xmlns:cybox="http://cybox.mitre.org/cybox-2"
+        xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+        xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+        xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
+        xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+        xmlns:marking="http://data-marking.mitre.org/Marking-1"
+        xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+        xmlns:edge="http://soltra.com/"
+        xmlns:indicator="http://stix.mitre.org/Indicator-2"
+        xmlns:stixCommon="http://stix.mitre.org/common-1"
+        xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+        xmlns:stix="http://stix.mitre.org/stix-1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:threatq="https://threatq.com" id="edge:Package-8239ns32-sef5-3f45-1243-sa8h7hl2h7js" version="1.1.1" timestamp="2018-08-16T19:10:11.085925+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="threatq:observable-2c63cb96-0dbb-4f85-aeb7-82c0d847c4e2">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="threatq:observable-fd16efbd-0504-41de-8041-f90c94e4601a">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-c0296696-31d1-44f4-b6c8-039d9437f8fc">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-14354fme-9n37-a83n-8js3-ons28d7h2l0e">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-c0296696-31d1-44f4-b6c8-039d9437f8fc">
+            <cybox:Description/>
+            <cybox:Object id="threatq:file-b2c985a8-646e-4d37-91e0-0c3d5b7cef5b">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name/>
+                    <FileObj:Device_Path/>
+                    <FileObj:Full_Path/>
+                    <FileObj:File_Extension/>
+                    <FileObj:Size_In_Bytes>3282</FileObj:Size_In_Bytes>
+                    <FileObj:File_Format>data</FileObj:File_Format>
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA384</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>2cf166b15711818a42b0e1a45895020cd8884a360c66a7e07814394270277d08ca68da687d47a071318b641e23d57b7b</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-fd16efbd-0504-41de-8041-f90c94e4601a">
+            <cybox:Description>This email have some bad stuff</cybox:Description>
+            <cybox:Object id="threatq:Email-f7568f93-bd04-4715-8fd9-2b179b07acda">
+                <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                    <EmailMessageObj:Header>
+                        <EmailMessageObj:To>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>abc@abc.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:To>
+                        <EmailMessageObj:CC>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>lol@abc.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:CC>
+                        <EmailMessageObj:BCC>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>timepass@abc.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:BCC>
+                        <EmailMessageObj:From xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                            <AddressObj:Address_Value>june@abc.com</AddressObj:Address_Value>
+                        </EmailMessageObj:From>
+                        <EmailMessageObj:Subject>All your base now belong to us</EmailMessageObj:Subject>
+                        <EmailMessageObj:Date>2017-12-07T00:00:00</EmailMessageObj:Date>
+                        <EmailMessageObj:User_Agent>sadd</EmailMessageObj:User_Agent>
+                        <EmailMessageObj:X_Mailer>dewd</EmailMessageObj:X_Mailer>
+                    </EmailMessageObj:Header>
+                    <EmailMessageObj:Email_Server>abc.com</EmailMessageObj:Email_Server>
+                    <EmailMessageObj:Raw_Body><![CDATA[]]></EmailMessageObj:Raw_Body>
+                    <EmailMessageObj:Raw_Header><![CDATA[]]></EmailMessageObj:Raw_Header>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="threatq:indicator-3885f473-0180-437f-8553-405ec4aacfcd" timestamp="2017-08-16T19:09:57.462173+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Indicator with observable pointing to observable composition</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+            <indicator:Short_Description>test</indicator:Short_Description>
+            <indicator:Observable idref="threatq:observable-2c63cb96-0dbb-4f85-aeb7-82c0d847c4e2">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2017-08-18T19:09:57.462334+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="threatq:indicator-fff5f473-0180-437f-8553-405ec4aacfcd" timestamp="2018-08-16T19:09:57.462173+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Indicator with observable pointing to the file observable</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+            <indicator:Short_Description>This is another test</indicator:Short_Description>
+            <indicator:Observable idref="threatq:observable-c0296696-31d1-44f4-b6c8-039d9437f8fc">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2018-08-16T19:09:57.462334+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:Related_Packages>
+        <stix:Related_Package>
+            <stix:Package id="edge:Package-knsu79n7-38n7-7nsh-3425-e8hs78b83l92" version="1.1.1" timestamp="2018-08-16T19:10:11.085925+00:00">
+                <stix:STIX_Header>
+                    <stix:Handling>
+                        <marking:Marking>
+                            <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                            <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                        </marking:Marking>
+                    </stix:Handling>
+                </stix:STIX_Header>
+                <stix:Observables>
+                    <cybox:Observable id="threatq:observable-14354fme-9n37-a83n-8js3-ons28d7h2l0e">
+                        <cybox:Observable_Composition operator="OR">
+                            <cybox:Observable idref="threatq:observable-ksnu7h3k-s3g5-225g-ins8-0183mn8n7sh7">
+                            </cybox:Observable>
+                            <cybox:Observable idref="example:Observable-837j7hs7-s7h3-34j5-ao8h-s7h3l5j9s7h21">
+                            </cybox:Observable>
+                        </cybox:Observable_Composition>
+                    </cybox:Observable>
+                    <cybox:Observable id="threatq:observable-ksnu7h3k-s3g5-225g-ins8-0183mn8n7sh7">
+                        <cybox:Description/>
+                        <cybox:Object id="threatq:file-aun8h37n-847h-h782-8j87-son8j37h9s98">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:File_Name/>
+                                <FileObj:Device_Path/>
+                                <FileObj:Full_Path/>
+                                <FileObj:File_Extension/>
+                                <FileObj:Size_In_Bytes>3000</FileObj:Size_In_Bytes>
+                                <FileObj:File_Format>data</FileObj:File_Format>
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA384</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value>lsn8j308n8j7sh70m3n7hs90u895020cd8884a360c66a7e07814394270277d08ca68da687d47a071318b641e23d57b7b</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="example:Observable-837j7hs7-s7h3-34j5-ao8h-s7h3l5j9s7h21">
+                        <cybox:Object id="example:Address-s7h3j458-s3r4-1342-3g4s-ksn8jet7h398">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>211.1.1.1</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </stix:Observables>
+            </stix:Package>
+        </stix:Related_Package>
+    </stix:Related_Packages>
+</stix:STIX_Package>

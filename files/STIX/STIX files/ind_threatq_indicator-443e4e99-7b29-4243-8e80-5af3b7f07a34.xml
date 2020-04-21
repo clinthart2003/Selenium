@@ -1,0 +1,237 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:threatq="http://threatq.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="edge:Package-daa7c0ba-578c-45d1-abf6-23138c8fb4da" version="1.1.1" timestamp="2018-10-16T14:17:56.386793+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="RED"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="threatq:observable-2a280892-f946-453b-a6f1-c6e921b75af8">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="threatq:observable-f888651d-5cb5-4fc2-8cbc-eed72d6103a4">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-8fb3353f-d6b5-4b26-bb89-d1a1f55446ed">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-26a7e678-073b-40d3-868e-ab30bddd0a9f">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-73a31644-bd2f-4eac-909d-04b82ce66e86">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-42ce326d-a79d-44d4-9f47-656ab5bbef3d">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-f605db92-b81a-482a-bfc8-4dcca957ed7e">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-89964456-ba3a-4651-933f-09080828dfba">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-39b26b70-a277-4874-a5e9-a98bd194e7de">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-ecb1eae6-b9fc-47f2-8983-0572c4e7b397">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-e83ddeea-0ddb-4076-b68e-9eac60a81936">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-e83ddeea-0ddb-4076-b68e-9eac60a81936">
+            <cybox:Title>Domain Name : .faith</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-e56025b9-65aa-427e-af38-c5d93cf44aef">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.faith</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-f605db92-b81a-482a-bfc8-4dcca957ed7e">
+            <cybox:Title>Domain Name : .ga	</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-dcfc5dbf-6a05-4dc1-85a4-1ff1dd214cf3">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.ga	</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-8fb3353f-d6b5-4b26-bb89-d1a1f55446ed">
+            <cybox:Title>Domain Name : .cf	</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-fe90d0e0-fb16-430e-8117-da0a8175e772">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.cf	</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-39b26b70-a277-4874-a5e9-a98bd194e7de">
+            <cybox:Title>Domain Name : .top	</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-57f2a7a1-eb49-4391-9770-70179c18f7f3">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.top	</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-73a31644-bd2f-4eac-909d-04b82ce66e86">
+            <cybox:Title>Domain Name : .tk</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-ae832de5-c090-4ed7-a93b-e6578ac00817">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.tk</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-ecb1eae6-b9fc-47f2-8983-0572c4e7b397">
+            <cybox:Title>Domain Name : .racing</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-1be8242e-db1d-49e3-b181-60cdf250a341">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.racing</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-42ce326d-a79d-44d4-9f47-656ab5bbef3d">
+            <cybox:Title>Domain Name : .ml</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-cb0dd014-f9bf-4bd9-9b6d-e47c7a199595">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.ml</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-f888651d-5cb5-4fc2-8cbc-eed72d6103a4">
+            <cybox:Title>Domain Name : .gq</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-6605dd36-b8cf-4ac5-9c6f-b44bf87792d9">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.gq</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-26a7e678-073b-40d3-868e-ab30bddd0a9f">
+            <cybox:Title>Domain Name : .loan	</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-89b1f148-743d-4988-b513-dec02b573a0b">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.loan	</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-89964456-ba3a-4651-933f-09080828dfba">
+            <cybox:Title>Domain Name : .men	</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-7fbffc63-12e0-4f6e-aada-7e577190c517">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>.men	</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-589e9d8a-097d-44b3-844d-0e6321fbd51d">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="threatq:observable-b69b5688-931d-47d8-a5ab-6168ee2f9938">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-a200a5c2-36a5-4b7a-87a9-e97d3f9c2375">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-7f9c7718-2f75-49f2-8675-a28bce39a477">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-05afb673-20fa-4ef7-ab58-00722063f917">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-7f9c7718-2f75-49f2-8675-a28bce39a477">
+            <cybox:Title>Domain Name : abc2.com</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-e47a2c0a-9954-4e04-be7e-f91272cd54c4">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>abc2.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-b69b5688-931d-47d8-a5ab-6168ee2f9938">
+            <cybox:Title>Domain Name : abc.com</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-8ff886f8-1d9c-46f0-a2d8-1184e85c05e7">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>abc.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-05afb673-20fa-4ef7-ab58-00722063f917">
+            <cybox:Title>Domain Name : abc3.com</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-d50264d7-705c-4af1-b7e0-1fd9fcc42394">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>abc3.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-a200a5c2-36a5-4b7a-87a9-e97d3f9c2375">
+            <cybox:Title>Domain Name : abc1.com</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-a74d8c72-b389-4e0e-8f72-646694e2b655">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>abc1.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="threatq:indicator-443e4e99-7b29-4243-8e80-5af3b7f07a34" timestamp="2018-10-15T15:11:38.961593+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>When Spamhaus is enabled </indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Domain Watchlist</indicator:Type>
+            <indicator:Short_Description>Real data</indicator:Short_Description>
+            <indicator:Observable idref="threatq:observable-2a280892-f946-453b-a6f1-c6e921b75af8">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="RED"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2018-10-15T15:11:38.961628+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Related_Indicators>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator idref="threatq:indicator-6d3f7d45-9a69-43eb-90ea-3c484e6eb9a3" xsi:type='indicator:IndicatorType'/>
+                </indicator:Related_Indicator>
+            </indicator:Related_Indicators>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="threatq:indicator-6d3f7d45-9a69-43eb-90ea-3c484e6eb9a3" timestamp="2018-10-15T15:04:29.109768+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>test1</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Domain Watchlist</indicator:Type>
+            <indicator:Description>no</indicator:Description>
+            <indicator:Short_Description>no</indicator:Short_Description>
+            <indicator:Observable idref="threatq:observable-589e9d8a-097d-44b3-844d-0e6321fbd51d">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2018-10-15T15:04:29.109819+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

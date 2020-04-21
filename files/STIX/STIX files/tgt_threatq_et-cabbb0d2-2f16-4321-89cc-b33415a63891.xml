@@ -1,0 +1,155 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:coa="http://stix.mitre.org/CourseOfAction-1"
+	xmlns:et="http://stix.mitre.org/ExploitTarget-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:threatq="https://www.threatq.com" id="edge:Package-51f19bd5-bca9-4ccf-ab42-b2404fff2819" version="1.1.1" timestamp="2018-10-11T15:50:26.215157+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                <marking:Marking_Structure xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                    <simpleMarking:Statement>NOT HANDLED</simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Exploit_Targets>
+        <stixCommon:Exploit_Target id="threatq:et-cabbb0d2-2f16-4321-89cc-b33415a63891" timestamp="2018-10-11T15:50:19.573370+00:00" xsi:type='et:ExploitTargetType'>
+            <et:Title>EXPLOIT THE TARGET</et:Title>
+            <et:Description>LONG DES ET</et:Description>
+            <et:Short_Description>SHORT DES ET</et:Short_Description>
+            <et:Vulnerability>
+                <et:Title>CDF | Feed Batches, Retries.</et:Title>
+                <et:Description>SOMETHING LONG</et:Description>
+                <et:Short_Description>SOEMTHING</et:Short_Description>
+                <et:CVE_ID>CVE-2014-20150</et:CVE_ID>
+                <et:Source>NOT KNOWN</et:Source>
+            </et:Vulnerability>
+            <et:Weakness>
+                <et:Description>WEAKNESS</et:Description>
+                <et:CWE_ID>CWE-2914</et:CWE_ID>
+            </et:Weakness>
+            <et:Configuration>
+                <et:Description>NOT KNOWSN</et:Description>
+                <et:Short_Description>DESC FOR WEAK</et:Short_Description>
+                <et:CCE_ID>CCE-2014-1</et:CCE_ID>
+            </et:Configuration>
+            <et:Potential_COAs>
+                <et:Potential_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-73267d18-8502-402e-919c-40e7d898bf06" xsi:type='coa:CourseOfActionType'/>
+                </et:Potential_COA>
+            </et:Potential_COAs>
+            <et:Information_Source>
+                <stixCommon:Description>ATATATATAT12345!!!</stixCommon:Description>
+                <stixCommon:Identity id="EGEN"/>
+            </et:Information_Source>
+            <et:Related_Exploit_Targets>
+                <et:Related_Exploit_Target>
+                    <stixCommon:Exploit_Target idref="threatq:et-b6e37f58-5c5b-4b2a-b75d-edc6a1a5a209" xsi:type='et:ExploitTargetType'/>
+                </et:Related_Exploit_Target>
+            </et:Related_Exploit_Targets>
+        </stixCommon:Exploit_Target>
+        <stixCommon:Exploit_Target id="threatq:et-b6e37f58-5c5b-4b2a-b75d-edc6a1a5a209" timestamp="2018-10-11T15:48:20.450354+00:00" xsi:type='et:ExploitTargetType'>
+            <et:Title>Exploit - Targets</et:Title>
+            <et:Description>Long Description for Exploit Targets 
+Description for Exploit Targets</et:Description>
+            <et:Short_Description>Short Description for ET</et:Short_Description>
+            <et:Vulnerability>
+                <et:Title>Vulnerable</et:Title>
+                <et:Description>DESCRIPTION for Vulnerable</et:Description>
+                <et:Short_Description>SD</et:Short_Description>
+                <et:CVE_ID>CVE-2014-12345</et:CVE_ID>
+                <et:Source>RANDOM SOLTRA</et:Source>
+            </et:Vulnerability>
+            <et:Weakness>
+                <et:Description>Not known</et:Description>
+                <et:CWE_ID>CWE-2014</et:CWE_ID>
+            </et:Weakness>
+            <et:Configuration>
+                <et:Description>Confidguration ID</et:Description>
+                <et:Short_Description>SD for configuration</et:Short_Description>
+                <et:CCE_ID>CCE-2715-1</et:CCE_ID>
+            </et:Configuration>
+            <et:Potential_COAs>
+                <et:Potential_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-91d5770a-7def-45f1-940b-726cac243c21" xsi:type='coa:CourseOfActionType'/>
+                </et:Potential_COA>
+            </et:Potential_COAs>
+            <et:Information_Source>
+                <stixCommon:Description>Thtreatq</stixCommon:Description>
+                <stixCommon:Identity id="Nidhi"/>
+            </et:Information_Source>
+        </stixCommon:Exploit_Target>
+    </stix:Exploit_Targets>
+    <stix:Courses_Of_Action>
+        <stix:Course_Of_Action id="threatq:coa-73267d18-8502-402e-919c-40e7d898bf06" timestamp="2018-09-25T15:00:21.776642+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>COA-TEST1</coa:Title>
+            <coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Remedy</coa:Stage>
+            <coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Rebuilding</coa:Type>
+            <coa:Description>DESCRIPTION OF THINGS</coa:Description>
+            <coa:Short_Description>SOME DESCRIPTION</coa:Short_Description>
+            <coa:Objective>
+                <coa:Description>TO GET THIS WORKING</coa:Description>
+                <coa:Short_Description>WITH THREATQ</coa:Short_Description>
+                <coa:Applicability_Confidence timestamp="2018-09-25T15:00:21.777375+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </coa:Applicability_Confidence>
+            </coa:Objective>
+            <coa:Impact timestamp="2018-09-25T15:00:21.777191+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                <stixCommon:Description>LIKELY IMPACT</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-09-25T15:00:21.777226+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Impact>
+            <coa:Cost timestamp="2018-09-25T15:00:21.777003+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+                <stixCommon:Description>COST IS HIGH</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-09-25T15:00:21.777121+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Cost>
+            <coa:Efficacy timestamp="2018-09-25T15:00:21.777249+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                <stixCommon:Description>HIGH EFFICACY</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-09-25T15:00:21.777281+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">None</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Efficacy>
+            <coa:Related_COAs>
+                <coa:Related_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-2e19859e-3bb0-4284-9501-66618db61874" xsi:type='coa:CourseOfActionType'/>
+                </coa:Related_COA>
+            </coa:Related_COAs>
+        </stix:Course_Of_Action>
+        <stix:Course_Of_Action id="threatq:coa-2e19859e-3bb0-4284-9501-66618db61874" timestamp="2018-08-27T17:51:00.869980+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>Nidhi-Spam</coa:Title>
+            <coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Remedy</coa:Stage>
+            <coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Redirection</coa:Type>
+            <coa:Short_Description>Nidhi</coa:Short_Description>
+            <coa:Impact timestamp="2018-08-27T17:51:00.870079+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Low</stixCommon:Value>
+                <stixCommon:Description>Likely</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-08-27T17:51:00.870108+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Impact>
+        </stix:Course_Of_Action>
+        <stix:Course_Of_Action id="threatq:coa-91d5770a-7def-45f1-940b-726cac243c21" timestamp="2018-08-27T17:50:04.673358+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>Nidhi</coa:Title>
+            <coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Remedy</coa:Stage>
+            <coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Monitoring</coa:Type>
+        </stix:Course_Of_Action>
+    </stix:Courses_Of_Action>
+</stix:STIX_Package>

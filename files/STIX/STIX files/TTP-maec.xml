@@ -1,0 +1,102 @@
+<stix:STIX_Package xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" 
+    xmlns:stixCommon="http://stix.mitre.org/common-1" 
+    xmlns:ttp="http://stix.mitre.org/TTP-1" 
+    xmlns:stix="http://stix.mitre.org/stix-1" 
+    xmlns:example="http://example.com"
+    xmlns:stix-maec="http://stix.mitre.org/extensions/Malware#MAEC4.1-1"
+    xmlns:maecPackage="http://maec.mitre.org/XMLSchema/maec-package-2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="example:Package-b3dc249a-11b1-42c8-ad11-8962da39dda6" version="1.2">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-730fca62-0002-4975-a18d-37a20ead1a1c" timestamp="2017-07-18T14:28:30.526415+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>MAEC Characterization of 8f4fc2e10b6ec15a01e0af24529040dd</ttp:Title>
+            <ttp:Behavior>
+                <ttp:Malware>
+                    <ttp:Malware_Instance xsi:type='stix-maec:MAEC4.1InstanceType'>
+                        <stix-maec:MAEC id="example:package-296603e9-98d9-4a29-99ab-39546b77f494" schema_version="2.1">
+                            <maecPackage:Malware_Subjects>
+                                <maecPackage:Malware_Subject id="example:malware_subject-0fa514e4-6cbf-4943-83db-f2f35e5fd209">
+                                    <maecPackage:Malware_Instance_Object_Attributes idref="example:WinExecutableFile-3ad46370-c3b3-4e82-b37d-d4dc757eed5a"/>
+                                    <maecPackage:Findings_Bundles>
+                                        <maecPackage:Bundle defined_subject="true" id="example:bundle-b9a50a46-aa4e-4858-9284-c4356593d7ab" schema_version="4.1">
+                                                    <cyboxCommon:Vendor>Systweak</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>trojan.deltacharlie	</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>F-secure</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Trojan.GenericKD.5400227</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Kaspersky</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Backdoor.Win32.Agent.guhi</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>BitDefender</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Trojan.GenericKD.5400227</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Microsoft Security Essentials</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Trojan:Win32/Dynamer!rfn</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Sophos</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Troj/DeltaC-A</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>TrendMicro House Call</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>BKDR_ESCAD.SMHA</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>TrendMicro</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>BKDR_ESCAD.SMHA</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Emsisoft</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Trojan.GenericKD.5400227 (B)</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Avira</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>TR/Fuery.kevww</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Ahnlab</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Backdoor/Win32.Escad</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>ESET</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>a variant of Generik.DXNZOSG trojan</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>NANOAV</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Trojan.Win32.Agent.eqhpcw</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Vir.IT eXplorer</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Trojan.Win32.Genus.BWG</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Quick Heal</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name> DDoS.HidenCobra.S1166387</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>Ikarus</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>Trojan.SuspectCRC</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                                <maecBundle:AV_Classification>
+                                                    <cyboxCommon:Vendor>AVG</cyboxCommon:Vendor>
+                                                    <maecBundle:Classification_Name>SCGeneric2.BDVR</maecBundle:Classification_Name>
+                                                </maecBundle:AV_Classification>
+                                            </maecBundle:AV_Classifications>
+                                        </maecPackage:Bundle>
+                                    </maecPackage:Findings_Bundles>
+                                </maecPackage:Malware_Subject>
+                            </maecPackage:Malware_Subjects>
+                        </stix-maec:MAEC>
+                    </ttp:Malware_Instance>
+                </ttp:Malware>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+</stix:STIX_Package>

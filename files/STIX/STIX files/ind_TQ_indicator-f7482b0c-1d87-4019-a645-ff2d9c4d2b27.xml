@@ -1,0 +1,62 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TQ="https://www.threatq.com" id="edge:Package-87fea619-e643-4f3a-888b-25bdd32b8642" version="1.1.1" timestamp="2018-10-16T14:56:43.227677+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="TQ:observable-9c94565e-1b85-4fab-91fc-3ab688b2e884">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="TQ:observable-f4df050e-7a75-4f10-8825-193d10793e67">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="TQ:observable-f4df050e-7a75-4f10-8825-193d10793e67">
+            <cybox:Title>Address : 10.10.10.10</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="TQ:address-674a0c8b-ba91-4b7f-bada-edadc6576bbb">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr" is_source="true" is_destination="true" is_spoofed="true">
+                    <AddressObj:Address_Value>10.10.10.10</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="TQ:indicator-f7482b0c-1d87-4019-a645-ff2d9c4d2b27" timestamp="2018-10-16T14:56:39.900660+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Upgrade Tests for KISS </indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+            <indicator:Observable idref="TQ:observable-9c94565e-1b85-4fab-91fc-3ab688b2e884">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2018-10-16T14:56:39.900709+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

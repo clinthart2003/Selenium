@@ -1,0 +1,523 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:coa="http://stix.mitre.org/CourseOfAction-1"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:threatq="https://www.threatq.com"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3" id="edge:Package-b851cd57-5bcf-4d44-a11c-864ed270a600" version="1.1.1" timestamp="2018-10-10T18:10:09.320071+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+                <marking:Marking_Structure xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                    <simpleMarking:Statement>We do not handle this</simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="threatq:observable-d054c507-756f-4b43-b6e1-47967155dd22">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="threatq:observable-b2b23e58-37b2-4ee0-ac58-23ecf20393e0">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-6b1b3803-8ffc-4ff6-859a-da89da3847a1">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-9b06e5eb-a59a-4d40-82ba-c5b0a683927d">
+            <cybox:Observable_Composition operator="AND">
+                <cybox:Observable idref="threatq:observable-efd4458c-6e42-443c-af0f-56d91fa6e1e5">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-62e907fc-96b8-4d05-ba19-f1b084694aae">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-534e695f-b2ec-441b-915a-33b436a4e84f">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-3be2a7ad-b11b-4937-be20-15bfed3245b5">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-113c40e4-d4da-4003-b7fb-e5356334cd48">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-1a23766e-daca-43e0-b6dc-3fbf099063a6">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-a7bc6baa-4f97-4ccc-8c96-5e0e915fbdf1">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-558dd3a1-af9e-4c1b-882a-680d6a97c9fe">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-53497ada-00ba-4cb3-a9f5-e4b3b028a643">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-7fd184bb-24a4-4e67-a21d-e5af6163ea37">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-33ed7af4-1002-4549-a5a0-0dce16ed1b28">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-e54a0140-9b8d-4124-a32c-310d03fdaf1b">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-1a23766e-daca-43e0-b6dc-3fbf099063a6">
+            <cybox:Title>weird address 4</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-32bd0d7c-7223-4771-81ea-cb4462413cf1">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>e@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-a7bc6baa-4f97-4ccc-8c96-5e0e915fbdf1">
+            <cybox:Title>weird address 5</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-3ec89dd5-fce2-43e9-9aaa-99719f04af03">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>f@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-113c40e4-d4da-4003-b7fb-e5356334cd48">
+            <cybox:Title>weird address 3</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-e636485d-f101-4633-bd84-59bd2e686001">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>d@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-53497ada-00ba-4cb3-a9f5-e4b3b028a643">
+            <cybox:Title>weird address 7</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-5d6b3a6a-6684-4705-a1b9-e05076732508">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>h@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-558dd3a1-af9e-4c1b-882a-680d6a97c9fe">
+            <cybox:Title>weird address 6</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-b9a1d3a2-75bf-442a-a9ef-025177bd1e1d">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>g@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-33ed7af4-1002-4549-a5a0-0dce16ed1b28">
+            <cybox:Title>weird address 9</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-b2182bc8-f64b-4dbe-9c62-5fbabb5f6dff">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>j@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-6b1b3803-8ffc-4ff6-859a-da89da3847a1">
+            <cybox:Title>234567</cybox:Title>
+            <cybox:Description>345678</cybox:Description>
+            <cybox:Object id="threatq:uri-f7993cd2-7b46-4d51-b001-4df2d81db7a3">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                    <URIObj:Value>url.url.com</URIObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-534e695f-b2ec-441b-915a-33b436a4e84f">
+            <cybox:Title>weird address 1</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-c54b415d-2557-45ba-9c13-ec6da71e9ec1">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>b@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-7fd184bb-24a4-4e67-a21d-e5af6163ea37">
+            <cybox:Title>weird address 8</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-6b6df78d-d78a-4848-bb31-a2ccae8c6abc">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>i@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-e54a0140-9b8d-4124-a32c-310d03fdaf1b">
+            <cybox:Title>weird address 10</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-379aad83-6839-4f07-9781-d382b4449652">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>k@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-b2b23e58-37b2-4ee0-ac58-23ecf20393e0">
+            <cybox:Title>Mail Indicator</cybox:Title>
+            <cybox:Description>To Test a Mail Indicator</cybox:Description>
+            <cybox:Object id="threatq:Email-1ef6cf82-8a3b-4513-97f2-7b0079d4408c">
+                <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                    <EmailMessageObj:Header>
+                        <EmailMessageObj:To>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>to@to.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:To>
+                        <EmailMessageObj:CC>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>cc@cc.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:CC>
+                        <EmailMessageObj:BCC>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>bcc@bcc.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:BCC>
+                        <EmailMessageObj:From xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                            <AddressObj:Address_Value>from@from.com</AddressObj:Address_Value>
+                        </EmailMessageObj:From>
+                        <EmailMessageObj:Subject>Subject - Mail Indicator</EmailMessageObj:Subject>
+                        <EmailMessageObj:Date>2018-08-31T00:00:00</EmailMessageObj:Date>
+                        <EmailMessageObj:User_Agent>Email</EmailMessageObj:User_Agent>
+                        <EmailMessageObj:X_Mailer>X@x.com</EmailMessageObj:X_Mailer>
+                    </EmailMessageObj:Header>
+                    <EmailMessageObj:Email_Server>smtp.com</EmailMessageObj:Email_Server>
+                    <EmailMessageObj:Raw_Body><![CDATA[Blank Again]]></EmailMessageObj:Raw_Body>
+                    <EmailMessageObj:Raw_Header><![CDATA[Leave it Blank]]></EmailMessageObj:Raw_Header>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-5e3a8c75-4c4a-47f7-81da-cee9be8f5c39">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="threatq:observable-6fb4c749-1a95-4da1-8550-250e683dfc93">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-3be2a7ad-b11b-4937-be20-15bfed3245b5">
+            <cybox:Title>weird address 2</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-cb5c3bc3-66f2-47a7-a649-cc6d8ad3461b">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>c@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-62e907fc-96b8-4d05-ba19-f1b084694aae">
+            <cybox:Title>weird address</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-eb4f9169-6bd1-4291-a3d3-2a1e9ec80e76">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>a@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-efd4458c-6e42-443c-af0f-56d91fa6e1e5">
+            <cybox:Title>Email Title Not Auto Generated</cybox:Title>
+            <cybox:Description>Description is for Automation</cybox:Description>
+            <cybox:Object id="threatq:Email-2c0a297f-d0ad-4506-a38c-9284540a8d8e">
+                <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                    <EmailMessageObj:Header>
+                        <EmailMessageObj:To>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>tothreatq@threatq.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:To>
+                        <EmailMessageObj:CC>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>ccthreatq@threatq.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:CC>
+                        <EmailMessageObj:BCC>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>bccthreatq@threatq.com</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:BCC>
+                        <EmailMessageObj:From xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                            <AddressObj:Address_Value>fromthreatq@threatq.com</AddressObj:Address_Value>
+                        </EmailMessageObj:From>
+                        <EmailMessageObj:Subject>Subject is for Automation</EmailMessageObj:Subject>
+                        <EmailMessageObj:Date>2000-05-31T00:00:00</EmailMessageObj:Date>
+                        <EmailMessageObj:User_Agent>User Agent - GMAIL/YAHOO</EmailMessageObj:User_Agent>
+                        <EmailMessageObj:X_Mailer>XMAILER IS NOT PARSED</EmailMessageObj:X_Mailer>
+                    </EmailMessageObj:Header>
+                    <EmailMessageObj:Email_Server>Email Server - GMAIL/YAHOO</EmailMessageObj:Email_Server>
+                    <EmailMessageObj:Raw_Body><![CDATA[There is no RAW body header]]></EmailMessageObj:Raw_Body>
+                    <EmailMessageObj:Raw_Header><![CDATA[There isn't really a RAW header !]]></EmailMessageObj:Raw_Header>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-6fb4c749-1a95-4da1-8550-250e683dfc93">
+            <cybox:Title>EMAIL OBJECT</cybox:Title>
+            <cybox:Description>EMAIL OBJECT EMAIL OBJECT </cybox:Description>
+            <cybox:Object id="threatq:Email-324aae2b-b1c4-4615-8eb8-6cba7aec594d">
+                <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                    <EmailMessageObj:Header>
+                        <EmailMessageObj:To>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>NIDHI@NIDHI.COM</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:To>
+                        <EmailMessageObj:CC>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>SHARMA@SHARMA.COM</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:CC>
+                        <EmailMessageObj:BCC>
+                            <EmailMessageObj:Recipient xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                                <AddressObj:Address_Value>SNEH@SNEH.COM</AddressObj:Address_Value>
+                            </EmailMessageObj:Recipient>
+                        </EmailMessageObj:BCC>
+                        <EmailMessageObj:From xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                            <AddressObj:Address_Value>FROM@ABC</AddressObj:Address_Value>
+                        </EmailMessageObj:From>
+                        <EmailMessageObj:Subject>EMAIL OBJECT </EmailMessageObj:Subject>
+                        <EmailMessageObj:Date>2018-09-10T00:00:00</EmailMessageObj:Date>
+                        <EmailMessageObj:User_Agent>nss</EmailMessageObj:User_Agent>
+                        <EmailMessageObj:X_Mailer>nidhi@nidhi.comz</EmailMessageObj:X_Mailer>
+                    </EmailMessageObj:Header>
+                    <EmailMessageObj:Email_Server>comz</EmailMessageObj:Email_Server>
+                    <EmailMessageObj:Raw_Body><![CDATA[1234567890
+asdfghjkl]]></EmailMessageObj:Raw_Body>
+                    <EmailMessageObj:Raw_Header><![CDATA[1234567890]]></EmailMessageObj:Raw_Header>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="threatq:indicator-cfbc9fcd-d068-4dc8-a57b-cda54868bf28" timestamp="2018-10-10T18:09:54.308374+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Email Automation</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malicious E-mail</indicator:Type>
+            <indicator:Description>Email Indicators for test Automation</indicator:Description>
+            <indicator:Short_Description>Automation for Email Indicator</indicator:Short_Description>
+            <indicator:Observable idref="threatq:observable-9b06e5eb-a59a-4d40-82ba-c5b0a683927d">
+            </indicator:Observable>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="threatq:ttp-8fb33ad9-954a-49ef-9dba-c2ef81500fca" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Suggested_COAs>
+                <indicator:Suggested_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-ccf236e2-3126-43aa-aa59-43728f7c4068" xsi:type='coa:CourseOfActionType'/>
+                </indicator:Suggested_COA>
+            </indicator:Suggested_COAs>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+                    <marking:Marking_Structure xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                        <simpleMarking:Statement>We do not handle this</simpleMarking:Statement>
+                    </marking:Marking_Structure>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2018-10-10T18:09:54.308490+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Related_Indicators>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator idref="threatq:indicator-cfbc9fcd-d068-4dc8-a57b-cda54868bf28" xsi:type='indicator:IndicatorType'/>
+                </indicator:Related_Indicator>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator idref="threatq:indicator-55206d84-deb2-4e1c-9263-42499b350143" xsi:type='indicator:IndicatorType'/>
+                </indicator:Related_Indicator>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator idref="threatq:indicator-a0231dff-4c11-4183-8a18-289452518ef2" xsi:type='indicator:IndicatorType'/>
+                </indicator:Related_Indicator>
+            </indicator:Related_Indicators>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="threatq:indicator-a0231dff-4c11-4183-8a18-289452518ef2" timestamp="2018-08-31T16:56:25.647548+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Mail</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malicious E-mail</indicator:Type>
+            <indicator:Short_Description>Email to Test</indicator:Short_Description>
+            <indicator:Observable idref="threatq:observable-d054c507-756f-4b43-b6e1-47967155dd22">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="GREEN"/>
+                    <marking:Marking_Structure xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                        <simpleMarking:Statement>Email Caveat</simpleMarking:Statement>
+                    </marking:Marking_Structure>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2018-08-31T16:56:25.647584+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="threatq:indicator-55206d84-deb2-4e1c-9263-42499b350143" timestamp="2018-09-11T16:57:38.312995+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Mail Indicators</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malicious E-mail</indicator:Type>
+            <indicator:Description>Mail Indicators Mail Indicators Mail Indicators Mail Indicators Mail Indicators</indicator:Description>
+            <indicator:Short_Description>Mail Indicators</indicator:Short_Description>
+            <indicator:Observable idref="threatq:observable-5e3a8c75-4c4a-47f7-81da-cee9be8f5c39">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="RED"/>
+                    <marking:Marking_Structure xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                        <simpleMarking:Statement>Mail Indicators</simpleMarking:Statement>
+                    </marking:Marking_Structure>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2018-09-11T16:57:38.313260+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:TTP id="threatq:ttp-8fb33ad9-954a-49ef-9dba-c2ef81500fca" timestamp="2018-09-12T17:07:40.971840+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>drama</ttp:Title>
+            <ttp:Description>drama2</ttp:Description>
+            <ttp:Short_Description>drama1</ttp:Short_Description>
+            <ttp:Victim_Targeting>
+                <ttp:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <stixCommon:Name>some tole</stixCommon:Name>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:FreeTextLines xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:FreeTextLine xpil:Type="string">1234567890</xpil:FreeTextLine>
+  </xpil:FreeTextLines>
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">role</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:ElectronicAddressIdentifiers xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:ElectronicAddressIdentifier>dfghjj</xpil:ElectronicAddressIdentifier>
+  </xpil:ElectronicAddressIdentifiers>
+  <xpil:Languages xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Language>minionese</xpil:Language>
+  </xpil:Languages>
+</ExtSch:Specification>
+                    <stix-ciqidentity:Role>some dumb</stix-ciqidentity:Role>
+                </ttp:Identity>
+            </ttp:Victim_Targeting>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Courses_Of_Action>
+        <stix:Course_Of_Action id="threatq:coa-ccf236e2-3126-43aa-aa59-43728f7c4068" timestamp="2018-10-08T18:26:34.699235+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>COA-Automation</coa:Title>
+            <coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Remedy</coa:Stage>
+            <coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Redirection (Honey Pot)</coa:Type>
+            <coa:Description>Description : This is the COA used for Automation, The Stage is Remedy, COA Type is Perimeter Blocking</coa:Description>
+            <coa:Short_Description>Short Description</coa:Short_Description>
+            <coa:Objective>
+                <coa:Description>Objective Description</coa:Description>
+                <coa:Short_Description>This Test is for Automation with Medium Confidence</coa:Short_Description>
+                <coa:Applicability_Confidence timestamp="2018-10-08T18:26:34.695928+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </coa:Applicability_Confidence>
+            </coa:Objective>
+            <coa:Impact timestamp="2018-10-08T18:26:34.695753+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+                <stixCommon:Description>Impact Description</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-10-08T18:26:34.695780+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Low</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Impact>
+            <coa:Cost timestamp="2018-10-08T18:26:34.695581+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                <stixCommon:Description>Cost Description</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-10-08T18:26:34.695704+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Cost>
+            <coa:Efficacy timestamp="2018-10-08T18:26:34.695802+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+                <stixCommon:Description>Efficacy Description</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-10-08T18:26:34.695832+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Low</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Efficacy>
+            <coa:Related_COAs>
+                <coa:Related_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-91d5770a-7def-45f1-940b-726cac243c21" xsi:type='coa:CourseOfActionType'/>
+                </coa:Related_COA>
+                <coa:Related_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-ccf236e2-3126-43aa-aa59-43728f7c4068" xsi:type='coa:CourseOfActionType'/>
+                </coa:Related_COA>
+                <coa:Related_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-73267d18-8502-402e-919c-40e7d898bf06" xsi:type='coa:CourseOfActionType'/>
+                </coa:Related_COA>
+                <coa:Related_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-2e19859e-3bb0-4284-9501-66618db61874" xsi:type='coa:CourseOfActionType'/>
+                </coa:Related_COA>
+            </coa:Related_COAs>
+        </stix:Course_Of_Action>
+        <stix:Course_Of_Action id="threatq:coa-73267d18-8502-402e-919c-40e7d898bf06" timestamp="2018-09-25T15:00:21.776642+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>COA-TEST1</coa:Title>
+            <coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Remedy</coa:Stage>
+            <coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Rebuilding</coa:Type>
+            <coa:Description>DESCRIPTION OF THINGS</coa:Description>
+            <coa:Short_Description>SOME DESCRIPTION</coa:Short_Description>
+            <coa:Objective>
+                <coa:Description>TO GET THIS WORKING</coa:Description>
+                <coa:Short_Description>WITH THREATQ</coa:Short_Description>
+                <coa:Applicability_Confidence timestamp="2018-09-25T15:00:21.777375+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </coa:Applicability_Confidence>
+            </coa:Objective>
+            <coa:Impact timestamp="2018-09-25T15:00:21.777191+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                <stixCommon:Description>LIKELY IMPACT</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-09-25T15:00:21.777226+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Impact>
+            <coa:Cost timestamp="2018-09-25T15:00:21.777003+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+                <stixCommon:Description>COST IS HIGH</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-09-25T15:00:21.777121+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Cost>
+            <coa:Efficacy timestamp="2018-09-25T15:00:21.777249+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                <stixCommon:Description>HIGH EFFICACY</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-09-25T15:00:21.777281+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">None</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Efficacy>
+            <coa:Related_COAs>
+                <coa:Related_COA>
+                    <stixCommon:Course_Of_Action idref="threatq:coa-2e19859e-3bb0-4284-9501-66618db61874" xsi:type='coa:CourseOfActionType'/>
+                </coa:Related_COA>
+            </coa:Related_COAs>
+        </stix:Course_Of_Action>
+        <stix:Course_Of_Action id="threatq:coa-91d5770a-7def-45f1-940b-726cac243c21" timestamp="2018-08-27T17:50:04.673358+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>Nidhi</coa:Title>
+            <coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Remedy</coa:Stage>
+            <coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Monitoring</coa:Type>
+        </stix:Course_Of_Action>
+        <stix:Course_Of_Action id="threatq:coa-2e19859e-3bb0-4284-9501-66618db61874" timestamp="2018-08-27T17:51:00.869980+00:00" xsi:type='coa:CourseOfActionType'>
+            <coa:Title>Nidhi-Spam</coa:Title>
+            <coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Remedy</coa:Stage>
+            <coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Redirection</coa:Type>
+            <coa:Short_Description>Nidhi</coa:Short_Description>
+            <coa:Impact timestamp="2018-08-27T17:51:00.870079+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Low</stixCommon:Value>
+                <stixCommon:Description>Likely</stixCommon:Description>
+                <stixCommon:Confidence timestamp="2018-08-27T17:51:00.870108+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </coa:Impact>
+        </stix:Course_Of_Action>
+    </stix:Courses_Of_Action>
+</stix:STIX_Package>

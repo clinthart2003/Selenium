@@ -1,0 +1,420 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:campaign="http://stix.mitre.org/Campaign-1"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:threatq="http://threatq.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:threatq="https://www.threatq.com"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3" id="edge:Package-31c69cb7-1834-42d8-94ba-6e98248829dc" version="1.1.1" timestamp="2018-10-16T02:45:31.730213+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="RED"/>
+                <marking:Marking_Structure xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                    <simpleMarking:Statement>Handling Caveat not Handled</simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="threatq:observable-589e9d8a-097d-44b3-844d-0e6321fbd51d">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="threatq:observable-b69b5688-931d-47d8-a5ab-6168ee2f9938">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-a200a5c2-36a5-4b7a-87a9-e97d3f9c2375">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-7f9c7718-2f75-49f2-8675-a28bce39a477">
+                </cybox:Observable>
+                <cybox:Observable idref="threatq:observable-05afb673-20fa-4ef7-ab58-00722063f917">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-7f9c7718-2f75-49f2-8675-a28bce39a477">
+            <cybox:Title>Domain Name : abc2.com</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-e47a2c0a-9954-4e04-be7e-f91272cd54c4">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>abc2.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-33ed7af4-1002-4549-a5a0-0dce16ed1b28">
+            <cybox:Title>weird address 9</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:address-b2182bc8-f64b-4dbe-9c62-5fbabb5f6dff">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                    <AddressObj:Address_Value>j@threatq.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-b69b5688-931d-47d8-a5ab-6168ee2f9938">
+            <cybox:Title>Domain Name : abc.com</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-8ff886f8-1d9c-46f0-a2d8-1184e85c05e7">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>abc.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-05afb673-20fa-4ef7-ab58-00722063f917">
+            <cybox:Title>Domain Name : abc3.com</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-d50264d7-705c-4af1-b7e0-1fd9fcc42394">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>abc3.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="threatq:observable-a200a5c2-36a5-4b7a-87a9-e97d3f9c2375">
+            <cybox:Title>Domain Name : abc1.com</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="threatq:domainname-a74d8c72-b389-4e0e-8f72-646694e2b655">
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="">
+                    <DomainNameObj:Value>abc1.com</DomainNameObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="threatq:indicator-6d3f7d45-9a69-43eb-90ea-3c484e6eb9a3" timestamp="2018-10-15T15:04:29.109768+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>test1</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Domain Watchlist</indicator:Type>
+            <indicator:Description>no</indicator:Description>
+            <indicator:Short_Description>no</indicator:Short_Description>
+            <indicator:Observable idref="threatq:observable-589e9d8a-097d-44b3-844d-0e6321fbd51d">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2018-10-15T15:04:29.109819+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>Admin User &lt;user@domain.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:TTP id="threatq:ttp-8719e372-85ab-47b6-b770-8aabf2021105" timestamp="2018-10-16T02:42:09.026841+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>TTP</ttp:Title>
+            <ttp:Description>Description : http://172.16.113.18/campaign/build/</ttp:Description>
+            <ttp:Short_Description>Short Description</ttp:Short_Description>
+            <ttp:Victim_Targeting>
+                <ttp:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <stixCommon:Name>CIQ</stixCommon:Name>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:FreeTextLines xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:FreeTextLine xpil:Type="string">SOME RANDOM STUFF</xpil:FreeTextLine>
+  </xpil:FreeTextLines>
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">CIQCIQ</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:ElectronicAddressIdentifiers xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:ElectronicAddressIdentifier>NSS</xpil:ElectronicAddressIdentifier>
+  </xpil:ElectronicAddressIdentifiers>
+  <xpil:Languages xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Language>Lang</xpil:Language>
+  </xpil:Languages>
+</ExtSch:Specification>
+                    <stix-ciqidentity:Role>ROLE</stix-ciqidentity:Role>
+                </ttp:Identity>
+            </ttp:Victim_Targeting>
+        </stix:TTP>
+        <stix:TTP id="threatq:ttp-8fb33ad9-954a-49ef-9dba-c2ef81500fca" timestamp="2018-09-12T17:07:40.971840+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>drama</ttp:Title>
+            <ttp:Description>drama2</ttp:Description>
+            <ttp:Short_Description>drama1</ttp:Short_Description>
+            <ttp:Victim_Targeting>
+                <ttp:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <stixCommon:Name>some tole</stixCommon:Name>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:FreeTextLines xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:FreeTextLine xpil:Type="string">1234567890</xpil:FreeTextLine>
+  </xpil:FreeTextLines>
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">role</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:ElectronicAddressIdentifiers xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:ElectronicAddressIdentifier>dfghjj</xpil:ElectronicAddressIdentifier>
+  </xpil:ElectronicAddressIdentifiers>
+  <xpil:Languages xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Language>minionese</xpil:Language>
+  </xpil:Languages>
+</ExtSch:Specification>
+                    <stix-ciqidentity:Role>some dumb</stix-ciqidentity:Role>
+                </ttp:Identity>
+            </ttp:Victim_Targeting>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="threatq:incident-4fa2e6cd-e0a7-46d3-b773-31dc846ea0e3" timestamp="2018-10-16T02:44:43.818699+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Incidemt</incident:Title>
+            <incident:Description>LDLDLDLDLD</incident:Description>
+            <incident:Short_Description>SD</incident:Short_Description>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <stixCommon:Name>NIDHI</stixCommon:Name>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">NIDHINIDHI</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Responder>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <stixCommon:Name>1234567890</stixCommon:Name>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"/>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Responder>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <stixCommon:Name>12345678</stixCommon:Name>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">ASDFGHJKL</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Impact_Assessment>
+                <incident:Effects>
+                    <incident:Effect xsi:type="stixVocabs:IncidentEffectVocab-1.0">Loss of Competitive Advantage - Military</incident:Effect>
+                </incident:Effects>
+            </incident:Impact_Assessment>
+            <incident:Status xsi:type="stixVocabs:IncidentStatusVocab-1.0">Open</incident:Status>
+            <incident:Related_Indicators>
+                <incident:Related_Indicator>
+                    <stixCommon:Indicator idref="threatq:indicator-6d3f7d45-9a69-43eb-90ea-3c484e6eb9a3" xsi:type='indicator:IndicatorType'/>
+                </incident:Related_Indicator>
+            </incident:Related_Indicators>
+            <incident:Related_Observables>
+                <incident:Related_Observable>
+                    <stixCommon:Observable idref="threatq:observable-33ed7af4-1002-4549-a5a0-0dce16ed1b28">
+                    </stixCommon:Observable>
+                </incident:Related_Observable>
+            </incident:Related_Observables>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="threatq:ttp-8fb33ad9-954a-49ef-9dba-c2ef81500fca" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="threatq:threatactor-7513f51d-2aa3-442c-9e34-ad125fb77249" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Intended_Effect timestamp="2018-10-16T02:44:43.818814+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Competitive Advantage</stixCommon:Value>
+            </incident:Intended_Effect>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Law Enforcement</incident:Discovery_Method>
+            <incident:Confidence timestamp="2018-10-16T02:44:43.818753+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </incident:Confidence>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Campaigns>
+        <stix:Campaign id="threatq:campaign-d7a825ba-8a0a-4cfa-9763-465ec66e558f" timestamp="2018-10-16T02:45:23.283546+00:00" xsi:type='campaign:CampaignType'>
+            <campaign:Title>Campaign</campaign:Title>
+            <campaign:Description>Campaign-LD, LD</campaign:Description>
+            <campaign:Short_Description>Campaign-SD</campaign:Short_Description>
+            <campaign:Names>
+                <campaign:Name>nidhi.sharma@threatq.com</campaign:Name>
+            </campaign:Names>
+            <campaign:Intended_Effect timestamp="2018-10-16T02:45:23.283712+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Theft - Intellectual Property</stixCommon:Value>
+                <stixCommon:Source>
+                    <stixCommon:Description>Source : CampaignCampaignCampaignCampaign</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-16T02:45:23.283690+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </campaign:Intended_Effect>
+            <campaign:Status xsi:type="stixVocabs:CampaignStatusVocab-1.0">Future</campaign:Status>
+            <campaign:Related_TTPs>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="threatq:ttp-8719e372-85ab-47b6-b770-8aabf2021105" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="threatq:ttp-8fb33ad9-954a-49ef-9dba-c2ef81500fca" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+            </campaign:Related_TTPs>
+            <campaign:Related_Incidents>
+                <campaign:Related_Incident>
+                    <stixCommon:Incident idref="threatq:incident-4fa2e6cd-e0a7-46d3-b773-31dc846ea0e3" xsi:type='incident:IncidentType'/>
+                </campaign:Related_Incident>
+            </campaign:Related_Incidents>
+            <campaign:Related_Indicators>
+                <campaign:Related_Indicator>
+                    <stixCommon:Indicator idref="threatq:indicator-6d3f7d45-9a69-43eb-90ea-3c484e6eb9a3" xsi:type='indicator:IndicatorType'/>
+                </campaign:Related_Indicator>
+            </campaign:Related_Indicators>
+            <campaign:Attribution>
+                <campaign:Attributed_Threat_Actor>
+                    <stixCommon:Threat_Actor idref="threatq:threatactor-7513f51d-2aa3-442c-9e34-ad125fb77249" xsi:type='ta:ThreatActorType'/>
+                </campaign:Attributed_Threat_Actor>
+            </campaign:Attribution>
+            <campaign:Attribution>
+                <campaign:Attributed_Threat_Actor>
+                    <stixCommon:Threat_Actor idref="threatq:threatactor-c53824db-c405-445b-9d3f-d4973bae7870" xsi:type='ta:ThreatActorType'/>
+                </campaign:Attributed_Threat_Actor>
+            </campaign:Attribution>
+            <campaign:Associated_Campaigns>
+                <campaign:Associated_Campaign>
+                    <stixCommon:Campaign idref="threatq:campaign-c0055bb2-ee32-42e8-a9cb-80a5c2652b8b" xsi:type='campaign:CampaignType'/>
+                </campaign:Associated_Campaign>
+            </campaign:Associated_Campaigns>
+            <campaign:Confidence timestamp="2018-10-16T02:45:23.283628+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </campaign:Confidence>
+        </stix:Campaign>
+        <stix:Campaign id="threatq:campaign-c0055bb2-ee32-42e8-a9cb-80a5c2652b8b" timestamp="2018-08-27T17:49:29.382046+00:00" xsi:type='campaign:CampaignType'>
+            <campaign:Title>nidhi</campaign:Title>
+            <campaign:Status xsi:type="stixVocabs:CampaignStatusVocab-1.0">Ongoing</campaign:Status>
+            <campaign:Confidence timestamp="2018-08-27T17:49:29.382104+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </campaign:Confidence>
+        </stix:Campaign>
+    </stix:Campaigns>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="threatq:threatactor-7513f51d-2aa3-442c-9e34-ad125fb77249" timestamp="2018-09-10T20:14:59.316889+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>TATA</ta:Title>
+            <ta:Description>TATATATATATATAT
+TATATATATATTATAT</ta:Description>
+            <ta:Short_Description>TATATATATATA</ta:Short_Description>
+            <ta:Identity>
+                <stixCommon:Name>TATAT</stixCommon:Name>
+            </ta:Identity>
+            <ta:Type timestamp="2018-09-10T20:14:59.317670+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Hacker - Black hat</stixCommon:Value>
+                <stixCommon:Description>BHBHBH</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>BHBHBH</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-09-10T20:14:59.317537+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Type>
+            <ta:Motivation timestamp="2018-09-10T20:14:59.317802+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Ideological - Anti-Corruption</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Sophistication timestamp="2018-09-10T20:14:59.317900+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorSophisticationVocab-1.0">Innovator</stixCommon:Value>
+                <stixCommon:Description>INN</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>NNI</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-09-10T20:14:59.317878+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Sophistication>
+            <ta:Intended_Effect timestamp="2018-09-10T20:14:59.318018+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Embarrassment</stixCommon:Value>
+                <stixCommon:Description>EMB</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>EMB</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-09-10T20:14:59.317997+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Intended_Effect>
+            <ta:Planning_And_Operational_Support timestamp="2018-09-10T20:14:59.318134+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:PlanningAndOperationalSupportVocab-1.0.1">Skill Development / Recruitment</stixCommon:Value>
+                <stixCommon:Description>1221</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>122421</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-09-10T20:14:59.318094+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Planning_And_Operational_Support>
+        </stix:Threat_Actor>
+        <stix:Threat_Actor id="threatq:threatactor-c53824db-c405-445b-9d3f-d4973bae7870" timestamp="2018-10-08T20:08:54.430630+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Title>Threat Actor</ta:Title>
+            <ta:Description>Description for Threat Actor for Name - THREATQ-THREATACTOR</ta:Description>
+            <ta:Short_Description>Short Description for Threat Actor</ta:Short_Description>
+            <ta:Identity>
+                <stixCommon:Name>THREATQ</stixCommon:Name>
+            </ta:Identity>
+            <ta:Type timestamp="2018-10-08T20:08:54.431280+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">eCrime Actor - Credential Theft Botnet Operator</stixCommon:Value>
+                <stixCommon:Description>Type Description is malicious</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>Random Source</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-08T20:08:54.431172+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Type>
+            <ta:Motivation timestamp="2018-10-08T20:08:54.431435+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Ideological - Anti-Establishment</stixCommon:Value>
+                <stixCommon:Description>Motivation for this Threat Actor</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>Motivation Source</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-08T20:08:54.431404+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Unknown</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Motivation>
+            <ta:Sophistication timestamp="2018-10-08T20:08:54.431528+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorSophisticationVocab-1.0">Innovator</stixCommon:Value>
+                <stixCommon:Description>Sophistications description</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>A source for Sophistications</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-08T20:08:54.431501+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">Medium</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Sophistication>
+            <ta:Intended_Effect timestamp="2018-10-08T20:08:54.431650+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Disruption</stixCommon:Value>
+                <stixCommon:Description>DISRUPT DESCRIPTION</stixCommon:Description>
+                <stixCommon:Source>
+                    <stixCommon:Description>Source for Descriptions</stixCommon:Description>
+                </stixCommon:Source>
+                <stixCommon:Confidence timestamp="2018-10-08T20:08:54.431629+00:00">
+                    <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+                </stixCommon:Confidence>
+            </ta:Intended_Effect>
+            <ta:Observed_TTPs scope="exclusive">
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="threatq:ttp-8fb33ad9-954a-49ef-9dba-c2ef81500fca" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+            <ta:Associated_Campaigns scope="exclusive">
+                <ta:Associated_Campaign>
+                    <stixCommon:Campaign idref="threatq:campaign-c0055bb2-ee32-42e8-a9cb-80a5c2652b8b" xsi:type='campaign:CampaignType'/>
+                </ta:Associated_Campaign>
+            </ta:Associated_Campaigns>
+            <ta:Associated_Actors scope="exclusive">
+                <ta:Associated_Actor>
+                    <stixCommon:Threat_Actor idref="threatq:threatactor-7513f51d-2aa3-442c-9e34-ad125fb77249" xsi:type='ta:ThreatActorType'/>
+                </ta:Associated_Actor>
+            </ta:Associated_Actors>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>
