@@ -12,7 +12,7 @@ class CONFIG:
 
     username = 'clint.hart'
 
-    hostname = 'TE-22977'
+    hostname = 'te-22257'      # Selenium automation will run against this host
 
     SAML = False
 
@@ -22,7 +22,7 @@ class CONFIG:
 
     waittime = 4
 
-    graphhost = ["perftest04"]   # use for python server metric collection and graphing
+    graphhost = ["te-22257"]   # use for python server metric collection and graphing
 
     if '.' in hostname:
         server = hostname
@@ -32,23 +32,11 @@ class CONFIG:
 
     HOST = 'https://' + server + '/'             # Used primarily for all scripts
 
-    TIEHOST = 'https://364-upgrade01.threatq.com/'   # Used in ExportCSV.py
+    TIEHOST = 'https://upgrade01.threatq.com/'   # Used in ExportCSV.py
 
-    TQUSER = ['threatq@threatq.com', 'threatquotientthreatquotient']   # Mainly used for initial login and ldap.py setup
+    TQUSER = ['threatq@threatq.com', 'ChangeMePlease!']   # Mainly used for initial login and ldap.py setup
 
-    # USER = ['davea@threatq.com', 'ChangeMePlease!']  # Secure SAML login user.
-
-    # USER = ['Super@threatq.com', 'threatquotientthreatquotient']   # Secure Openldap login user.
-
-    # USER = ['stratum@stratumsecurity.com', 'HZfgSAcMPQG5RiG26gwVQFbca']  # Secure ldap login user.
-
-    USER = ['threatq@threatq.com', 'threatquotientthreatquotient']  #Default TQ system user
-
-    # USER = ['maintenance', 'ChangeMePlease!']  # non-secure ldap user.
-
-    # USER = ['contributor', 'ChangeMePlease!']  # non-secure ldap user.
-
-    # USER = ['tqadmin', 'ChangeMePlease!']  # non-secure ldap user.
+    USER = ['threatq@threatq.com', 'ChangeMePlease!']  #Default TQ system user
 
     users = [
              ["Adversary Reader", "ChangeMePlease!", "threatq2@threatq.com", "Administrative Access", "Adversary Reader Process"],
@@ -66,13 +54,13 @@ class CONFIG:
              ["Super@threatq.com", "ChangeMePlease!", "Super@threatq.com", "Maintenance Account","DDoS Attack"],
              ["Analyst@threatq.com", "ChangeMePlease!", "Analyst@threatq.com", "Primary Contributor Access", "DDoS Attack"],
              ["Observer@threatq.com", "ChangeMePlease!", "Observer@threatq.com","Read Only Access", "DDoS Attack"],
-             ["yitest", "ChangeMePlease!", "yitest@threatq.com", "Administrative Access", "DDoS Attack"],
+             ["tanuj", "ChangeMePlease!", "tanuj@threatq.com", "Administrative Access", "DDoS Attack"],
              ["clinthart", "ChangeMePlease!", "clinthart@threatq.com", "Primary Contributor Access", "DDoS Attack"],
              ["Guest", "ChangeMePlease!", "Guest@threatq.com", "Read Only Access", "DDoS Attack"],
-             ["tqadmin", "ChangeMePlease!", "tqadmin@threatq.com", "Administrative Access", "Wannacry Incident"],
+             ["tqadmin1", "ChangeMePlease!", "tqadmin1@threatq.com", "Administrative Access", "Wannacry Incident"],
              ["contributor", "ChangeMePlease!", "contributor@threatq.com", "Primary Contributor Access", "Wannacry Incident"],
              ["maintenance", "ChangeMePlease!", "maintenance@threatq.com", "Maintenance Account", "Wannacry Incident"],
-             ["readonly", "ChangeMePlease!", "readonly@threatq.com", "Read Only Access", "Wannacry Incident"]
+             ["read-only", "ChangeMePlease!", "read-only@threatq.com", "Read Only Access", "Wannacry Incident"]
             ]
 
     SOURCE = 'Jack Reacher'                              # used to set the source text in the scripts
@@ -81,10 +69,9 @@ class CONFIG:
 
     WEBDRIVER = 'Chrome'                  # Chrome or Firefox are the possible values here.
 
-    MYSQLROOT = 'Sqk51z9ce4d8CKbudEssnhpw5HKdNqRk'
+    MYSQLROOT = 'thisismySQLrootpassword'
 
-    # MYSQLROOT = 'threatquotientthreatquotient'
+    # MYSQLROOT = 'thisismyrootpassword'
 
-    TQBACKUP = 'threatq_backup_4.34.0_2020-03-23.tgz'
+    TQBACKUP = 'threatq_backup.tgz'
 
-    # TQBACKUP = 'threatq_backup_538_2018-08-04.tgz'

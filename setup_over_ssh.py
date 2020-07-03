@@ -8,7 +8,7 @@ remotepath = "/tmp"
 ssh = paramiko.SSHClient()
 ssh.load_system_host_keys()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(CONFIG.server, username="root", password="threatquotientthreatquotient")
+ssh.connect(CONFIG.server, username="root", password="simplepassword")
 
 # use shell for running the script to make-object-set
 channel = ssh.invoke_shell()
